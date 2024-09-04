@@ -1,0 +1,29 @@
+.slider {
+    margin: 0 20px;
+    padding: 2rem 0;
+}
+
+.slider .imgBox {
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+.react-multi-carousel-list {
+    padding: 0rem 0 2rem 0;
+}
+
+.custom-dot-list-style::after {
+    content: "";
+    padding: 2px;
+    width: 8px;
+    height: 8px;
+    right: -3px;
+    border-radius: 50%;
+    outline: 2px solid gray;
+    top: 0px;
+    transform: translateY(9px);
+    margin-left: 2px;
+    background: transparent;
+
+}

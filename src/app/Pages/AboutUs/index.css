@@ -1,0 +1,38 @@
+
+
+
+.appie-features-box-item-for-about-us {
+    border: 1px solid #202234;
+    padding: 24px;
+    border-radius: 6px;
+    -webkit-transition: all 0.3s ease-out 0s;
+    -moz-transition: all 0.3s ease-out 0s;
+    -ms-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+    /* margin-bottom: 20px; */
+    margin-left: 0;
+  }
+
+
+
+  @media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .appie-features-box-item-for-about-us {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .appie-features-box-item-for-about-us {
+      margin-left: 50px;
+      margin-right: 50px;
+    }
+  }
+  @media (max-width: 767px) {
+    .appie-features-box-item-for-about-us {
+        padding: 10px;
+    }
+    .appie-features-box-item-for-about-us p{
+        font-size: 12px;
+    }
+  }

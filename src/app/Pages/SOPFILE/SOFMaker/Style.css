@@ -1,0 +1,40 @@
+
+/* need to know text effecting */
+.needEffect{
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  
+  
+  
+  
+  .needEffect::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 1px;
+    left: 5px;
+    width: 10px;
+    height: 90%;
+    color: green;
+    font-weight: 600;
+    border-right: 2px solid red;
+    overflow: hidden;
+    animation: animate 6s linear infinite;
+  
+  }
+  
+  
+  @keyframes  animate{
+  
+  0%{
+      width: 0;
+  }
+  80%{
+  
+    width: 100%;
+  }
+  
+  
+  
+  }

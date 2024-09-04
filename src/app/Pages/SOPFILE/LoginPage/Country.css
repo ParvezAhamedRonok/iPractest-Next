@@ -1,0 +1,8 @@
+/* import img from ; */
+
+.Result-PopUp-box{
+    background-image: url("../../../assets/images/city1.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-clip: border-box;
+ }
