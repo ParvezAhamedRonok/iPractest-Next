@@ -1,0 +1,10 @@
+<voice name="en-IE-ConnorNeural">
+    <prosody rate="-10%" pitch="-5%">
+        <break time="1s" />
+        Thou <phoneme alphabet="sapi" ph="s i eh s t">seest</phoneme> we are not all alone unhappy:
+        <break time="1s" />
+        This wide and universal theatre
+        Presents more woeful pageants than the scene
+        Wherein we play in.
+    </prosody>
+</voice>

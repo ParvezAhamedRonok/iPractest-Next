@@ -68,7 +68,7 @@ export const ContextProvider = ({ children }) => {
   const [otherPaidStatus, setOtherPaidStatus] = useState(false);
 
   //if dont need above code remove please---------
-  const [userPaymentStatusCheck, setuserPaymentStatusCheck] = useState("paymentSatus")
+  const [userPaymentStatusCheck, setuserPaymentStatusCheck] = useState("")
 
   const [billPopUp, setBillPopUp] = useState(false); // it's not need
   const notify = () => toast('Thank you. Your payment has been successfully done.');

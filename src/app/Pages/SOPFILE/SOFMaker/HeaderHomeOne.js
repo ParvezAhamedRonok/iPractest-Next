@@ -28,6 +28,20 @@ function HeaderHomeOne({ action }) {
         setUserloginToken(localStorage.getItem("loginTOken") && localStorage.getItem("loginTOken"))
 
         StickyMenu();
+
+        //make the audio tag sticky when user scroll the page-----
+        window.addEventListener("scroll", function () {
+            try {
+                if (window.scrollY > 100) {
+                    setOpenNavImage(false)
+                } else {
+                    setOpenNavImage(true)
+                }
+            } catch (error) {
+                // console.log("Error has been occoured..")
+            }
+        })
+
     }, []);
 
     const openLogInPage = (x) => {
@@ -48,18 +62,6 @@ function HeaderHomeOne({ action }) {
 
 
 
-    //make the audio tag sticky when user scroll the page-----
-    window.addEventListener("scroll", function () {
-        try {
-            if (window.scrollY > 100) {
-                setOpenNavImage(false)
-            } else {
-                setOpenNavImage(true)
-            }
-        } catch (error) {
-            // console.log("Error has been occoured..")
-        }
-    })
 
 
 

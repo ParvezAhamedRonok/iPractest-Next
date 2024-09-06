@@ -1,0 +1,94 @@
+.reading-image-animation:hover {
+  height: 12.4rem;
+  cursor: pointer;
+  transition: 2s ease-in-out;
+}
+
+.congratulateText {
+  font-family: 'Roboto';
+}
+
+
+.zoom-in-out-box {
+  animation: zoom-in-zoom-out 1s ease 5;
+}
+
+@keyframes zoom-in-zoom-out {
+  0% {
+    transform: scale(1, 1);
+  }
+
+  50% {
+    transform: scale(1.1, 1.1);
+  }
+
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+
+
+
+
+
+/* for download button........ */
+.bookmarkBtn {
+  width: 200px;
+  height: 42px;
+  border-radius: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.349);
+  background-color: rgb(78, 194, 194);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+}
+
+.bookmarkBtn .IconContainer {
+  width: 53px;
+  height: 42px;
+  background: linear-gradient(to bottom, rgb(255, 136, 255), rgb(172, 70, 255));
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 2;
+  transition-duration: 0.3s;
+}
+
+.bookmarkBtn .icon {
+  border-radius: 1px;
+}
+
+.bookmarkBtn .text {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  z-index: 1;
+  transition-duration: 0.3s;
+  font-size: .8em;
+}
+
+.bookmarkBtn:hover .IconContainer {
+  width: 90px;
+  transition-duration: 0.3s;
+}
+
+.bookmarkBtn:hover .text {
+  transform: translate(10px);
+  width: 0;
+  font-size: 0;
+  transition-duration: 0.3s;
+}
+
+.bookmarkBtn:active {
+  transform: scale(0.95);
+  transition-duration: 0.3s;
+}

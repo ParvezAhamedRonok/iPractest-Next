@@ -9,6 +9,10 @@ import '../assets/css/main.css';
 import '../assets/css/style.css';
 import { ContextProvider } from '../contexts/ContextProvider';
 import { GoogleOAuthProvider } from '@react-oauth/google';
+import Script from "next/script"; // Import next/script for external scripts
+
+//end of the importing...........
+
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -19,11 +23,26 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  
+
   return (
     <GoogleOAuthProvider clientId='287013083759-c4uucpj3quv7s7l85ge4p1955khd2mi7.apps.googleusercontent.com'>
       <ContextProvider>
         <html lang="en">
+          <head>
+            <title>{metadata.title}</title>
+            <meta name="description" content={metadata.description} />
+            {/* External Script: jQuery */}
+            <Script
+              src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.6.0.min.js" async
+            />
+            {/* External Script: Example SDK or any other external script */}
+            <Script
+              src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.6.0.min.js" async
+            />
+            <Script
+              src="https://aka.ms/csspeech/jsbrowserpackageraw" async
+            />
+          </head>
           <body className={inter.className}>{children}</body>
         </html>
       </ContextProvider>

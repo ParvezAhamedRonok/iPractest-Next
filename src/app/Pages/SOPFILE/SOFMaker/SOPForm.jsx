@@ -14,7 +14,7 @@ import SignUpPage from '../LoginPage/SignUpPage';
 import Image from 'next/image';
 import CountrySelect from '../LoginPage/CountrySelect2.jsx';
 import { CheckPaymentStatus } from "../../Payments/CkeckPayment/CheckPayments.js";
-import { SOP_POST_FOR_GET_BACKENDFEEDBACK, SOP_POST_FOR_STORE_USER_DATA_IN_BACKEND, SOP_GET_SPECIFIC_USER_DATA } from "../../../assets/URL's/AllUrl.js";
+import { SOP_POST_FOR_GET_BACKENDFEEDBACK, SOP_POST_FOR_STORE_USER_DATA_IN_BACKEND, SOP_GET_SPECIFIC_USER_DATA } from "../../../../assets/URL's/AllUrl.js";
 
 //END OF THE IMPORTING....
 
@@ -244,13 +244,14 @@ export default function SOPForm() {
                 showFormsByState == "firstForm" && (
                     <form action="" onSubmit={() => { inputValueGetAndPush("secondForm") }}>
                         <section className='grid grid-cols-1 mt-[30px] sm:mt-[45px] md:mt-[25px]  rounded  justify-center align-middle w-[99vw] sm:w-[770px]  box-border overflow-x-auto bg-white border-1 border-gray-200 shadow-lg'>
-                            <div class="flex justify-center align-middle px-5 py-4 bg-gray-100 border-b border-gray-300">
+                            <div className="flex justify-center align-middle px-5 py-4 bg-gray-100 border-b border-gray-300">
                                 Fill the information below
                             </div>
                             <div className='grid grid-cols-1 sm:grid-cols-2 gap-3 p-[20px] sm:p-[30px] '>
                                 <div className=''>
                                     <label htmlFor="fullName" className='text-[13px] font-bold'>Full Name *</label> <br />
-                                    <input type="text" name="fullName" id="fullName" className='p-2 border-1 border-gray-300 rounded w-full placeholder:text-[12px] text-black placeholder:opacity-70 ' placeholder='Your Full Name'
+                                    <input type="text" name="fullName" id="fullName"
+                                     className='p-2 rounded w-full placeholder:text-[12px] text-black placeholder:opacity-70  border-[1px] border-gray-400' placeholder='Your Full Name'
                                         value={formInputValues.fullName}
                                         onChange={signUpinputChange}
                                         required />
@@ -261,7 +262,7 @@ export default function SOPForm() {
                                         labelField="name"
                                         valueField="name"
                                         onChange={(values) => setProgramArray(values)}
-                                        className='p-2 border-1 border-gray-300 rounded w-full placeholder:text-[12px] text-black placeholder:opacity-70 '
+                                        className='p-2 border-[2px] border-gray-300 rounded w-full placeholder:text-[12px] text-black placeholder:opacity-70 '
                                         placeholder='eg. MS in computer science'
                                         name="targetedProggram" id="targetedProggram"
                                         value={programArray[0] && programArray[0].name}
@@ -271,21 +272,21 @@ export default function SOPForm() {
 
                                 <div className=''>
                                     <label htmlFor="targetedUniversity" className='text-[13px] font-bold'>Target University *</label> <br />
-                                    <input type="text" name="targetedUniversity" id="targetedUniversity" className='p-2 border-1 border-gray-300 rounded w-full placeholder:text-[12px] text-black placeholder:opacity-70' placeholder='eg. TU MUNICH'
+                                    <input type="text" name="targetedUniversity" id="targetedUniversity" className='p-2 border-[1px] border-gray-300 rounded w-full placeholder:text-[12px] text-black placeholder:opacity-70' placeholder='eg. TU MUNICH'
                                         value={formInputValues.targetedUniversity}
                                         onChange={signUpinputChange}
                                         required />
                                 </div>
                                 <div className=''>
                                     <label htmlFor="interest" className='text-[13px] font-bold'>Area of interest *</label> <br />
-                                    <input type="text" name="interest" id="interest" className='p-2 border-1 border-gray-300 rounded w-full placeholder:text-[12px] text-black placeholder:opacity-70' placeholder='eg. Computer vision for healtcare'
+                                    <input type="text" name="interest" id="interest" className='p-2 border-[1px] border-gray-300 rounded w-full placeholder:text-[12px] text-black placeholder:opacity-70' placeholder='eg. Computer vision for healtcare'
                                         value={formInputValues.interest}
                                         onChange={signUpinputChange}
                                         required />
                                 </div>
                                 <div className=''>
                                     <label htmlFor="careerGoal" className='text-[13px] font-bold'>Career Goal *</label> <br />
-                                    <input type="text" name="careerGoal" id="careerGoal" className='p-2 border-1 border-gray-300 rounded w-full placeholder:text-[12px] text-black placeholder:opacity-70' placeholder='I want to work as a AI researcher'
+                                    <input type="text" name="careerGoal" id="careerGoal" className='p-2 border-[1px] border-gray-300 rounded w-full placeholder:text-[12px] text-black placeholder:opacity-70' placeholder='I want to work as a AI researcher'
                                         value={formInputValues.careerGoal}
                                         onChange={signUpinputChange}
                                         required />
@@ -294,13 +295,13 @@ export default function SOPForm() {
 
                             </div>
 
-                            <div class="flex justify-end px-5 py-4 bg-gray-100 border-t border-gray-300">
+                            <div className="flex justify-end px-5 py-4 bg-gray-100 border-t border-gray-300">
                                 {/* <button class="px-3 py-2  text-gray-600 transition duration-150 hover:text-gray-700"
                     >Back</button> */}
-                                <button class=" transition duration-150 "
+                                <button className=" transition duration-150 "
                                     type='submit'
                                 >
-                                    <a className="w-auto text-black p-2 border-1 border-gray bg-sky-300 rounded-[30px] hover:bg-red-400 cursor-pointer border-r-t-[20px]">
+                                    <a className="w-auto text-black p-2 border-[1px] border-gray bg-sky-300 rounded-[30px] hover:bg-red-400 cursor-pointer border-r-t-[20px]">
                                         Next<i className="fal fa-arrow-right ml-2 text-[11px]" />
                                     </a>
                                 </button>
@@ -315,7 +316,7 @@ export default function SOPForm() {
                 showFormsByState == "secondForm" && (
                     <form action="" onSubmit={() => { inputValueGetAndPush("thirdForm") }}>
                         <section className='grid grid-cols-1 mt-[80px] sm:mt-[80px]   rounded  justify-center align-middle w-[98vw] sm:w-auto h-auto  box-border overflow-x-auto bg-white border-1 border-gray-200 shadow-lg'>
-                            <div class="flex justify-center align-middle px-5 py-4 bg-gray-100 border-b border-gray-300">
+                            <div className="flex justify-center align-middle px-5 py-4 bg-gray-100 border-b border-gray-300">
                                 Fill the information below
                             </div>
                             <div className='grid grid-cols-1 sm:grid-cols-2 gap-3 p-[18px] sm:p-[26px] '>
@@ -339,8 +340,8 @@ export default function SOPForm() {
 
                             </div>
 
-                            <div class="flex justify-between px-5 py-4 bg-gray-100 border-t border-gray-300">
-                                <button class=" text-gray-600 transition duration-150  "
+                            <div className="flex justify-between px-5 py-4 bg-gray-100 border-t border-gray-300">
+                                <button className=" text-gray-600 transition duration-150  "
                                     onClick={() => { inputValueGetAndPush("firstForm") }}
                                 >
                                     <a className="w-auto text-black p-2 border-1 border-gray bg-sky-300 rounded-[30px] hover:bg-red-400 cursor-pointer border-r-t-[20px]">
@@ -348,7 +349,7 @@ export default function SOPForm() {
                                     </a>
                                 </button>
 
-                                <button class=" transition duration-150  "
+                                <button className=" transition duration-150  "
                                     type='submit'
                                 >
                                     <a className="w-auto text-black p-2 border-1 border-gray bg-sky-300 rounded-[30px] hover:bg-red-400 cursor-pointer border-r-t-[20px]">
@@ -366,7 +367,7 @@ export default function SOPForm() {
                 showFormsByState == "thirdForm" && (
                     <div >
                         <section className='grid grid-cols-1 mt-[70px] sm:mt-[60px]   rounded  justify-center align-middle w-[98vw] sm:w-[950px] h-auto  box-border overflow-x-auto bg-white border-1 border-gray-200 shadow-lg'>
-                            <div class="flex justify-center align-middle  px-5 py-4 bg-gray-100 border-b border-gray-300">
+                            <div className="flex justify-center align-middle  px-5 py-4 bg-gray-100 border-b border-gray-300">
                                 Fill the information below
                             </div>
                             <form action="" onSubmit={userLoginFunction}>
@@ -398,15 +399,15 @@ export default function SOPForm() {
 
                                 </div>
 
-                                <div class="flex justify-between px-5 py-4 bg-gray-100 border-t border-gray-300">
-                                    <button class=" transition duration-150  "
+                                <div className="flex justify-between px-5 py-4 bg-gray-100 border-t border-gray-300">
+                                    <button className=" transition duration-150  "
                                         onClick={() => { inputValueGetAndPush("secondForm") }}
                                     >
                                         <a className="w-auto text-black p-2 border-1 border-gray bg-sky-300 rounded-[30px] hover:bg-red-400 cursor-pointer border-r-t-[20px]">
                                             <i className="fal fa-arrow-left mr-1 text-[11px]" />Back
                                         </a>
                                     </button>
-                                    <button class="px-3 py-2 rounded-[20px] bg-green-300 hover:bg-red-300 text-center text-gray-600 transition duration-150 hover:text-gray-700 "
+                                    <button className="px-3 py-2 rounded-[20px] bg-green-300 hover:bg-red-300 text-center text-gray-600 transition duration-150 hover:text-gray-700 "
                                         type='submit'
                                     >Submit</button>
                                 </div>

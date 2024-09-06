@@ -1,0 +1,38 @@
+:where(.css-dev-only-do-not-override-1k979oh).ant-progress.ant-progress-circle .ant-progress-text {
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-start: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: rgba(0, 0, 0, 0.88);
+  font-size: 1.5em;
+  line-height: 1;
+  font-weight: 600;
+  white-space: normal;
+  text-align: center;
+  transform: translateY(-50%);
+}
+
+.malkeClipPath{
+  clip-path: polygon(50% 0%, 100% 38%, 100% 100%, 0 98%, 0% 38%);
+}
+
+
+
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.pulse-animation {
+  animation: pulse 2s infinite;
+}

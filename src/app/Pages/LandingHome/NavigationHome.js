@@ -1,10 +1,11 @@
 
+"use client"
 import React from 'react';
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 import Link from 'next/link';
 
 function NavigationHome() {
-    const currentRoute = useRouter().pathname;
+    const currentRoute = usePathname();
     console.log(currentRoute)
     //    const currentRoute = useRouter().pathname.toLowerCase();
 
@@ -45,12 +46,12 @@ function NavigationHome() {
                                                     </ul> */}
                 </li>
                 <li
-                    // onClick={(e) => handler(e, 'service')}
+                    // onClick={(e) => handler(e, 'service')} 
                     // onClick={(e) => alert("Speaking page is under construction. This page will be live on 15th oct")}
                     id="service"
                     className="menu-item-has-children active cursor-pointer"
                 >
-                    <Link className={currentRoute == "speakingpage" ? "Nav_active" : "Nav_Nonactive"} href="/SpeakingPage" style={{ color: currentRoute == "speakingpage" ? "#000" : "#fff" }}>Speaking</Link>
+                    <Link className={currentRoute.includes("Speaking-Module") ? "Nav_active" : "Nav_Nonactive"} href="/Pages/Speaking-Module" style={{ color: currentRoute.includes("Speaking-Module") ? "#000" : "#fff" }}>Speaking</Link>
 
                 </li>
                 <li>
@@ -64,7 +65,7 @@ function NavigationHome() {
                     <Link className={currentRoute == "listeningpage" ? "Nav_active" : "Nav_Nonactive"} href="/ListeningPage/cambridgeAllTests" style={{ color: currentRoute == "listeningpage" ? "#000" : "#fff" }}>Listening</Link>
                 </li>
                 <li>
-                    <Link className={currentRoute == "AboutUs" ? "Nav_active" : "Nav_Nonactive"} href="/Pages/AboutUs" style={{ color: currentRoute == "AboutUs" ? "#000" : "#fff" }}>About Us</Link>
+                    <Link className={currentRoute.includes("AboutUs") ? "Nav_active" : "Nav_Nonactive"} href="/Pages/AboutUs" style={{ color: currentRoute.includes("AboutUs") ? "#000" : "#fff" }}>About Us</Link>
                 </li>
                 {/* <li>
                     <Link className={currentRoute.includes("sop-download") ? "Nav_active" : "Nav_Nonactive"} href="/SOP-Download" style={{ color: currentRoute.includes("sop-download") ? "#000" : "#fff" }}>SOP-Download</Link>
@@ -73,7 +74,7 @@ function NavigationHome() {
                     <Link className={currentRoute.includes("contact") ? "Nav_active" : "Nav_Nonactive"} href="/contact" style={{ color: currentRoute.includes("contact") ? "#000" : "#fff" }}>Contact</Link>
                 </li> */}
                 <li>
-                    <Link className={currentRoute == "sop-download" ? "Nav_active" : "Nav_Nonactive"} href="/sop-download" style={{ color: currentRoute == "sop-download" ? "#000" : "#fff" }}>SOP</Link>
+                    <Link className={currentRoute.includes("SOFDownload") ? "Nav_active" : "Nav_Nonactive"} href="/Pages/SOPFILE/SOFDownload" style={{ color: currentRoute.includes("SOFDownload") ? "#000" : "#fff" }}>SOP</Link>
                 </li>
 
                 {/* <li>

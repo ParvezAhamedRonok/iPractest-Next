@@ -4,6 +4,7 @@ import "./index.css";
 import PaypalCheckoutPage from "../Paypal/checkoutPage"
 import { Toaster } from 'react-hot-toast';
 import AamarPayBDPaymentForm from "../AmerPay/index";
+import Image from 'next/image';
 import Axios from "axios";
 import Img1 from "../../../../assets/images/otherImgs/masterCard.png"
 import Img3 from "../../../../assets/images/otherImgs/bkash2.webp"
@@ -75,6 +76,7 @@ function Index() {
         PaypalAmountStatus = "Expert"
     }
     console.log(PaypalAmountStatus)
+    console.log(userCountry)
     return (
         <>
             {
@@ -190,7 +192,7 @@ function Index() {
                                                         <div className="p-3">
                                                             {
                                                                 userCountry == "Bangladesh" ? (
-                                                                    <div className="w-full bg-purple-600 rounded-[20px] translate-y-[10px] text-white p-2 text-[14px] text-center"
+                                                                    <div className="w-full bg-purple-600 cursor-pointer rounded-[20px] cursor-pointer translate-y-[10px] text-white p-2 text-[14px] text-center"
                                                                         onClick={() => {
                                                                             setAmerPayPayment(true);
                                                                             funForWhenUserClickToPay("_SecondPage");
@@ -216,9 +218,9 @@ function Index() {
                                                                 userCountry == "Bangladesh" && (
                                                                     <div className='flex gap-2 justify-center align-bottom p-2 mt-auto'>
                                                                         <div className='p-2 w-auto rounded-[15px] bg-gray-300 translate-x-[-2px] flex justify-center align-middle gap-3 translate-y-[15px]'>
-                                                                            <img src={Img1} className='m-auto h-[34px] rounded-[3px]' />
-                                                                            <img src={Img3} className='m-auto h-[34px] rounded-[10px]' />
-                                                                            <img src={Img4} className='m-auto h-[40px] rounded-[10px]' />
+                                                                            <Image src={Img1} className='m-auto h-[34px] rounded-[3px]' />
+                                                                            <Image src={Img3} className='m-auto w-[50px] h-[34px] rounded-[10px]' />
+                                                                            <Image src={Img4} className='m-auto w-[50px] h-[40px] rounded-[10px]' />
                                                                         </div>
 
                                                                     </div>
@@ -282,7 +284,7 @@ function Index() {
                                                         <div className="p-3">
                                                             {
                                                                 userCountry == "Bangladesh" ? (
-                                                                    <div className="w-full bg-purple-600 rounded-[20px] translate-y-[10px] text-white p-2 text-[14px] text-center"
+                                                                    <div className="w-full bg-purple-600 cursor-pointer rounded-[20px] translate-y-[10px] text-white p-2 text-[14px] text-center"
                                                                         onClick={() => {
                                                                             setAmerPayPayment(true);
                                                                             funForWhenUserClickToPay("_SecondPage");
@@ -309,9 +311,9 @@ function Index() {
                                                                 userCountry == "Bangladesh" && (
                                                                     <div className='flex gap-2 justify-center align-bottom p-2 mt-auto'>
                                                                         <div className='p-2 w-auto rounded-[15px] bg-gray-300 translate-x-[-2px] flex justify-center align-middle gap-3 translate-y-[15px]'>
-                                                                            <img src={Img1} className='m-auto h-[34px] rounded-[3px]' />
-                                                                            <img src={Img3} className='m-auto h-[34px] rounded-[10px]' />
-                                                                            <img src={Img4} className='m-auto h-[40px] rounded-[10px]' />
+                                                                            <Image src={Img1} className='m-auto h-[34px] rounded-[3px]' />
+                                                                            <Image src={Img3} className='m-auto w-[50px] h-[34px] rounded-[10px]' />
+                                                                            <Image src={Img4} className='m-auto w-[50px] h-[40px] rounded-[10px]' />
                                                                         </div>
 
                                                                     </div>
@@ -382,7 +384,7 @@ function Index() {
                                                                 <div className="p-3">
                                                                     {
                                                                         userCountry == "Bangladesh" ? (
-                                                                            <div className="w-full bg-purple-600 rounded-[20px] translate-y-[10px] text-white p-2 text-[14px] text-center"
+                                                                            <div className="w-full bg-purple-600 cursor-pointer rounded-[20px] translate-y-[10px] text-white p-2 text-[14px] text-center"
                                                                                 onClick={() => {
                                                                                     setAmerPayPayment(true);
                                                                                     funForWhenUserClickToPay("_SecondPage");
@@ -406,9 +408,9 @@ function Index() {
                                                                         userCountry == "Bangladesh" && (
                                                                             <div className='flex gap-2 justify-center align-bottom p-2 mt-auto'>
                                                                                 <div className='p-2 w-auto rounded-[15px] bg-gray-300 translate-x-[-2px] flex justify-center align-middle gap-3 translate-y-[15px]'>
-                                                                                    <img src={Img1} className='m-auto h-[34px] rounded-[3px]' />
-                                                                                    <img src={Img3} className='m-auto h-[34px] rounded-[10px]' />
-                                                                                    <img src={Img4} className='m-auto h-[40px] rounded-[10px]' />
+                                                                                    <Image src={Img1} className='m-auto h-[34px] rounded-[3px]' />
+                                                                                    <Image src={Img3} className='m-auto w-[50px] h-[34px] rounded-[10px]' />
+                                                                                    <Image src={Img4} className='m-auto w-[50px] h-[40px] rounded-[10px]' />
                                                                                 </div>
 
                                                                             </div>
@@ -468,7 +470,7 @@ function Index() {
                                                             <div className="p-3">
                                                                 {
                                                                     userCountry == "Bangladesh" ? (
-                                                                        <div className="w-full bg-purple-600 rounded-[20px] translate-y-[10px] text-white p-2 text-[14px] text-center"
+                                                                        <div className="w-full bg-purple-600 cursor-pointer rounded-[20px] translate-y-[10px] text-white p-2 text-[14px] text-center"
                                                                             onClick={() => {
                                                                                 setAmerPayPayment(true);
                                                                                 funForWhenUserClickToPay("_SecondPage");
@@ -493,9 +495,9 @@ function Index() {
                                                                     userCountry == "Bangladesh" && (
                                                                         <div className='flex gap-2 justify-center align-bottom p-2 mt-auto'>
                                                                             <div className='p-2 w-auto rounded-[15px] bg-gray-300 translate-x-[-2px] flex justify-center align-middle gap-3 translate-y-[15px]'>
-                                                                                <img src={Img1} className='m-auto h-[34px] rounded-[3px]' />
-                                                                                <img src={Img3} className='m-auto h-[34px] rounded-[10px]' />
-                                                                                <img src={Img4} className='m-auto h-[40px] rounded-[10px]' />
+                                                                                <Image src={Img1} className='m-auto h-[34px] rounded-[3px]' />
+                                                                                <Image src={Img3} className='m-auto w-[50px] h-[34px] rounded-[10px]' />
+                                                                                <Image src={Img4} className='m-auto w-[50px] h-[40px] rounded-[10px]' />
                                                                             </div>
 
                                                                         </div>

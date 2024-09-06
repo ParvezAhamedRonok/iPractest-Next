@@ -68,8 +68,8 @@ const PdfDawonloader = () => {
                         </div>
                     </div>
                     {
-                        SOPDownloadedFiles.map((items) => {
-                            return <>
+                        SOPDownloadedFiles.map((items , index) => {
+                            return <div key={index}>
                                 <div className="w-full  justify-center align-middle">
                                     <div className="w-[95%] m-auto sm:w-[800px] p-2 text-3xl text-center border-b-2 border-b-gray-400 font-bold underline rounded bg-gray-100" id={items.title}>
                                         {items.title}
@@ -79,7 +79,7 @@ const PdfDawonloader = () => {
 
                                     {
                                         items.links.map((items, index) => {
-                                            return <div className="p-3 sm:p-7 rounded border-2 border-gray-300 ">
+                                            return <div className="p-3 sm:p-7 rounded border-2 border-gray-300 " key={index}>
                                                 <Image src={items.Image} alt={index} className="w-[310px] sm:w-[380px] h-[350px] sm:h-[500px]" />
                                                 <div>
                                                     <div className="w-full flex mt-2 justify-center">
@@ -91,7 +91,7 @@ const PdfDawonloader = () => {
                                                             <button className="bookmarkBtn"
                                                                 onClick={() => { onButtonClick(items.Pdf) }}
                                                             >
-                                                                <span class="IconContainer">
+                                                                <span className="IconContainer">
                                                                     < CiSaveDown1 className="text-xl" />
                                                                 </span>
                                                                 <p className="text">Download</p>
@@ -104,7 +104,7 @@ const PdfDawonloader = () => {
                                         })
                                     }
                                 </div>
-                            </>
+                            </div>
                         })
                     }
 

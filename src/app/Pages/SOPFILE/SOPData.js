@@ -159,6 +159,7 @@ export const SOPDownloadedFiles = [
             {
                 ID: uuidv4(),
                 Image: ManagementsImg2,
+                Pdf:ManagementsPDF2,
                 SOP: 2,
                 SOPtitle: "Managements-SOP"
             },

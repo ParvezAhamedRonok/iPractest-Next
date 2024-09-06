@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import "./index.css"
 import { MdOutlineCancel } from "react-icons/md";
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 import { AAMARPAY_POST_FOR_OPEN_CHECKOUTPAGE } from "../../../../assets/URL's/AllUrl"
 
 import Img1 from "../../../../assets/images/otherImgs/masterCard.png"
@@ -214,9 +215,9 @@ function Index({ setAmerPayPayment, productName }) {
             <div className='w-full flex justify-center align-middle'>
               <div className='p-2 w-full sm:w-[80%] m-auto translate-y-[30px] sm:translate-y-[37px] rounded-[15px] translate-x-[-2px]  flex justify-center align-bottom gap-3'>
                 <div className='flex gap-3 m-auto bg-gray-300 p-2 rounded-[7px]'>
-                  <img src={Img1} className='m-auto h-[37px] rounded-[3px]' />
-                  <img src={Img3} className='m-auto h-[37px] rounded-[10px]' />
-                  <img src={Img4} className='m-auto h-[43px] rounded-[10px]' />
+                  <Image src={Img1} className='m-auto h-[37px] rounded-[3px]' />
+                  <Image src={Img3} className='m-auto w-[50px] h-[39px] rounded-[10px]' />
+                  <Image src={Img4} className='m-auto w-[50px] h-[43px] rounded-[10px]' />
                 </div>
               </div>
             </div>
