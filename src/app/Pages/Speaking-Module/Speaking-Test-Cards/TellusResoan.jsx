@@ -167,9 +167,9 @@ function TellusReason() {
                         {
                             (userPaymentStatusCheck == "") && (
                                 <div className='fixed top-0  left-0 right-0 bottom-0 bg-transparent z-[1000000]'>
-                                    <div class="min-h-screen py-3 sm:px-6 lg:px-8 px-6 ">
-                                        <div class="sm:mx-auto sm:w-full sm:max-w-md pt-[40px] ">
-                                            <div class="backGroundColorSetCss py-2 px-4 shadow sm:rounded-lg sm:px-10 relative">
+                                    <div className="min-h-screen py-3 sm:px-6 lg:px-8 px-6 ">
+                                        <div className="sm:mx-auto sm:w-full sm:max-w-md pt-[40px] ">
+                                            <div className="backGroundColorSetCss py-2 px-4 shadow sm:rounded-lg sm:px-10 relative">
                                                 <div className='absolute top-3 text-center font-bold right-4 w-[35px] h-[36px] rounded-[50%] pt-2 flex justify-center align-middle shadow-lg cursor-pointer hover:border-1 hover:border-gray-300 z-[10000]'
                                                     onClick={() => {
                                                         // setShowReasonPage(false)
@@ -195,7 +195,7 @@ function TellusReason() {
                                                 </div>
 
                                                 <form onSubmit={handleSubmit}>
-                                                    <div class="grid items-center justify-start pt-[105px]">
+                                                    <div className="grid items-center justify-start pt-[105px]">
                                                         <strong className='text-[16px]'>
                                                             {
                                                                 countryName == "Bangladesh" ? <>আমরা খুবই দুঃখিত যে আপনি না কেনার সিদ্ধান্ত নিয়েছেন 😔😔 <br />
@@ -208,12 +208,12 @@ function TellusReason() {
                                                         <p className="simple-reg-terms">
                                                             <div className=' flex text-[8px] sm:text-[13px]'>
                                                                 <span className="checkbox">
-                                                                    <label class="container flex jus gap-2" >
+                                                                    <label className="container flex jus gap-2" >
                                                                         <input title="Please tick" name="" type="checkbox"
                                                                             defaultChecked={reason1} onClick={() => { setReason1(!reason1) }}
 
                                                                             className="required translate-y-[2px]" id="js-accept-terms" />
-                                                                        <div class="checkmark w-[1.6rem] sm:w-[1.3rem]"></div>
+                                                                        <div className="checkmark w-[1.6rem] sm:w-[1.3rem]"></div>
                                                                         <span className='text-[14px] font-bold translate-y-[-2px]'>
                                                                             {
                                                                                 countryName == "Bangladesh" ? <>Speaking module এর টেস্ট গুলার সংখ্যা অনেক কম।</> : <> Speaking Module's tests are very low.</>
@@ -229,11 +229,11 @@ function TellusReason() {
                                                         <p className="simple-reg-terms">
                                                             <div className=' flex text-[8px] sm:text-[13px]'>
                                                                 <span className="checkbox">
-                                                                    <label class="container flex gap-2" >
+                                                                    <label className="container flex gap-2" >
                                                                         <input title="Please tick" name="" type="checkbox"
                                                                             defaultChecked={reason2} onClick={() => { setReason2(!reason2) }}
                                                                             className="required translate-y-[2px]" id="js-accept-terms" />
-                                                                        <div class="checkmark"></div>
+                                                                        <div className="checkmark"></div>
                                                                         <span className='text-[14px] font-bold translate-y-[-2px]'>
                                                                             {
                                                                                 countryName == "Bangladesh" ? <>টাকার পরিমান তুলনামুলক বেশি।</> : <>  The amount of money is relatively high.</>
@@ -247,11 +247,11 @@ function TellusReason() {
                                                         <p className="simple-reg-terms">
                                                             <div className=' flex text-[8px] sm:text-[13px]'>
                                                                 <span className="checkbox">
-                                                                    <label class="container flex gap-2" >
+                                                                    <label className="container flex gap-2" >
                                                                         <input title="Please tick" name="" type="checkbox"
                                                                             defaultChecked={reason3} onClick={() => { setReason3(!reason3) }}
                                                                             className="required translate-y-[2px]" id="js-accept-terms" />
-                                                                        <div class="checkmark"></div>
+                                                                        <div className="checkmark"></div>
                                                                         <span className='text-[14px] font-bold translate-y-[-2px]'>
                                                                             {
                                                                                 countryName == "Bangladesh" ? <>
@@ -269,11 +269,11 @@ function TellusReason() {
                                                         <p className="simple-reg-terms">
                                                             <div className=' flex text-[8px] sm:text-[13px]'>
                                                                 <span className="checkbox">
-                                                                    <label class="container flex gap-2" >
+                                                                    <label className="container flex gap-2" >
                                                                         <input title="Please tick" name="" type="checkbox"
                                                                             defaultChecked={reason4} onClick={() => { setReason4(!reason4) }}
                                                                             className="required translate-y-[2px]" id="js-accept-terms" />
-                                                                        <div class="checkmark"></div>
+                                                                        <div className="checkmark"></div>
                                                                         <span className='text-[14px] font-bold translate-y-[-2px]'>
                                                                             {
                                                                                 countryName == "Bangladesh" ? <>
@@ -290,11 +290,11 @@ function TellusReason() {
                                                         <p className="simple-reg-terms">
                                                             <div className=' flex text-[8px] sm:text-[13px]'>
                                                                 <span className="checkbox">
-                                                                    <label class="container flex gap-2" >
+                                                                    <label className="container flex gap-2" >
                                                                         <input title="Please tick" name="" type="checkbox"
                                                                             defaultChecked={reason5} onClick={() => { setReason5(!reason5) }}
                                                                             className="required translate-y-[2px]" id="js-accept-terms" />
-                                                                        <div class="checkmark"></div>
+                                                                        <div className="checkmark"></div>
                                                                         <span className='text-[14px] font-bold translate-y-[-2px]'>
                                                                             {
                                                                                 countryName == "Bangladesh" ? <>
@@ -320,9 +320,9 @@ function TellusReason() {
                                                         }
                                                     </div>
 
-                                                    <div class="mt-3 pb-[36px]">
-                                                        <span class="block w-full rounded-md shadow-sm">
-                                                            <button type="submit" class="w-full flex gap-1 justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-[10px] text-white bg-[#6f11f5] hover:bg-blue-600 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition duration-150 ease-in-out">
+                                                    <div className="mt-3 pb-[36px]">
+                                                        <span className="block w-full rounded-md shadow-sm">
+                                                            <button type="submit" className="w-full flex gap-1 justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-[10px] text-white bg-[#6f11f5] hover:bg-blue-600 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition duration-150 ease-in-out">
                                                                 <AiOutlineLogin className='text-xl' />  Submit
                                                             </button>
                                                         </span>

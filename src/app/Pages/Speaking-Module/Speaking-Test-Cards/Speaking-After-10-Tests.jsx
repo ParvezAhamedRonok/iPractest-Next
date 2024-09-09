@@ -5281,7 +5281,7 @@ function SpeakingAfter10Tests({ openTestAfter20, setOpenTestsAfter20, mainDataAl
                                     }
                                 </button> 
                                 <button className="bookmarkBtn" onClick={checkAllTestsForOpenNextTests} >
-                                    <span class="IconContainer">
+                                    <span className="IconContainer">
                                         {loadMoreStatus ? (<LoadingCom className="text-xl" />) : < AiOutlineLogin className="text-xl" />}
                                     </span>
                                     <p className="text">Load More 10 Tests </p>
@@ -5339,9 +5339,9 @@ function SpeakingAfter10Tests({ openTestAfter20, setOpenTestsAfter20, mainDataAl
             {/* popup for showing to the user if they did not complete the above 10 tests------ */}
             {
                 ShowUserIfTheyDidNotCompleteAboveTests && <div className='fixed top-0  left-0 right-0 bottom-0 bg-transparent z-[1000000]'>
-                    <div class="min-h-screen py-3 sm:px-6 lg:px-8 px-6 ">
-                        <div class="sm:mx-auto sm:w-full sm:max-w-xl pt-[40px] ">
-                            <div class="mt-[40px] backGroundColorSetCss py-10 px-4 shadow sm:rounded-lg sm:px-10 relative">
+                    <div className="min-h-screen py-3 sm:px-6 lg:px-8 px-6 ">
+                        <div className="sm:mx-auto sm:w-full sm:max-w-xl pt-[40px] ">
+                            <div className="mt-[40px] backGroundColorSetCss py-10 px-4 shadow sm:rounded-lg sm:px-10 relative">
                                 <div className='absolute top-4 text-center font-bold right-6 w-[35px] h-[36px] rounded-[50%] pt-2 flex justify-center align-middle shadow-lg cursor-pointer hover:border-1 hover:border-gray-300'
                                     onClick={() => { setShowUserIfTheyDidNotCompleteAboveTests(false) }}
                                 >

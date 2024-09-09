@@ -323,27 +323,27 @@ function ClickSpeaking({ testNo, setPassComment, setWaveTit }) {
         language: 'en-US'
     });
 
-    // history.listen((location, action) => {
+    history.listen = ((location, action) => {
 
-    //     SpeechRecognition.abortListening();
-    //     SpeechRecognition.stopListening();
-    //     clearInterval(timer);
-    //     clearTimeout(oneMinuteTimeout)
-    //     clearTimeout(TwoMinuteTimeout);
-    //     clearInterval(StopPlay);
-    //     StopPlay = null;
+        SpeechRecognition.abortListening();
+        SpeechRecognition.stopListening();
+        clearInterval(timer);
+        clearTimeout(oneMinuteTimeout)
+        clearTimeout(TwoMinuteTimeout);
+        clearInterval(StopPlay);
+        StopPlay = null;
 
-    //     try {
-    //         stream.getTracks()[0].stop();
-    //         useReactMediaRecorder.stop();
-    //         window.playerG.pause();
-    //         firstplay = true;
-    //     } catch (error) {
-    //         console.log(error)
-    //     }
+        try {
+            stream.getTracks()[0].stop();
+            useReactMediaRecorder.stop();
+            window.playerG.pause();
+            firstplay = true;
+        } catch (error) {
+            console.log(error)
+        }
 
 
-    // })
+    })
 
 
     if (!browserSupportsSpeechRecognition) {
@@ -625,15 +625,15 @@ function ClickSpeaking({ testNo, setPassComment, setWaveTit }) {
             </div>
   <div >
   <h5>Talk about an idea you have had to make your learning more effective.</h5>
-  <h5 class="mt-1 mb-1 text-purple-600">You should say :</h5>
-      <div class="ml-4 p-1 font-bold">
-            <div class="mb-1"><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-red-300  rounded-[50%]'></i>   What is the idea?</div>
+  <h5 className="mt-1 mb-1 text-purple-600">You should say :</h5>
+      <div className="ml-4 p-1 font-bold">
+            <div className="mb-1"><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-red-300  rounded-[50%]'></i>   What is the idea?</div>
            
-            <div class="mb-1"><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-gray-300  rounded-[50%]'></i>   When and where did you think about the idea?</div>
+            <div className="mb-1"><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-gray-300  rounded-[50%]'></i>   When and where did you think about the idea?</div>
            
-            <div class="mb-1"><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-green-300  rounded-[50%]'></i>  How does this idea make your learning more effective?</div>
+            <div className="mb-1"><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-green-300  rounded-[50%]'></i>  How does this idea make your learning more effective?</div>
            
-            <div><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-purple-300  rounded-[50%]'></i>  What encouraged you to think about this idea and how can you improve it further?</div>
+            <div><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-purple-300  rounded-[50%]'></i>  What encouraged you to think about this idea and how can you improve it further?</div>
 
        </div>
   </div>
@@ -671,15 +671,15 @@ function ClickSpeaking({ testNo, setPassComment, setWaveTit }) {
             <h4 className="text-center">IELTS Cue Card</h4> <br />
             </div>
             <h5>Describe a place where there was a lot of noise </h5>
-            <h5 class="mt-1 mb-1 text-purple-600">You should say :</h5>
-                <div class="ml-4 p-1 font-bold">
-                      <div class="mb-1"><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-red-300  rounded-[50%]'></i> When this happened?  </div>
+            <h5 className="mt-1 mb-1 text-purple-600">You should say :</h5>
+                <div className="ml-4 p-1 font-bold">
+                      <div className="mb-1"><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-red-300  rounded-[50%]'></i> When this happened?  </div>
                      
-                      <div class="mb-1"><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-gray-300  rounded-[50%]'></i>    Where it was? </div>
+                      <div className="mb-1"><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-gray-300  rounded-[50%]'></i>    Where it was? </div>
                      
-                      <div class="mb-1"><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-green-300  rounded-[50%]'></i> Why there was a lot of noise</div>
+                      <div className="mb-1"><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-green-300  rounded-[50%]'></i> Why there was a lot of noise</div>
                      
-                      <div><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-purple-300  rounded-[50%]'></i> Explain what you did when you heard the noise</div>
+                      <div><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-purple-300  rounded-[50%]'></i> Explain what you did when you heard the noise</div>
 
                  </div>
             </div>`
@@ -714,15 +714,15 @@ function ClickSpeaking({ testNo, setPassComment, setWaveTit }) {
             <h4 className="text-center">IELTS Cue Card</h4> <br />
             </div>
             <h5 > Describe a person who inspired you to do something interesting?</h5>
-            <h5 class="mt-1 mb-1 text-purple-600">You should say :</h5>
-                <div class="ml-4 p-1 font-bold">
-                      <div class="mb-1"><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-red-300  rounded-[50%]'></i>    Who is this person? </div>
+            <h5 className="mt-1 mb-1 text-purple-600">You should say :</h5>
+                <div className="ml-4 p-1 font-bold">
+                      <div className="mb-1"><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-red-300  rounded-[50%]'></i>    Who is this person? </div>
                      
-                      <div class="mb-1"><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-gray-300  rounded-[50%]'></i>    - What they inspired you to do?</div>
+                      <div className="mb-1"><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-gray-300  rounded-[50%]'></i>    - What they inspired you to do?</div>
                      
-                      <div class="mb-1"><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-green-300  rounded-[50%]'></i> How do they inspire you?</div>
+                      <div className="mb-1"><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-green-300  rounded-[50%]'></i> How do they inspire you?</div>
                      
-                      <div><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-purple-300  rounded-[50%]'></i>How do you feel?</div>
+                      <div><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-purple-300  rounded-[50%]'></i>How do you feel?</div>
 
                  </div>
             </div>`
@@ -755,15 +755,15 @@ function ClickSpeaking({ testNo, setPassComment, setWaveTit }) {
             <h4 className="text-center">IELTS Cue Card</h4> <br />
             </div>
             <h5>Describe an achievement or success you are proud of?</h5>
-            <h5 class="mt-1 mb-1 text-purple-600">You should say :</h5>
-                <div class="ml-4 p-1 font-bold">
-                      <div class="mb-1"><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-red-300  rounded-[50%]'></i>What did you do?</div>
+            <h5 className="mt-1 mb-1 text-purple-600">You should say :</h5>
+                <div className="ml-4 p-1 font-bold">
+                      <div className="mb-1"><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-red-300  rounded-[50%]'></i>What did you do?</div>
 
-                      <div class="mb-1"><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-gray-300  rounded-[50%]'></i>    –  When did you do it? </div>
+                      <div className="mb-1"><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-gray-300  rounded-[50%]'></i>    –  When did you do it? </div>
 
-                      <div class="mb-1"><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-green-300  rounded-[50%]'></i>     How did you feel about it?</div>
+                      <div className="mb-1"><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-green-300  rounded-[50%]'></i>     How did you feel about it?</div>
 
-                      <div><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-purple-300  rounded-[50%]'></i>  Why did that achievement make you proud?</div>
+                      <div><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-purple-300  rounded-[50%]'></i>  Why did that achievement make you proud?</div>
 
                  </div>
             </div>`
@@ -799,15 +799,15 @@ function ClickSpeaking({ testNo, setPassComment, setWaveTit }) {
             <h4 className="text-center">IELTS Cue Card</h4> <br />
             </div>
             <h5>  Describe a family member whom you would like to  work with in the future.  </h5>
-            <h5 class="mt-1 mb-1 text-purple-600">You should say :</h5>
-                <div class="ml-4 p-1 font-bold">
-                      <div class="mb-1"><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-red-300  rounded-[50%]'></i> Who the person is </div>
+            <h5 className="mt-1 mb-1 text-purple-600">You should say :</h5>
+                <div className="ml-4 p-1 font-bold">
+                      <div className="mb-1"><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-red-300  rounded-[50%]'></i> Who the person is </div>
                      
-                      <div class="mb-1"><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-gray-300  rounded-[50%]'></i> Have you ever worked with the person before  </div>
+                      <div className="mb-1"><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-gray-300  rounded-[50%]'></i> Have you ever worked with the person before  </div>
                      
-                      <div class="mb-1"><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-green-300  rounded-[50%]'></i>  What kinds of work you would like to do with the person</div>
+                      <div className="mb-1"><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-green-300  rounded-[50%]'></i>  What kinds of work you would like to do with the person</div>
                      
-                      <div><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-purple-300  rounded-[50%]'></i> And explain how you will feel if you can finally work together.</div>
+                      <div><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-purple-300  rounded-[50%]'></i> And explain how you will feel if you can finally work together.</div>
 
                  </div>
             </div>`
@@ -841,13 +841,13 @@ function ClickSpeaking({ testNo, setPassComment, setWaveTit }) {
             <h4 className="text-center">IELTS Cue Card</h4> <br />
             </div>
             <h5>   Talk about an important river or lake in your country or hometown </h5>
-            <h5 class="mt-1 mb-1 text-purple-600">You should say :</h5>
-                <div class="ml-4 p-1 font-bold">
-                      <div class="mb-1"><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-red-300  rounded-[50%]'></i> Which water body is that </div>
+            <h5 className="mt-1 mb-1 text-purple-600">You should say :</h5>
+                <div className="ml-4 p-1 font-bold">
+                      <div className="mb-1"><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-red-300  rounded-[50%]'></i> Which water body is that </div>
                      
-                      <div class="mb-1"><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-gray-300  rounded-[50%]'></i> How do you know about it? </div>
+                      <div className="mb-1"><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-gray-300  rounded-[50%]'></i> How do you know about it? </div>
                      
-                      <div class="mb-1"><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-green-300  rounded-[50%]'></i>Why does it impress you so much</div>
+                      <div className="mb-1"><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-green-300  rounded-[50%]'></i>Why does it impress you so much</div>
                  </div>
             </div>`
 
@@ -882,15 +882,15 @@ function ClickSpeaking({ testNo, setPassComment, setWaveTit }) {
             <h4 className="text-center">IELTS Cue Card</h4> <br />
             </div>
                   <h5>Talk about an enjoyable experience you had at a restaurant</h5>
-                  <h5 class="mt-1 mb-1 text-purple-600">You should say :</h5>
-                      <div class="ml-4 p-1 font-bold">
-                            <div class="mb-1"><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-red-300  rounded-[50%]'></i>   When did this happen?</div>
+                  <h5 className="mt-1 mb-1 text-purple-600">You should say :</h5>
+                      <div className="ml-4 p-1 font-bold">
+                            <div className="mb-1"><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-red-300  rounded-[50%]'></i>   When did this happen?</div>
                            
-                            <div class="mb-1"><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-gray-300  rounded-[50%]'></i>Who were you there with?</div>
+                            <div className="mb-1"><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-gray-300  rounded-[50%]'></i>Who were you there with?</div>
                            
-                            <div class="mb-1"><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-green-300  rounded-[50%]'></i> What was positive about this experience?</div>
+                            <div className="mb-1"><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-green-300  rounded-[50%]'></i> What was positive about this experience?</div>
                            
-                            <div><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-purple-300  rounded-[50%]'></i>What could you recommend for the restaurant to be even better</div>
+                            <div><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-purple-300  rounded-[50%]'></i>What could you recommend for the restaurant to be even better</div>
       
                        </div>
                   </div>`
@@ -925,15 +925,15 @@ function ClickSpeaking({ testNo, setPassComment, setWaveTit }) {
             <h4 className="text-center">IELTS Cue Card</h4> <br />
             </div>
                             <h5>Discuss a difficult decision that you have made .</h5>
-                            <h5 class="mt-1 mb-1 text-purple-600">You should say :</h5>
-                                <div class="ml-4 p-1 font-bold">
-                                      <div class="mb-1"><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-red-300  rounded-[50%]'></i> What was the big decision?</div>
+                            <h5 className="mt-1 mb-1 text-purple-600">You should say :</h5>
+                                <div className="ml-4 p-1 font-bold">
+                                      <div className="mb-1"><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-red-300  rounded-[50%]'></i> What was the big decision?</div>
                                      
-                                      <div class="mb-1"><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-gray-300  rounded-[50%]'></i>When did you make this decision?</div>
+                                      <div className="mb-1"><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-gray-300  rounded-[50%]'></i>When did you make this decision?</div>
                                      
-                                      <div class="mb-1"><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-green-300  rounded-[50%]'></i>Why was it difficult?</div>
+                                      <div className="mb-1"><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-green-300  rounded-[50%]'></i>Why was it difficult?</div>
                                      
-                                      <div><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-purple-300  rounded-[50%]'></i>What was the outcome, and would you do anything differently?</div>
+                                      <div><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-purple-300  rounded-[50%]'></i>What was the outcome, and would you do anything differently?</div>
                 
                                  </div>
                             </div>`
@@ -974,12 +974,12 @@ function ClickSpeaking({ testNo, setPassComment, setWaveTit }) {
             <h4 className="text-center">IELTS Cue Card</h4> <br />
             </div>
             <h5 className="">Talk about a club that you have been a member of in the past.</h5>
-            <h5 class="mt-1 mb-1 text-purple-600">You should say :</h5>
-                <div class="ml-4 p-1 font-bold">
-                      <div class="mb-1"><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-red-300  rounded-[50%]'></i>  What was this club ?</div>
-                      <div class="mb-1"><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-gray-300  rounded-[50%]'></i>  How long were you in this club?</div>
-                      <div class="mb-1"><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-green-300  rounded-[50%]'></i>   What did you do at  this club?</div>
-                      <div><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-purple-300  rounded-[50%]'></i>  Did you like being a member of this club and why did you stop?</div>
+            <h5 className="mt-1 mb-1 text-purple-600">You should say :</h5>
+                <div className="ml-4 p-1 font-bold">
+                      <div className="mb-1"><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-red-300  rounded-[50%]'></i>  What was this club ?</div>
+                      <div className="mb-1"><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-gray-300  rounded-[50%]'></i>  How long were you in this club?</div>
+                      <div className="mb-1"><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-green-300  rounded-[50%]'></i>   What did you do at  this club?</div>
+                      <div><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-purple-300  rounded-[50%]'></i>  Did you like being a member of this club and why did you stop?</div>
 
                  </div>
             </div>`
@@ -1011,12 +1011,12 @@ function ClickSpeaking({ testNo, setPassComment, setWaveTit }) {
             <h4 className="text-center">IELTS Cue Card</h4> <br />
             </div>
             <h5 className=""> Describe a piece of good news you heard from others </h5>
-            <h5 class="mt-1 mb-1 text-purple-600">You should say :</h5>
-                <div class="ml-4 p-1 font-bold">
-                      <div class="mb-1"><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-red-300  rounded-[50%]'></i> What was it?</div>
-                      <div class="mb-1"><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-gray-300  rounded-[50%]'></i> When you received this news?</div>
-                      <div class="mb-1"><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-green-300  rounded-[50%]'></i> How you received this news? </div>
-                      <div><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-purple-300  rounded-[50%]'></i> Why do you feel it was good news?</div>
+            <h5 className="mt-1 mb-1 text-purple-600">You should say :</h5>
+                <div className="ml-4 p-1 font-bold">
+                      <div className="mb-1"><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-red-300  rounded-[50%]'></i> What was it?</div>
+                      <div className="mb-1"><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-gray-300  rounded-[50%]'></i> When you received this news?</div>
+                      <div className="mb-1"><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-green-300  rounded-[50%]'></i> How you received this news? </div>
+                      <div><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-purple-300  rounded-[50%]'></i> Why do you feel it was good news?</div>
 
                  </div>
             </div>`
@@ -1054,15 +1054,15 @@ function ClickSpeaking({ testNo, setPassComment, setWaveTit }) {
             <h4 className="text-center">IELTS Cue Card</h4> <br />
             </div>
             <h5>Talk about  your dream vacation. </h5>
-            <h5 class="mt-1 mb-1 text-purple-600">You should say :</h5>
-                <div class="ml-4 p-1 font-bold">
-                      <div class="mb-1"><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-red-300  rounded-[50%]'></i>   Where would you go? </div>
+            <h5 className="mt-1 mb-1 text-purple-600">You should say :</h5>
+                <div className="ml-4 p-1 font-bold">
+                      <div className="mb-1"><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-red-300  rounded-[50%]'></i>   Where would you go? </div>
                      
-                      <div class="mb-1"><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-gray-300  rounded-[50%]'></i>    -When would you go there?</div>
+                      <div className="mb-1"><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-gray-300  rounded-[50%]'></i>    -When would you go there?</div>
                      
-                      <div class="mb-1"><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-green-300  rounded-[50%]'></i>   Who would you go with and why?</div>
+                      <div className="mb-1"><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-green-300  rounded-[50%]'></i>   Who would you go with and why?</div>
                      
-                      <div><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-purple-300  rounded-[50%]'></i>  What kinds of activities would you do?  & why is this your dream vocation?</div>
+                      <div><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-purple-300  rounded-[50%]'></i>  What kinds of activities would you do?  & why is this your dream vocation?</div>
 
                  </div>
             </div>`
@@ -1094,15 +1094,15 @@ function ClickSpeaking({ testNo, setPassComment, setWaveTit }) {
             <h4 className="text-center">IELTS Cue Card</h4> <br />
             </div>
             <h5>Talk about an important choice that you had in your life. </h5>
-            <h5 class="mt-1 mb-1 text-purple-600">You should say :</h5>
-                <div class="ml-4 p-1 font-bold">
-                      <div class="mb-1"><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-red-300  rounded-[50%]'></i>   When did you make this choice? </div>
+            <h5 className="mt-1 mb-1 text-purple-600">You should say :</h5>
+                <div className="ml-4 p-1 font-bold">
+                      <div className="mb-1"><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-red-300  rounded-[50%]'></i>   When did you make this choice? </div>
                      
-                      <div class="mb-1"><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-gray-300  rounded-[50%]'></i>    – What did you have to choose between? </div>
+                      <div className="mb-1"><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-gray-300  rounded-[50%]'></i>    – What did you have to choose between? </div>
                      
-                      <div class="mb-1"><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-green-300  rounded-[50%]'></i>    Did you make a good choice or not ?</div>
+                      <div className="mb-1"><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-green-300  rounded-[50%]'></i>    Did you make a good choice or not ?</div>
                      
-                      <div><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-purple-300  rounded-[50%]'></i> How did you feel when you were making the choice?</div>
+                      <div><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-purple-300  rounded-[50%]'></i> How did you feel when you were making the choice?</div>
 
                  </div>
             </div>`
@@ -1138,13 +1138,13 @@ function ClickSpeaking({ testNo, setPassComment, setWaveTit }) {
             <h4 className="text-center">IELTS Cue Card</h4> <br />
             </div>
             <h5>Describe a time when you were late?</h5>
-            <h5 class="mt-1 mb-1 text-purple-600">You should say :</h5>
-                <div class="ml-4 p-1 font-bold">
-                      <div class="mb-1"><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-red-300  rounded-[50%]'></i> When was it?</div>
+            <h5 className="mt-1 mb-1 text-purple-600">You should say :</h5>
+                <div className="ml-4 p-1 font-bold">
+                      <div className="mb-1"><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-red-300  rounded-[50%]'></i> When was it?</div>
                      
-                      <div class="mb-1"><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-gray-300  rounded-[50%]'></i>Why were you late?</div>
+                      <div className="mb-1"><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-gray-300  rounded-[50%]'></i>Why were you late?</div>
                      
-                      <div class="mb-1"><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-green-300  rounded-[50%]'></i>How feel you feel about being late?</div>
+                      <div className="mb-1"><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-green-300  rounded-[50%]'></i>How feel you feel about being late?</div>
                  </div>
             </div>`
             // store all of the Question to the variable & send to the local indexdDB local databases..
@@ -1184,15 +1184,15 @@ function ClickSpeaking({ testNo, setPassComment, setWaveTit }) {
             </div>
             <h5> Describe a time when you were stuck in a traffic  jam.
              </h5>
-            <h5 class="mt-1 mb-1 text-purple-600">You should say :</h5>
-                <div class="ml-4 p-1 font-bold">
-                      <div class="mb-1"><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-red-300  rounded-[50%]'></i> When and where it happened </div>
+            <h5 className="mt-1 mb-1 text-purple-600">You should say :</h5>
+                <div className="ml-4 p-1 font-bold">
+                      <div className="mb-1"><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-red-300  rounded-[50%]'></i> When and where it happened </div>
                      
-                      <div class="mb-1"><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-gray-300  rounded-[50%]'></i> How long you were in the traffic jam</div>
+                      <div className="mb-1"><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-gray-300  rounded-[50%]'></i> How long you were in the traffic jam</div>
                      
-                      <div class="mb-1"><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-green-300  rounded-[50%]'></i> What you did while waiting </div>
+                      <div className="mb-1"><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-green-300  rounded-[50%]'></i> What you did while waiting </div>
                      
-                      <div><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-purple-300  rounded-[50%]'></i> And explain how you felt when you were in that traffic jam</div>
+                      <div><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-purple-300  rounded-[50%]'></i> And explain how you felt when you were in that traffic jam</div>
 
                  </div>
             </div>`
@@ -1233,15 +1233,15 @@ function ClickSpeaking({ testNo, setPassComment, setWaveTit }) {
             </div>
             <h5> Describe an invention that has changed how people 
             live. </h5>
-            <h5 class="mt-1 mb-1 text-purple-600">You should say :</h5>
-                <div class="ml-4 p-1 font-bold">
-                      <div class="mb-1"><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-red-300  rounded-[50%]'></i>What it is </div>
+            <h5 className="mt-1 mb-1 text-purple-600">You should say :</h5>
+                <div className="ml-4 p-1 font-bold">
+                      <div className="mb-1"><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-red-300  rounded-[50%]'></i>What it is </div>
                      
-                      <div class="mb-1"><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-gray-300  rounded-[50%]'></i>How has it changed people’s lives   </div>
+                      <div className="mb-1"><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-gray-300  rounded-[50%]'></i>How has it changed people’s lives   </div>
                      
-                      <div class="mb-1"><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-green-300  rounded-[50%]'></i> What benefits did it bring </div>
+                      <div className="mb-1"><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-green-300  rounded-[50%]'></i> What benefits did it bring </div>
                      
-                      <div><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-purple-300  rounded-[50%]'></i>And explain if it is more important for older or younger people.</div>
+                      <div><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-purple-300  rounded-[50%]'></i>And explain if it is more important for older or younger people.</div>
 
                  </div>
             </div>`
@@ -1278,15 +1278,15 @@ function ClickSpeaking({ testNo, setPassComment, setWaveTit }) {
             <h4 className="text-center">IELTS Cue Card</h4> <br />
             </div>
                   <h5 >Describe an advertisement you remember.</h5>
-                  <h5 class="mt-1 mb-1 text-purple-600">You should say :</h5>
-                      <div class="ml-4 p-1 font-bold">
-                            <div class="mb-1"><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-red-300  rounded-[50%]'></i>  What was the advertisement for?</div>
+                  <h5 className="mt-1 mb-1 text-purple-600">You should say :</h5>
+                      <div className="ml-4 p-1 font-bold">
+                            <div className="mb-1"><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-red-300  rounded-[50%]'></i>  What was the advertisement for?</div>
                            
-                            <div class="mb-1"><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-gray-300  rounded-[50%]'></i>    What type of advertisement was it? </div>
+                            <div className="mb-1"><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-gray-300  rounded-[50%]'></i>    What type of advertisement was it? </div>
                            
-                            <div class="mb-1"><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-green-300  rounded-[50%]'></i>     When did you see this advertisement? </div>
+                            <div className="mb-1"><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-green-300  rounded-[50%]'></i>     When did you see this advertisement? </div>
                            
-                            <div><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-purple-300  rounded-[50%]'></i>And explain what you remember the most about this advertisement? </div>
+                            <div><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-purple-300  rounded-[50%]'></i>And explain what you remember the most about this advertisement? </div>
       
                        </div>
                   </div>`
@@ -1323,15 +1323,15 @@ function ClickSpeaking({ testNo, setPassComment, setWaveTit }) {
             <h4 className="text-center">IELTS Cue Card</h4> <br />
             </div>
                   <h5 >Talk about an event that you could organize to help people </h5>
-                  <h5 class="mt-1 mb-1 text-purple-600">You should say :</h5>
-                      <div class="ml-4 p-1 font-bold">
-                            <div class="mb-1"><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-red-300  rounded-[50%]'></i>   What is the event?</div>
+                  <h5 className="mt-1 mb-1 text-purple-600">You should say :</h5>
+                      <div className="ml-4 p-1 font-bold">
+                            <div className="mb-1"><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-red-300  rounded-[50%]'></i>   What is the event?</div>
                            
-                            <div class="mb-1"><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-gray-300  rounded-[50%]'></i> Where & when can you do this activity? </div>
+                            <div className="mb-1"><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-gray-300  rounded-[50%]'></i> Where & when can you do this activity? </div>
                            
-                            <div class="mb-1"><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-green-300  rounded-[50%]'></i>  Who would be invited to this event?</div>
+                            <div className="mb-1"><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-green-300  rounded-[50%]'></i>  Who would be invited to this event?</div>
                            
-                            <div><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-purple-300  rounded-[50%]'></i>How could you help people through organizing this event?</div>
+                            <div><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-purple-300  rounded-[50%]'></i>How could you help people through organizing this event?</div>
       
                        </div>
                   </div>`
@@ -1368,15 +1368,15 @@ function ClickSpeaking({ testNo, setPassComment, setWaveTit }) {
                 <h4 className="text-center">IELTS Cue Card</h4> <br />
                 </div>
                 <h5> Talk about a traditional product of your country that  you bought  </h5>
-                <h5 class="mt-1 mb-1 text-purple-600">You should say :</h5>
-                    <div class="ml-4 p-1 font-bold">
-                          <div class="mb-1"><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-red-300  rounded-[50%]'></i> What is it    </div>
+                <h5 className="mt-1 mb-1 text-purple-600">You should say :</h5>
+                    <div className="ml-4 p-1 font-bold">
+                          <div className="mb-1"><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-red-300  rounded-[50%]'></i> What is it    </div>
                          
-                          <div class="mb-1"><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-gray-300  rounded-[50%]'></i>How is it made </div>
+                          <div className="mb-1"><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-gray-300  rounded-[50%]'></i>How is it made </div>
                          
-                          <div class="mb-1"><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-green-300  rounded-[50%]'></i> When did you try it for the first time</div>
+                          <div className="mb-1"><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-green-300  rounded-[50%]'></i> When did you try it for the first time</div>
 
-                          <div class="mb-1"><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-blue-300  rounded-[50%]'></i>Why do you like it</div>
+                          <div className="mb-1"><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-blue-300  rounded-[50%]'></i>Why do you like it</div>
                      </div>
                 </div>`
 
@@ -1413,15 +1413,15 @@ function ClickSpeaking({ testNo, setPassComment, setWaveTit }) {
                     <h4 className="text-center">IELTS Cue Card</h4> <br />
                     </div>
                     <h5>  Describe a positive change in your life  </h5>
-                    <h5 class="mt-1 mb-1 text-purple-600">You should say :</h5>
-                        <div class="ml-4 p-1 font-bold">
-                              <div class="mb-1"><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-red-300  rounded-[50%]'></i> What the change was </div>
+                    <h5 className="mt-1 mb-1 text-purple-600">You should say :</h5>
+                        <div className="ml-4 p-1 font-bold">
+                              <div className="mb-1"><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-red-300  rounded-[50%]'></i> What the change was </div>
                              
-                              <div class="mb-1"><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-gray-300  rounded-[50%]'></i>When it happened                              </div>
+                              <div className="mb-1"><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-gray-300  rounded-[50%]'></i>When it happened                              </div>
                              
-                              <div class="mb-1"><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-green-300  rounded-[50%]'></i> How it happened</div>
+                              <div className="mb-1"><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-green-300  rounded-[50%]'></i> How it happened</div>
     
-                              <div class="mb-1"><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-blue-300  rounded-[50%]'></i>And explain why it was a positive change</div>
+                              <div className="mb-1"><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-blue-300  rounded-[50%]'></i>And explain why it was a positive change</div>
                          </div>
                     </div>`
 
@@ -1459,17 +1459,17 @@ function ClickSpeaking({ testNo, setPassComment, setWaveTit }) {
                     <h4 className="text-center">IELTS Cue Card</h4> <br />
                     </div>
                     <h5>   Talk about an important/Special event you celebrated </h5>
-                    <h5 class="mt-1 mb-1 text-purple-600">You should say :</h5>
-                        <div class="ml-4 p-1 font-bold">
-                              <div class="mb-1"><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-red-300  rounded-[50%]'></i> What was it</div>
+                    <h5 className="mt-1 mb-1 text-purple-600">You should say :</h5>
+                        <div className="ml-4 p-1 font-bold">
+                              <div className="mb-1"><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-red-300  rounded-[50%]'></i> What was it</div>
                              
-                              <div class="mb-1"><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-gray-300  rounded-[50%]'></i> When did you celebrate   </div>
+                              <div className="mb-1"><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-gray-300  rounded-[50%]'></i> When did you celebrate   </div>
                              
-                              <div class="mb-1"><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-green-300  rounded-[50%]'></i>Where did you celebrate</div>
+                              <div className="mb-1"><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-green-300  rounded-[50%]'></i>Where did you celebrate</div>
     
-                              <div class="mb-1"><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-blue-300  rounded-[50%]'></i>Who was with you </div>
+                              <div className="mb-1"><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-blue-300  rounded-[50%]'></i>Who was with you </div>
 
-                              <div class="mb-1"><i class='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-red-300  rounded-[50%]'></i> Why was It special </div>
+                              <div className="mb-1"><i className='fal fa-check text-white text-[14px]  flex mr-2 p-[5px] bg-red-300  rounded-[50%]'></i> Why was It special </div>
                          </div>
                     </div>`
 

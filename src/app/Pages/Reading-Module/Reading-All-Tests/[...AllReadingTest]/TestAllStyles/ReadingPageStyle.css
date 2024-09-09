@@ -1,0 +1,96 @@
+/*for mainContainer height set-up*/
+.mainContainer {
+    height: 100%;
+}
+
+
+
+
+
+/* for panels_Scrollbar  */
+.panel_1 {
+    background-color: rgb(215, 230, 220);
+    padding: 35px;
+
+}
+
+.panel_1::-webkit-scrollbar {
+    width: 12px;
+}
+
+.panel_1::-webkit-scrollbar-track {
+    border-radius: 20px;
+
+}
+
+.panel_1::-webkit-scrollbar-thumb {
+    border-radius: 50px;
+    background-color: rgb(26, 119, 111);
+
+}
+
+
+
+/* for-spliting height */
+.split-sash-content {
+    width: 13px;
+    height: 100%;
+    z-index: -1;
+}
+
+
+.split-sash-content.split-sash-content-vscode.split-sash-content-active {
+    background-color: gray;
+}
+
+.split-sash-content {
+    background-color: gray;
+}
+
+/* for change page Toggling--------------- */
+.forChangePage {
+    display: flex;
+    column-gap: 20px;
+    width: 50%;
+    top: 50px;
+    right: 15px;
+    position: fixed;
+}
+
+.forChangePage>.btnforPageChnage {
+    width: 100px;
+    padding: 7px;
+    border-radius: 10px;
+    border: 2px solid gray;
+    background-color: blue;
+    font-size: 1rem;
+    color: white;
+    margin-left: auto;
+    opacity: 0.7;
+    z-index: 1;
+}
+
+
+
+
+
+@media screen and (max-width:770px) {
+    .forChangePage>.btnforPageChnage {
+        top: 100px;
+        right: 20px;
+    }
+
+    .split-sash-content {
+        width: 100%;
+        height: 10px;
+        z-index: -1;
+    }
+
+    .split-sash-content.split-sash-content-vscode.split-sash-content-active {
+        background-color: red;
+    }
+
+    .split-sash-content {
+        background-color: gray
+    }
+}

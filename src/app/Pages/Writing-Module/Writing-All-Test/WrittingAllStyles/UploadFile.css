@@ -1,0 +1,54 @@
+
+.u-main-Container{
+    padding-left: 0;
+    margin-left: -40px;
+}
+.u-main-Container h4{
+    font-size: inherit;
+    margin-bottom: 20px;
+}
+
+.upload-form{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     border: 2px dashed green;
+     height: 250px;
+     width: 100%;
+     cursor: pointer;
+     border-radius: 5px;
+
+}
+.uploaded-row{
+    width: 74%;
+    margin: 10px 0;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-radius: 5px;
+    background-color: transparent;
+
+}
+
+.upload-content{
+    display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:770px) {
+    .u-main-Container{
+        width: 80vw;
+        
+    }
+}

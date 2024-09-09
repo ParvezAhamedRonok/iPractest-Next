@@ -748,7 +748,7 @@ export default function Index() {
                                                                             className="inline-block h-12 w-12 animate-spin rounded-full border-4 border-solid border-current border-e-transparent align-[-0.125em] text-surface motion-reduce:animate-[spin_1.5s_linear_infinite] dark:text-white m-auto"
                                                                             role="status">
                                                                             <span
-                                                                                class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+                                                                                className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
                                                                             >Loading...</span
                                                                             >
                                                                         </div>
@@ -867,7 +867,7 @@ export default function Index() {
                                                                             className="inline-block h-12 w-12 animate-spin rounded-full border-4 border-solid border-current border-e-transparent align-[-0.125em] text-surface motion-reduce:animate-[spin_1.5s_linear_infinite] dark:text-white m-auto"
                                                                             role="status">
                                                                             <span
-                                                                                class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+                                                                                className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
                                                                             >Loading...</span
                                                                             >
                                                                         </div>
@@ -972,7 +972,7 @@ export default function Index() {
                                                             className="inline-block h-12 w-12 animate-spin rounded-full border-4 border-solid border-current border-e-transparent align-[-0.125em] text-surface motion-reduce:animate-[spin_1.5s_linear_infinite] dark:text-white m-auto"
                                                             role="status">
                                                             <span
-                                                                class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+                                                                className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
                                                             >Loading...</span
                                                             >
                                                         </div>
@@ -1064,7 +1064,7 @@ export default function Index() {
                                                         className="inline-block h-12 w-12 animate-spin rounded-full border-4 border-solid border-current border-e-transparent align-[-0.125em] text-surface motion-reduce:animate-[spin_1.5s_linear_infinite] dark:text-white m-auto"
                                                         role="status">
                                                         <span
-                                                            class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+                                                            className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
                                                         >Loading...</span
                                                         >
                                                     </div>
@@ -1114,9 +1114,9 @@ export default function Index() {
 
             {/* popup for showing to the user if they did not complete the above 10 tests------ */}
             {showLoginAlerttoTheUser && <div className='fixed top-0  left-0 right-0 bottom-0 bg-transparent z-[1000000]'>
-                <div class="min-h-screen py-3 sm:px-6 lg:px-8 px-6 ">
-                    <div class="sm:mx-auto sm:w-full sm:max-w-xl pt-[40px] ">
-                        <div class="mt-[40px] backGroundColorSetCss bg-sky-200 py-10 px-4 shadow sm:rounded-lg sm:px-10 relative">
+                <div className="min-h-screen py-3 sm:px-6 lg:px-8 px-6 ">
+                    <div className="sm:mx-auto sm:w-full sm:max-w-xl pt-[40px] ">
+                        <div className="mt-[40px] backGroundColorSetCss bg-sky-200 py-10 px-4 shadow sm:rounded-lg sm:px-10 relative">
                             <div className='absolute top-4 text-center font-bold right-6 w-[35px] h-[36px] rounded-[50%] pt-2 flex justify-center align-middle shadow-lg cursor-pointer hover:border-1 hover:border-gray-300'
                                 onClick={() => { setshowLoginAlerttoTheUser(false) }}
                             >

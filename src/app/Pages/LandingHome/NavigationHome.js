@@ -46,7 +46,7 @@ function NavigationHome() {
                                                     </ul> */}
                 </li>
                 <li
-                    // onClick={(e) => handler(e, 'service')} 
+                    // onClick={(e) => handler(e, 'service')}  
                     // onClick={(e) => alert("Speaking page is under construction. This page will be live on 15th oct")}
                     id="service"
                     className="menu-item-has-children active cursor-pointer"
@@ -55,7 +55,7 @@ function NavigationHome() {
 
                 </li>
                 <li>
-                    <Link className={currentRoute == "readingpage" ? "Nav_active" : "Nav_Nonactive"} href="/ReadingPage/cambridgeAllTests" style={{ color: currentRoute == "readingpage" ? "#000" : "#fff" }}>Reading</Link>
+                    <Link className={currentRoute.includes("Cambridge-Reading-tests") ? "Nav_active" : "Nav_Nonactive"} href="/Pages/Reading-Module/Cambridge-Reading-tests" style={{ color: currentRoute.includes("Cambridge-Reading-tests") ? "#000" : "#fff" }}>Reading</Link>
 
                 </li>
                 <li>

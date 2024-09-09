@@ -425,22 +425,22 @@ function ClickSpeaking({ testNo, setPassComment, setWaveTit }) {
         });
     };
 
-    // history.listen((location, action) => {
-    //     SpeechRecognition.abortListening();
-    //     SpeechRecognition.stopListening();
-    //     clearInterval(timeoutSpeechBreak);
-    //     clearInterval(StopPlay);
-    //     StopPlay = null;
-    //     //  clearInterval(firstStopPlayTimer);
-    //     try {
-    //         stream.getTracks()[0].stop();
-    //         useReactMediaRecorder.stop();
-    //         window.playerG.pause();
-    //         firstplay = true;
-    //     } catch (error) {
-    //         console.log(error)
-    //     }
-    // })
+    history.listen = ((location, action) => {
+        SpeechRecognition.abortListening();
+        SpeechRecognition.stopListening();
+        clearInterval(timeoutSpeechBreak);
+        clearInterval(StopPlay);
+        StopPlay = null;
+        //  clearInterval(firstStopPlayTimer);
+        try {
+            stream.getTracks()[0].stop();
+            useReactMediaRecorder.stop();
+            window.playerG.pause();
+            firstplay = true;
+        } catch (error) {
+            console.log(error)
+        }
+    })
 
     async function sendSpeakingtextToBackend(mainText) {
         useReactMediaRecorder.stop();
