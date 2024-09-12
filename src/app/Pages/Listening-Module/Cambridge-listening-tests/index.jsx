@@ -37,7 +37,6 @@ function ListeningAllTest() {
             <NavigationBar drawer={drawer} action={drawerAction.toggle} />
             <HeaderLanding action={drawerAction.toggle} />
             <AllListeningTest />
-
             <FooterHomeThree />
             <BackToTop />
 

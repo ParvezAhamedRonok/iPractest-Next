@@ -1,6 +1,8 @@
 import React from 'react';
+import {allServiceAboutPost} from '/src/data/app/ServiceAbout'
 
 function ServicesAbout() {
+    const posts = allServiceAboutPost();
     return (
         <>
             <section className="appie-services-2-area pt-90 pb-55" id="service">
@@ -14,7 +16,10 @@ function ServicesAbout() {
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col-lg-4 col-md-6">
+                        {
+                            posts.map((post)=>{
+                                return(
+                                    <div className="col-lg-4 col-md-6">
                             <div
                                 className="appie-single-service-2 appie-single-service-about mt-30 wow animated fadeInUp"
                                 data-wow-duration="2000ms"
@@ -23,11 +28,16 @@ function ServicesAbout() {
                                 <div className="icon">
                                     <i className="fal fa-tv"></i>
                                 </div>
-                                <h4 className="title">Carefully designed</h4>
-                                <p>He lost his bottle loo don't get shirty with me ruddy.</p>
+                                <h4 className="title">{post.title}</h4>
+                                <p>{post.subTitle}</p>
                             </div>
                         </div>
-                        <div className="col-lg-4 col-md-6">
+                                )
+                            })
+                        }
+
+                        
+                        {/* <div className="col-lg-4 col-md-6">
                             <div
                                 className="appie-single-service-2 appie-single-service-about item-2 mt-30 wow animated fadeInUp"
                                 data-wow-duration="2000ms"
@@ -91,7 +101,7 @@ function ServicesAbout() {
                                 <h4 className="title">Notifications Settings</h4>
                                 <p>He lost his bottle loo don't get shirty with me ruddy.</p>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </section>

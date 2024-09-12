@@ -43,7 +43,10 @@ export default function RootLayout({ children }) {
               src="https://aka.ms/csspeech/jsbrowserpackageraw" async
             />
           </head>
-          <body className={inter.className}>{children}</body>
+          <body className={inter.className}>
+          
+            {children}
+          </body>
         </html>
       </ContextProvider>
     </GoogleOAuthProvider>
