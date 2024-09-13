@@ -1,0 +1,12 @@
+.firstBgcolor{
+    background-image: linear-gradient(to right, #3ab5b0 0%, #3d99be 31%, #56317a 100%);
+}
+.secondBgcolor{
+    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+.thirdBgcolor{
+    background-image: linear-gradient(to top, #7028e4 0%, #e5b2ca 100%);
+}
+.fourBgcolor{
+    background-image: linear-gradient(-20deg, #d558c8 0%, #24d292 100%);
+}

@@ -4,7 +4,8 @@ const nextConfig = {
         domains: [
             'randomuser.me',
             'images.unsplash.com',
-            'images.pexels.com'
+            'images.pexels.com',
+            'flagcdn.com'
         ], // Allow 'randomuser.me' and 'images.unsplash.com' for next/image
     },
     webpack: (config, { isServer }) => {

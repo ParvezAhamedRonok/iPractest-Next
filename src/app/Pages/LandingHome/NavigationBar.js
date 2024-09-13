@@ -9,11 +9,8 @@ import Image from 'next/image';
 import SignUpPage from '../LoginPage/SignUpPage';
 import LoginPage from '../LoginPage/LoginPage';
 import { useStateContext } from "../../../contexts/ContextProvider";
-
-// import Img from '../../assets/images/NavbarImg.png';
-// import UpgradeComponnt from "../../Payments/UpgradePayment/index";
+import UpgradeComponnt from "../../Pages/Payments/UpgradePayment/index";
 import peningImg1 from "../../../assets/images/LandingImgs/peping-6.gif"
-// import peningImg2 from "../../../assets/images/LandingImgs/pepning-3.gif"
 import { GiUpgrade } from 'react-icons/gi'
 
 // end of the importing-----
@@ -118,7 +115,7 @@ function NavigationBar({ drawer, action }) {
 
                                             <div className='flex gap-2'>
                                                 <span className="main-btn ml-1 mb-2 p-2" style={{ cursor: "pointer" }}
-                                                    onClick={() => { history.push("/MainDashBoard/Dashboard") }}>
+                                                    onClick={() => { history.push("/Pages/MainDashboard/Dashboard") }}>
                                                     <p className='flex text-white'>
                                                         <FaBookReader className='text-xl mr-2' />
                                                         Dashboard</p>
@@ -204,7 +201,7 @@ function NavigationBar({ drawer, action }) {
                                             // onClick={(e) => alert("Speaking page is under construction. This page will be live on 15th oct.")}
                                             className="menu-item-has-children active"
                                         >
-                                            <Link href="/speakingpage">Speaking</Link>
+                                            <Link href="/Pages/Speaking-Module">Speaking</Link>
                                         </li>
 
                                         <li
@@ -212,7 +209,7 @@ function NavigationBar({ drawer, action }) {
                                             id="service"
                                             className="menu-item-has-children active"
                                         >
-                                            <Link href="/ReadingPage/cambridgeAllTests">Reading</Link>
+                                            <Link href="/Reading-Module/Cambridge-Reading-tests">Reading</Link>
 
                                         </li>
 
@@ -221,7 +218,7 @@ function NavigationBar({ drawer, action }) {
                                             id="service"
                                             className="menu-item-has-children active"
                                         >
-                                            <Link href="/WrittingPage">Writing</Link>
+                                            <Link href="/Writing-Module/Actual-writing-tests">Writing</Link>
                                         </li>
 
                                         <li
@@ -229,7 +226,7 @@ function NavigationBar({ drawer, action }) {
                                             id="service"
                                             className="menu-item-has-children active"
                                         >
-                                            <Link href="/ListeningPage/cambridgeAllTests">Listening</Link>
+                                            <Link href="/Listening-Module/Cambridge-listening-tests">Listening</Link>
                                         </li>
 
                                         {/* <li
@@ -295,7 +292,7 @@ function NavigationBar({ drawer, action }) {
                                             id="contact"
                                             className="menu-item-has-children active"
                                         >
-                                            <Link href="/SOP-Download">SOP</Link>
+                                            <Link href="/Pages/SOPFILE/SOPDownload">SOP</Link>
                                         </li>
 
 
@@ -385,13 +382,13 @@ function NavigationBar({ drawer, action }) {
             </div>
 
             {/* below component if for Upgradation if user bought a starter pack then if they want they can upgrade this */}
-            {/* {
+            {
                 openUpgrateComponent && (
                     <UpgradeComponnt
                         setopenUpgradeComponet={setopenUpgradeComponet}
                     />
                 )
-            } */}
+            }
         </>
     );
 }

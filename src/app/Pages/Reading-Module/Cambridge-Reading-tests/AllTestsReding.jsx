@@ -264,13 +264,13 @@ function ServicesReadingAllTest() {
                     <div className='grid  justify-center align-middle'>
                         <button className=' flex gap-2  rounded borde-1 border-gray-300 bg-white h-full '>
                             <button className='p-2 flex gap-1 w-auto h-[40px] text-[15px] text-center translate-y-[-1px] sm:w-[200px]  bg-white text-blue-900 cursor-pointer border-b-[4px] border-b-green-700 font-bold'
-                                onClick={() => { history.push("/ReadingPage/cambridgeAllTests") }}
+                                onClick={() => { history.push("/Pages/Reading-Module/Cambridge-Reading-tests") }}
                             >Cambridge tests
                                 {/* <BiSolidCategoryAlt className='text-xl text-black' /> */}
                                 <Image src={cambrigeIcon} className='w-[15px] translate-y-[2px]' />
                             </button>
                             <button className='p-2 flex gap-1 w-auto text-[12px] translate-y-[1px] text-center h-[40px] sm:w-[200px] bg-white text-black cursor-pointer opacity-50 font-bold hover:border-b-[3px] hover:border-b-green-700 transition-all hover:opacity-90'
-                                onClick={() => { history.push("/ReadingPage") }}
+                                onClick={() => { history.push("/Pages/Reading-Module/Actual-Reading-tests") }}
                             >Actual Tests
                                 <BiIntersect className='text-xl text-black translate-y-[-1px]' />
                             </button>

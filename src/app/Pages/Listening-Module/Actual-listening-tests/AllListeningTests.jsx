@@ -158,63 +158,63 @@ function AllListeningTests() {
     const goBackListeningTest1 = (e) => {
         localStorage.setItem('ModulesListening', 1)
         e.preventDefault();
-        history.push("/ListeningPage/ListeningAllTests/Actual-test-1")
+        history.push("/Pages/Listening-Module/Listening-All-Tests/Actual-test-1")
     };
     const goBackListeningTest2 = (e) => {
         localStorage.setItem('ModulesListening', 2)
         e.preventDefault();
-        history.push("/ListeningPage/ListeningAllTests/Actual-test-2")
+        history.push("/Pages/Listening-Module/Listening-All-Tests/Actual-test-2")
     };
     const goBackListeningTest3 = (e) => {
         localStorage.setItem('ModulesListening', 3)
         e.preventDefault();
-        history.push("/ListeningPage/ListeningAllTests/Actual-test-3")
+        history.push("/Pages/Listening-Module/Listening-All-Tests/Actual-test-3")
     };
     const goBackListeningTest4 = (e) => {
         localStorage.setItem('ModulesListening', 4)
         e.preventDefault();
-        history.push("/ListeningPage/ListeningAllTests/Actual-test-4")
+        history.push("/Pages/Listening-Module/Listening-All-Tests/Actual-test-4")
     };
     const goBackListeningTest5 = (e) => {
         localStorage.setItem('ModulesListening', 5)
         e.preventDefault();
-        history.push("/ListeningPage/ListeningAllTests/Actual-test-5")
+        history.push("/Pages/Listening-Module/Listening-All-Tests/Actual-test-5")
     };
     const goBackListeningTest6 = (e) => {
         localStorage.setItem('ModulesListening', 6)
         e.preventDefault();
-        history.push("/ListeningPage/ListeningAllTests/Actual-test-6")
+        history.push("/Pages/Listening-Module/Listening-All-Tests/Actual-test-6")
     };
     const goBackListeningTest7 = (e) => {
         localStorage.setItem('ModulesListening', 7)
         e.preventDefault();
-        history.push("/ListeningPage/ListeningAllTests/Actual-test-7")
+        history.push("/Pages/Listening-Module/Listening-All-Tests/Actual-test-7")
     };
     const goBackListeningTest8 = (e) => {
         localStorage.setItem('ModulesListening', 8)
         e.preventDefault();
-        history.push("/ListeningPage/ListeningAllTests/Actual-test-8")
+        history.push("/Pages/Listening-Module/Listening-All-Tests/Actual-test-8")
     };
 
     const goBackListeningTest9 = (e) => {
         localStorage.setItem('ModulesListening', 9)
         e.preventDefault();
-        history.push("/ListeningPage/ListeningAllTests/Actual-test-9")
+        history.push("/Pages/Listening-Module/Listening-All-Tests/Actual-test-9")
     };
     const goBackListeningTest10 = (e) => {
         localStorage.setItem('ModulesListening', 10)
         e.preventDefault();
-        history.push("/ListeningPage/ListeningAllTests/Actual-test-10")
+        history.push("/Pages/Listening-Module/Listening-All-Tests/Actual-test-10")
     };
     const goBackListeningTest11 = (e) => {
         localStorage.setItem('ModulesListening', 11)
         e.preventDefault();
-        history.push("/ListeningPage/ListeningAllTests/Actual-test-11")
+        history.push("/Pages/Listening-Module/Listening-All-Tests/Actual-test-11")
     };
     const goBackListeningTest12 = (e) => {
         localStorage.setItem('ModulesListening', 12)
         e.preventDefault();
-        history.push("/ListeningPage/ListeningAllTests/Actual-test-12")
+        history.push("/Pages/Listening-Module/Listening-All-Tests/Actual-test-12")
     };
 
 
@@ -254,13 +254,13 @@ function AllListeningTests() {
                     <div className='grid justify-center align-middle'>
                         <button className=' flex gap-2 rounded borde-1 border-gray-300 bg-white h-full '>
                             <button className='p-2 flex gap-1 w-auto text-[12px] translate-y-[1px] text-center h-[40px] sm:w-[200px] bg-white text-black cursor-pointer opacity-50 font-bold hover:border-b-[3px] hover:border-b-green-700 transition-all hover:opacity-90'
-                                onClick={() => { history.push("/ListeningPage/cambridgeAllTests") }}
+                                onClick={() => { history.push("/Pages/Listening-Module/Cambridge-listening-tests") }}
                             >Cambridge tests
                                 {/* <BiSolidCategoryAlt className ='text-xl text-black' /> */}
                                 <Image src={cambrigeIcon} className='w-[15px] translate-y-[1px]' />
                             </button>
                             <button className='p-2 flex gap-1 w-auto h-[40px] text-[15px] text-center translate-y-[1px] sm:w-[200px]  bg-white text-blue-900 cursor-pointer border-b-[4px] border-b-green-700 font-bold'
-                                onClick={() => { history.push("/ListeningPage") }}
+                                onClick={() => { history.push("/Pages/Listening-Module/Actual-listening-tests") }}
                                 disabled
                             >Actual Tests
                                 <BiIntersect className='text-xl text-black' />

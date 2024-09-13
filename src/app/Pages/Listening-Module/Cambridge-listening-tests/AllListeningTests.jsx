@@ -157,63 +157,63 @@ function AllListeningTests() {
     const goBackListeningTest1 = (e) => {
         localStorage.setItem('ModulesListening', "cambridge-1")
         e.preventDefault();
-        history.push("/ListeningPage/ListeningAllTests/Cambridge-test-1")
+        history.push("/Pages/Listening-Module/Listening-All-Tests/Cambridge-test-1")
     };
     const goBackListeningTest2 = (e) => {
         localStorage.setItem('ModulesListening', "cambridge-2")
         e.preventDefault();
-        history.push("/ListeningPage/ListeningAllTests/Cambridge-test-2")
+        history.push("/Pages/Listening-Module/Listening-All-Tests/Cambridge-test-2")
     };
     const goBackListeningTest3 = (e) => {
         localStorage.setItem('ModulesListening', "cambridge-3")
         e.preventDefault();
-        history.push("/ListeningPage/ListeningAllTests/Cambridge-test-3")
+        history.push("/Pages/Listening-Module/Listening-All-Tests/Cambridge-test-3")
     };
     const goBackListeningTest4 = (e) => {
         localStorage.setItem('ModulesListening', "cambridge-4")
         e.preventDefault();
-        history.push("/ListeningPage/ListeningAllTests/Cambridge-test-4")
+        history.push("/Pages/Listening-Module/Listening-All-Tests/Cambridge-test-4")
     };
     const goBackListeningTest5 = (e) => {
         localStorage.setItem('ModulesListening', "cambridge-5")
         e.preventDefault();
-        history.push("/ListeningPage/ListeningAllTests/Cambridge-test-5")
+        history.push("/Pages/Listening-Module/Listening-All-Tests/Cambridge-test-5")
     };
     const goBackListeningTest6 = (e) => {
         localStorage.setItem('ModulesListening', "cambridge-6")
         e.preventDefault();
-        history.push("/ListeningPage/ListeningAllTests/Cambridge-test-6")
+        history.push("/Pages/Listening-Module/Listening-All-Tests/Cambridge-test-6")
     };
     const goBackListeningTest7 = (e) => {
         localStorage.setItem('ModulesListening', "cambridge-7")
         e.preventDefault();
-        history.push("/ListeningPage/ListeningAllTests/Cambridge-test-7")
+        history.push("/Pages/Listening-Module/Listening-All-Tests/Cambridge-test-7")
     };
     const goBackListeningTest8 = (e) => {
         localStorage.setItem('ModulesListening', "cambridge-8")
         e.preventDefault();
-        history.push("/ListeningPage/ListeningAllTests/Cambridge-test-8")
+        history.push("/Pages/Listening-Module/Listening-All-Tests/Cambridge-test-8")
     };
 
     const goBackListeningTest9 = (e) => {
         localStorage.setItem('ModulesListening', "cambridge-9")
         e.preventDefault();
-        history.push("/ListeningPage/ListeningAllTests/Cambridge-test-9")
+        history.push("/Pages/Listening-Module/Listening-All-Tests/Cambridge-test-9")
     };
     const goBackListeningTest10 = (e) => {
         localStorage.setItem('ModulesListening', "cambridge-10")
         e.preventDefault();
-        history.push("/ListeningPage/ListeningAllTests/Cambridge-test-10")
+        history.push("/Pages/Listening-Module/Listening-All-Tests/Cambridge-test-10")
     };
     const goBackListeningTest11 = (e) => {
         localStorage.setItem('ModulesListening', "cambridge-11")
         e.preventDefault();
-        history.push("/ListeningPage/ListeningAllTests/Cambridge-test-11")
+        history.push("/Pages/Listening-Module/Listening-All-Tests/Cambridge-test-11")
     };
     const goBackListeningTest12 = (e) => {
         localStorage.setItem('ModulesListening', "cambridge-12")
         e.preventDefault();
-        history.push("/ListeningPage/ListeningAllTests/Cambridge-test-12")
+        history.push("/Pages/Listening-Module/Listening-All-Tests/Cambridge-test-12")
     };
 
 

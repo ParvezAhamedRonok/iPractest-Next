@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import ListeningMain from "./Importants/Main.js"
 
 export default function page({ params }) {
   let testName = params.AllListeningTest[0];
@@ -6,7 +7,9 @@ export default function page({ params }) {
 
   return (
     <div>
-
+      <ListeningMain
+        testName={testName}
+      />
     </div>
   )
 }

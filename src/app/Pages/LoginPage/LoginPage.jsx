@@ -3,7 +3,7 @@ import { useRouter } from 'next/navigation';
 import Axios from 'axios';
 import GoogleFacebooklog from './GoogleFacebooklog';
 import { ClockLoader } from "react-spinners";
-// import Timer from "../WritingAllTests/Writing-All-Pages/Writing-Importand/Pages/Timer";
+import Timer from "../Writing-Module/Writing-All-Test/Writing-Importand/Pages/Timer";
 import { useStateContext } from "../../../contexts/ContextProvider";
 import { LOGIN_URL } from "../../../assets/URL's/AllUrl"
 
@@ -46,7 +46,7 @@ function LoginPage({ openLogInPage, openSignUpPage }) {
     } else {
       setDeviceNo("anyThing")
     }
-  },[])
+  }, [])
 
 
 
@@ -110,7 +110,7 @@ function LoginPage({ openLogInPage, openSignUpPage }) {
           // setsignUpMsg(false);
           setLoadingMsg(false);
           openLogInPage()  // this is for close popUp
-          nextPath("/MainDashBoard/Dashboard");
+          nextPath("/Pages/MainDashboard/Dashboard");
           // if (loginRedirectStatus == "") {
           //   nextPath("/MainDashBoard/Dashboard");
           // } else {
@@ -263,7 +263,7 @@ function LoginPage({ openLogInPage, openSignUpPage }) {
               <div className="w-full flex justify-center p-1 mt-1 bg-sky-300 text-white"
                 style={{ borderTopLeftRadius: "27px", borderTopRightRadius: "27px" }}
               >
-                {/* <Timer Second={20} /> */}
+                <Timer Second={20} />
               </div>
             </div>
 

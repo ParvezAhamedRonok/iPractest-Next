@@ -59,10 +59,10 @@ function NavigationHome() {
 
                 </li>
                 <li>
-                    <Link className={currentRoute == "writtingpage" ? "Nav_active" : "Nav_Nonactive"} href="/WrittingPage" style={{ color: currentRoute == "writtingpage" ? "#000" : "#fff" }}>Writing</Link>
+                    <Link className={currentRoute.includes("Writing-Module") ? "Nav_active" : "Nav_Nonactive"} href="/Pages/Writing-Module/Actual-writing-tests" style={{ color: currentRoute.includes("Writing-Module") ? "#000" : "#fff" }}>Writing</Link>
                 </li>
                 <li>
-                    <Link className={currentRoute == "listeningpage" ? "Nav_active" : "Nav_Nonactive"} href="/ListeningPage/cambridgeAllTests" style={{ color: currentRoute == "listeningpage" ? "#000" : "#fff" }}>Listening</Link>
+                    <Link className={currentRoute.includes("Listening-Module") ? "Nav_active" : "Nav_Nonactive"} href="/Pages/Listening-Module/Cambridge-listening-tests" style={{ color: currentRoute.includes("Listening-Module") ? "#000" : "#fff" }}>Listening</Link>
                 </li>
                 <li>
                     <Link className={currentRoute.includes("AboutUs") ? "Nav_active" : "Nav_Nonactive"} href="/Pages/AboutUs" style={{ color: currentRoute.includes("AboutUs") ? "#000" : "#fff" }}>About Us</Link>

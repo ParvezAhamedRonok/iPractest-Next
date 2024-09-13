@@ -1,0 +1,44 @@
+.Sticky {
+    position: fixed;
+    top: 16px;
+    width: 100%;
+    cursor: pointer;
+    z-index: 1233;
+  }
+
+  .Sticky #audioMain{
+    width: 100%;
+    margin-top: 16px;
+    display: grid;
+    text-align: center;
+    justify-content: center;
+  }
+  .Sticky #audioMain p{
+    padding: 5px;
+    background-color: rgb(159, 198, 213);
+    border-radius: 30px;
+    font-weight: 500;
+    color: blue;
+  }
+
+
+
+
+  .WithoutSticky{ 
+    /* background-color: red; */
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+    cursor: pointer;
+    text-align: center;
+}
+.WithoutSticky #audioMain p{
+    padding: 5px;
+    background-color: skyblue;
+    border-radius: 30px;
+    font-weight: 500;
+    color: blue;
+    font-size: 17px;
+  }
+

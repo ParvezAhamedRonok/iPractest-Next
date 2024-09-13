@@ -150,7 +150,7 @@ function Index({ setAmerPayPayment }) {
         }
         setTimeout(() => {
           setSimpleLoading(false);
-          history.push("/MainDashBoard/Dashboard");
+          history.push("/Pages/MainDashboard/Dashboard");
         }, 1000);
 
       })

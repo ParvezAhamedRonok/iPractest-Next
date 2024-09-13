@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import "./index.css";
 import { MdOutlineCancel } from "react-icons/md"
-// import Timer from "../components/WritingAllTests/Writing-All-Pages/Writing-Importand/Pages/Timer";
+import Timer from "../Writing-Module/Writing-All-Test/Writing-Importand/Pages/Timer";
 import axios from "axios";
 import { ClockLoader } from "react-spinners";
 import Select from 'react-dropdown-select'
 import { useStateContext } from "../../../contexts/ContextProvider";
 
-import {COUNTRY_PUT_URL } from "../../../assets/URL's/AllUrl";
+import { COUNTRY_PUT_URL } from "../../../assets/URL's/AllUrl";
 
 // end of the importing..................
 
@@ -158,7 +158,7 @@ function CountrySelect({ setSelectCountry }) {
                                     <div className="w-full flex justify-center p-1 mt-1 bg-sky-300 text-white"
                                         style={{ borderTopLeftRadius: "27px", borderTopRightRadius: "27px" }}
                                     >
-                                        {/* <Timer Second={20} /> */}
+                                        <Timer Second={20} />
                                     </div>
                                 </div>
 

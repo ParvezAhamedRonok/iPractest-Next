@@ -12,9 +12,8 @@ import { isMobile } from 'react-device-detect';
 import { useStateContext } from "../../../contexts/ContextProvider";
 
 import Img from '../../../assets/images/NavbarImg.png';
-// import UpgradeComponnt from "../../../Payments/UpgradePayment/index";
+import UpgradeComponnt from "../../Pages/Payments/UpgradePayment/index";
 import peningImg1 from "../../../assets/images/LandingImgs/peping-6.gif"
-import peningImg2 from "../../../assets/images/LandingImgs/pepning-3.gif"
 import { GiUpgrade } from 'react-icons/gi'
 //end importing----->
 
@@ -153,44 +152,44 @@ function HeaderHomeOne({ action }) {
                                     <div className="appie-btn-box text-right">
                                         {
                                             userSignupInfo || loginTOken ? (
-                                            <div className='translate-x-[0px] md:translate-x-[60px] flex'>
-                                                <a rel='canonical' href='/MainDashBoard/Dashboard' className="main-btn ml-2 p-2" style={{ cursor: "pointer" }}
+                                                <div className='translate-x-[0px] md:translate-x-[60px] flex'>
+                                                    <a rel='canonical' href='/Pages/MainDashboard/Dashboard' className="main-btn ml-2 p-2" style={{ cursor: "pointer" }}
 
-                                                >
-                                                    <p className='flex text-white text-[12px]'>
-                                                        <FaBookReader className='text-[14px] translate-y-1 mr-2 text-green-400' />
-                                                        Dashboard</p>
-                                                </a>
-                                                {
-                                                    userPaymentStatusCheck == "Starter" && (<div className='relative'>
+                                                    >
+                                                        <p className='flex text-white text-[12px]'>
+                                                            <FaBookReader className='text-[14px] translate-y-1 mr-2 text-green-400' />
+                                                            Dashboard</p>
+                                                    </a>
+                                                    {
+                                                        userPaymentStatusCheck == "Starter" && (<div className='relative'>
 
-                                                        <Image
-                                                            src={peningImg1} // Local image
-                                                            alt='this is for peningImg1 iaages'
-                                                            className='translate-y-[-30px] translate-x-[20px] mr-2 w-[50px] h-[50px] absolute top-0 left-0 right-0  z-[10]'
-                                                        />
+                                                            <Image
+                                                                src={peningImg1} // Local image
+                                                                alt='this is for peningImg1 iaages'
+                                                                className='translate-y-[-30px] translate-x-[20px] mr-2 w-[50px] h-[50px] absolute top-0 left-0 right-0  z-[10]'
+                                                            />
 
-                                                        <span className=" bg-[#663399] rounded-[20px] relative ml-2 p-2 z-[100]" style={{ cursor: "pointer" }}
-                                                            onClick={() => {
-                                                                // history.push("/MainDashBoard/Dashboard")
-                                                                setopenUpgradeComponet(true)
-                                                            }}>
-                                                            <p className='flex text-white text-[10px]'>
-                                                                <GiUpgrade className='text-[14px] translate-y-1 mr-2 text-green-400' />
+                                                            <span className=" bg-[#663399] rounded-[20px] relative ml-2 p-2 z-[100]" style={{ cursor: "pointer" }}
+                                                                onClick={() => {
+                                                                    // history.push("/MainDashBoard/Dashboard")
+                                                                    setopenUpgradeComponet(true)
+                                                                }}>
+                                                                <p className='flex text-white text-[10px]'>
+                                                                    <GiUpgrade className='text-[14px] translate-y-1 mr-2 text-green-400' />
 
-                                                                Upgrade</p>
-                                                        </span>
-                                                    </div>)
-                                                }
+                                                                    Upgrade</p>
+                                                            </span>
+                                                        </div>)
+                                                    }
 
-                                            </div>) : (<>
-                                                <span className="login-btn sm:translate-x-[10px] translate-y-[-3px] sm:translate-y-[0px]" style={{ cursor: "pointer" }} onClick={openLogInPage} >
-                                                    <i className="fal fa-user " style={{ color: "#fff" }} /> Login
-                                                </span>
-                                                <span className="main-btn ml-30 text-[13px]" style={{ color: "#fff", cursor: "pointer" }} onClick={openSignUpPage}>
-                                                    Get Started
-                                                </span>
-                                            </>)
+                                                </div>) : (<>
+                                                    <span className="login-btn sm:translate-x-[10px] translate-y-[-3px] sm:translate-y-[0px]" style={{ cursor: "pointer" }} onClick={openLogInPage} >
+                                                        <i className="fal fa-user " style={{ color: "#fff" }} /> Login
+                                                    </span>
+                                                    <span className="main-btn ml-30 text-[13px]" style={{ color: "#fff", cursor: "pointer" }} onClick={openSignUpPage}>
+                                                        Get Started
+                                                    </span>
+                                                </>)
                                         }
 
                                         <div
@@ -210,13 +209,13 @@ function HeaderHomeOne({ action }) {
 
 
             {/* below component if for Upgradation if user bought a starter pack then if they want they can upgrade this */}
-            {/* {
+            {
                 openUpgrateComponent && (
                     <UpgradeComponnt
                         setopenUpgradeComponet={setopenUpgradeComponet}
                     />
                 )
-            } */}
+            }
         </>
     );
 }

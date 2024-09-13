@@ -33,25 +33,25 @@ function HeroHomeLanding() {
                                 </h2>
                                 <ul>
                                     <li style={{ cursor: "pointer" }}>
-                                        <a href='/SpeakingPage'>
+                                        <a href='/Pages/Speaking-Module'>
                                             <i><GiSoundWaves className='text-xl mb-[-4px]' /></i> Speaking Tests
                                         </a>
                                     </li>
                                     <li className='mb-3' style={{ cursor: "pointer" }}>
-                                        <a href='/WrittingPage' className="item-2" >
+                                        <a href='/Writing-Module/Actual-writing-tests' className="item-2" >
                                             <i><TfiWrite className='text-xl text-blue-400 mb-[-4px]' /></i>  Writing Tests
 
                                         </a>
                                     </li>
                                     <li style={{ cursor: "pointer" }}>
-                                        <a href='/ListeningPage/cambridgeAllTests'>
+                                        <a href='/Pages/Listening-Module/Cambridge-listening-tests'>
                                             <i><GrAssistListening className='text-xl mb-[-4px] rounded' /></i>Listening Tests
 
                                         </a>
                                     </li>
 
                                     <li style={{ cursor: "pointer" }}>
-                                        <a href='/ReadingPage/cambridgeAllTests' className="item-2" >
+                                        <a href='/Pages/Reading-Module/Cambridge-Reading-tests' className="item-2" >
                                             <i><GiWhiteBook className='text-xl mb-[-4px]' /></i> Reading Tests
                                         </a>
                                     </li>

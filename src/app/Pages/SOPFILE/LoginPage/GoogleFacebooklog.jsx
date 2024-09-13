@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import axios from "axios"
 import { ClockLoader } from "react-spinners";
-// import Timer from "../../WritingAllTests/Writing-All-Pages/Writing-Importand/Pages/Timer";
+import Timer from "../../Writing-Module/Writing-All-Test/Writing-Importand/Pages/Timer";
 // import { GoogleLogin } from 'react-google-login'; 
 import "./GoogleFace.css";
 import { isMobile } from "react-device-detect"
@@ -357,7 +357,7 @@ function GoogleFacebooklog({ finalFuncAfterLogInorSignUp }) {
               <div className="w-full flex justify-center p-1 mt-1 bg-sky-300 text-white"
                 style={{ borderTopLeftRadius: "27px", borderTopRightRadius: "27px" }}
               >
-                {/* <Timer Second={20} /> */}
+                <Timer Second={20} />
               </div>
             </div>
 
