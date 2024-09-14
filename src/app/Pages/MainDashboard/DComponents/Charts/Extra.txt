@@ -1,184 +1,183 @@
 "use client"
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from "axios";
 import moment from "moment";
 import { SPEAKING_GET_FOR_COLLECT_USER_DATA, READING_GET_FOR_COLLECT_USER_DATA, LISTENING_GET_FOR_COLLECT_USER_DATA, WRITING_GET_FOR_COLLECT_USER_DATA } from "../../../../assets/URL's/AllUrl"
 
 
-const d = new Date();
-let year = d.getFullYear();
-let month = d.getMonth() + 1;
-console.log(month);
-console.log(d.getMonth());
+export const LineChartDataComponent = ({
+    SpeakingArray,
+    ReadingArray,
+    WritingArray,
+    ListeningArray,
+    //states..
+    setLinePrimaryXAxis,
+    setLinePrimaryYAxis,
+    setLinePrimaryXAxisPrevious,
+    setlineCustomSeries
+}) => {
+    const [useremail, setuserEmail] = useState("");
+    const [userLoginToken, setuserLoginToken] = useState("");
 
-if (month != 10 || month != 11 || month != 12) {
-    month = "0" + month
-}
-
-
-let previousMonth;
-let previousYear;
-if (d.getMonth() == 0) {
-    previousMonth = 12
-    previousYear = d.getFullYear() - 1
-} else {
-    previousMonth = d.getMonth();
-    previousYear = d.getFullYear();
-}
+    //Line-Chart all data getting 
 
 
-// console.log(year + "/" + month);
-// console.log(previousYear + "/" + previousMonth);
-export const LinePrimaryXAxis = {
-    valueType: 'DateTime',
-    minimum: year + "/" + month + "/1",
-    maximum: year + "/" + month + "/31",
-    intervalType: 'Days',
-    labelFormat: 'MMM d',
-    edgeLabelPlacement: 'Shift',
-    majorGridLines: { width: 0 }
-};
+    const d = new Date();
+    let year = d.getFullYear();
+    let month = d.getMonth() + 1;
+    console.log(month);
+    console.log(d.getMonth());
 
-export const LinePrimaryXAxisPrevious = {
-    valueType: 'DateTime',
-    minimum: previousYear + "/" + previousMonth + "/1",
-    maximum: previousYear + "/" + previousMonth + "/31",
-    intervalType: 'Days',
-    labelFormat: 'MMM d',
-    edgeLabelPlacement: 'Shift',
-    majorGridLines: { width: 0 }
-};
-
-export const LinePrimaryYAxis = {
-    labelFormat: '{value}',
-    rangePadding: 'None',
-    minimum: 0,
-    maximum: 9,
-    interval: 1,
-    lineStyle: { width: 0 },
-    majorTickLines: { width: 0 },
-    minorTickLines: { width: 0 },
-};
+    if (month != 10 || month != 11 || month != 12) {
+        month = "0" + month
+    }
 
 
+    let previousMonth;
+    let previousYear;
+    if (d.getMonth() == 0) {
+        previousMonth = 12
+        previousYear = d.getFullYear() - 1
+    } else {
+        previousMonth = d.getMonth();
+        previousYear = d.getFullYear();
+    }
 
 
-//Line-Chart all data getting 
-//from database-----------
-export let SpeakingArray = [];
-export let ReadingArray = [];
-export let WritingArray = [];
-export let ListeningArray = [];
+    // console.log(year + "/" + month);
+    // console.log(previousYear + "/" + previousMonth);
+    setLinePrimaryXAxis({
+        valueType: 'DateTime',
+        minimum: year + "/" + month + "/1",
+        maximum: year + "/" + month + "/31",
+        intervalType: 'Days',
+        labelFormat: 'MMM d',
+        edgeLabelPlacement: 'Shift',
+        majorGridLines: { width: 0 }
+    })
 
-//for passing this month & previous month date & scores by array
+    setLinePrimaryXAxisPrevious({
+        valueType: 'DateTime',
+        minimum: previousYear + "/" + previousMonth + "/1",
+        maximum: previousYear + "/" + previousMonth + "/31",
+        intervalType: 'Days',
+        labelFormat: 'MMM d',
+        edgeLabelPlacement: 'Shift',
+        majorGridLines: { width: 0 }
+    })
 
+    setLinePrimaryYAxis({
+        labelFormat: '{value}',
+        rangePadding: 'None',
+        minimum: 0,
+        maximum: 9,
+        interval: 1,
+        lineStyle: { width: 0 },
+        majorTickLines: { width: 0 },
+        minorTickLines: { width: 0 },
+    });
 
-
-
-
-
-export default function LineChartData() {
     useEffect(() => {
-        // var useremail = localStorage.getItem('userEmail');
-        // alert("hellow")
-
-        axios({
-            method: "get",
-            url: SPEAKING_GET_FOR_COLLECT_USER_DATA + localStorage.getItem('userEmail'),
-            // url: 'http://localhost:8080/api/user/SpeakingResults/' + useremail,
-            headers: {
-                "Authorization": `Bearer ${localStorage.getItem("loginTOken")}`,
-                'Content-Type': 'application/json'
-            }
-        })
-            .then((res) => {
-                let makeSpeakingArray = [];
-                res.data.data.map((items) => {
-                    makeSpeakingArray.push({
-                        createdAt: items.createdAt,
-                        ieltsRate: items.ieltsScore,
-                        userEmail: items.userEmail,
-                        username: items.username,
-                        updatedAt: items.updatedAt
-                    })
-
-
-                });
-                // console.log(makeSpeakingArray);
-                // let dataX = res.data.data;
-                console.log(res.data.data)
-                thisMonthFunction(makeSpeakingArray, SpeakingArray)
-                LastMonthFunction(makeSpeakingArray, SpeakingArray);
-                // dataX.map((e) => {
-                //     let mainData = {
-                //         x: moment.utc(e.createdAt).format('YYYY/MM/DD'),
-                //         y: e.ieltsRate,
-                //     }
-                //     // console.log(mainData)
-                //     return SpeakingArray.push(mainData);
-
-                // })
-            })
-            .catch((e) => { console.log(e) });
-
-
-
-
-        axios({
-            method: "get",
-            url: READING_GET_FOR_COLLECT_USER_DATA + localStorage.getItem('userEmail'),
-            headers: {
-                "Authorization": `Bearer ${localStorage.getItem("loginTOken")}`,
-                'Content-Type': 'application/json'
-            }
-        })
-            .then((res) => {
-                let dataX = res.data.data;
-                dataX.map((e) => {
-                    console.log(moment.utc(e.createdAt).format('YYYY/MM/DD'),)
-                })
-                // console.log(dataX)
-                thisMonthFunction(dataX, ReadingArray)
-                LastMonthFunction(dataX, ReadingArray)
-            })
-            .catch((e) => { console.log(e) });
-
-
-        axios({
-            method: "get",
-            url: WRITING_GET_FOR_COLLECT_USER_DATA + localStorage.getItem('userEmail'),
-            headers: {
-                "Authorization": `Bearer ${localStorage.getItem("loginTOken")}`,
-                'Content-Type': 'application/json'
-            }
-        })
-            .then((res) => {
-                let dataX = res.data.data;
-                thisMonthFunction(dataX, WritingArray)
-                LastMonthFunction(dataX, WritingArray)
-
-            })
-            .catch((e) => { console.log(e) });
-
-
-        axios({
-            method: "get",
-            url: LISTENING_GET_FOR_COLLECT_USER_DATA + localStorage.getItem('userEmail'),
-            headers: {
-                "Authorization": `Bearer ${localStorage.getItem("loginTOken")}`,
-                'Content-Type': 'application/json'
-            }
-        })
-            .then((res) => {
-                let dataX = res.data.data;
-                thisMonthFunction(dataX, ListeningArray)
-                LastMonthFunction(dataX, ListeningArray)
-            })
-            .catch((e) => { console.log(e) });
-
-
+        setuserEmail(localStorage.getItem('userEmail'));
+        setuserLoginToken(userLoginToken)
 
     }, []);
+
+
+
+    axios({
+        method: "get",
+        url: SPEAKING_GET_FOR_COLLECT_USER_DATA + useremail,
+        // url: 'http://localhost:8080/api/user/SpeakingResults/' + useremail,
+        headers: {
+            "Authorization": `Bearer ${userLoginToken}`,
+            'Content-Type': 'application/json'
+        }
+    })
+        .then((res) => {
+            let makeSpeakingArray = [];
+            res.data.data.map((items) => {
+                makeSpeakingArray.push({
+                    createdAt: items.createdAt,
+                    ieltsRate: items.ieltsScore,
+                    userEmail: items.userEmail,
+                    username: items.username,
+                    updatedAt: items.updatedAt
+                })
+
+
+            });
+            // console.log(makeSpeakingArray);
+            // let dataX = res.data.data;
+            console.log(res.data.data)
+            thisMonthFunction(makeSpeakingArray, SpeakingArray)
+            LastMonthFunction(makeSpeakingArray, SpeakingArray);
+            // dataX.map((e) => {
+            //     let mainData = {
+            //         x: moment.utc(e.createdAt).format('YYYY/MM/DD'),
+            //         y: e.ieltsRate,
+            //     }
+            //     // console.log(mainData)
+            //     return SpeakingArray.push(mainData);
+
+            // })
+        })
+        .catch((e) => { console.log(e) });
+
+
+
+
+    axios({
+        method: "get",
+        url: READING_GET_FOR_COLLECT_USER_DATA + useremail,
+        headers: {
+            "Authorization": `Bearer ${userLoginToken}`,
+            'Content-Type': 'application/json'
+        }
+    })
+        .then((res) => {
+            let dataX = res.data.data;
+            dataX.map((e) => {
+                console.log(moment.utc(e.createdAt).format('YYYY/MM/DD'),)
+            })
+            // console.log(dataX)
+            thisMonthFunction(dataX, ReadingArray)
+            LastMonthFunction(dataX, ReadingArray)
+        })
+        .catch((e) => { console.log(e) });
+
+
+    axios({
+        method: "get",
+        url: WRITING_GET_FOR_COLLECT_USER_DATA + useremail,
+        headers: {
+            "Authorization": `Bearer ${userLoginToken}`,
+            'Content-Type': 'application/json'
+        }
+    })
+        .then((res) => {
+            let dataX = res.data.data;
+            thisMonthFunction(dataX, WritingArray)
+            LastMonthFunction(dataX, WritingArray)
+
+        })
+        .catch((e) => { console.log(e) });
+
+
+    axios({
+        method: "get",
+        url: LISTENING_GET_FOR_COLLECT_USER_DATA + useremail,
+        headers: {
+            "Authorization": `Bearer ${userLoginToken}`,
+            'Content-Type': 'application/json'
+        }
+    })
+        .then((res) => {
+            let dataX = res.data.data;
+            thisMonthFunction(dataX, ListeningArray)
+            LastMonthFunction(dataX, ListeningArray)
+        })
+        .catch((e) => { console.log(e) });
 
 
 
@@ -723,55 +722,317 @@ export default function LineChartData() {
     // console.log(ReadingArray)
     // console.log(WritingArray)
     // console.log(ListeningArray)
+    setlineCustomSeries(
+        [
+            {
+                dataSource: SpeakingArray,
+                xName: 'x',
+                yName: 'y',
+                name: 'Speaking',
+                width: '2',
+                marker: { visible: true, width: 10, height: 10 },
+                type: 'Line'
+            },
 
-    let lineCustomSeries = [
-        {
-            dataSource: SpeakingArray,
-            xName: 'x',
-            yName: 'y',
-            name: 'Speaking',
-            width: '2',
-            marker: { visible: true, width: 10, height: 10 },
-            type: 'Line'
-        },
+            {
+                dataSource: WritingArray,
+                xName: 'x',
+                yName: 'y',
+                main: "z",
+                name: 'Writing',
+                width: '2',
+                marker: { visible: true, width: 10, height: 10, Text: "red" },
+                type: 'Line'
+            },
 
-        {
-            dataSource: WritingArray,
-            xName: 'x',
-            yName: 'y',
-            main: "z",
-            name: 'Writing',
-            width: '2',
-            marker: { visible: true, width: 10, height: 10, Text: "red" },
-            type: 'Line'
-        },
+            {
+                dataSource: ReadingArray,
+                xName: 'x',
+                yName: 'y',
+                main: "z",
+                name: 'Reading',
+                width: '2',
+                marker: { visible: true, width: 10, height: 10 },
+                type: 'Line'
+            },
+            {
 
-        {
-            dataSource: ReadingArray,
-            xName: 'x',
-            yName: 'y',
-            main: "z",
-            name: 'Reading',
-            width: '2',
-            marker: { visible: true, width: 10, height: 10 },
-            type: 'Line'
-        },
-        {
+                dataSource: ListeningArray,
+                xName: 'x',
+                yName: 'y',
+                main: "z",
+                name: 'Listening',
+                width: '2',
+                marker: { visible: true, width: 10, height: 10 },
+                type: 'Line'
+            },
 
-            dataSource: ListeningArray,
-            xName: 'x',
-            yName: 'y',
-            main: "z",
-            name: 'Listening',
-            width: '2',
-            marker: { visible: true, width: 10, height: 10 },
-            type: 'Line'
-        },
+        ]
+    )
 
-    ];
 
-    return lineCustomSeries
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import * as React from "react";
+// import { useEffect, useRef } from "react";
+import { LineChartDataComponent } from '../../data/LineChartData';
+import { ChartComponent, SeriesCollectionDirective, AxesDirective, AxisDirective, SeriesDirective, Inject, LineSeries, ChartAnnotation, ColumnSeries, AnnotationsDirective, AnnotationDirective, Category, Tooltip, SplineSeries } from '@syncfusion/ej2-react-charts';
+import moment from "moment";
+
+const SAMPLE_CSS = `
+    .control-fluid {
+        padding: 0px !important;
+    }`;
+
+let SpeakingArray = [];
+let ReadingArray = [];
+let WritingArray = [];
+let ListeningArray = [];
+
+const WeekReadingChart = () => {
+  //chart data getting states......
+  const [LinePrimaryXAxis, setLinePrimaryXAxis] = React.useState({});
+  const [LinePrimaryYAxis, setLinePrimaryYAxis] = React.useState({});
+  const [LinePrimaryXAxisPrevious, setLinePrimaryXAxisPrevious] = React.useState({});
+  const [lineCustomSeries, setlineCustomSeries] = React.useState([]);
+
+  var firstDay = new Date();
+  var Day1 = new Date(firstDay.getTime() - 0 * 24 * 60 * 60 * 1000);
+  var Day2 = new Date(firstDay.getTime() - 1 * 24 * 60 * 60 * 1000);
+  var Day3 = new Date(firstDay.getTime() - 2 * 24 * 60 * 60 * 1000);
+  var Day4 = new Date(firstDay.getTime() - 3 * 24 * 60 * 60 * 1000);
+  var Day5 = new Date(firstDay.getTime() - 4 * 24 * 60 * 60 * 1000);
+  var Day6 = new Date(firstDay.getTime() - 5 * 24 * 60 * 60 * 1000);
+  var Day7 = new Date(firstDay.getTime() - 6 * 24 * 60 * 60 * 1000);
+
+
+  let data1 = [
+    {
+      x: moment.utc(Day7).format('dddd'),
+      y: 0
+    },
+    {
+      x: moment.utc(Day6).format('dddd'),
+      y: 0
+    },
+    {
+      x: moment.utc(Day5).format('dddd'),
+      y: 0
+    },
+    {
+      x: moment.utc(Day4).format('dddd'),
+      y: 0
+    },
+    {
+      x: moment.utc(Day3).format('dddd'),
+      y: 0
+    },
+    {
+      x: moment.utc(Day2).format('dddd'),
+      y: 0
+    },
+    {
+      x: moment.utc(Day1).format('dddd'),
+      y: 0
+    },
+  ];
+  //getting all data from this component ...
+  LineChartDataComponent(
+    SpeakingArray={SpeakingArray},
+    ReadingArray={ReadingArray},
+    WritingArray={WritingArray},
+    ListeningArray={ListeningArray},
+    //states..
+    setLinePrimaryXAxis={setLinePrimaryXAxis},
+    setLinePrimaryYAxis={setLinePrimaryYAxis},
+    setLinePrimaryXAxisPrevious={setLinePrimaryXAxisPrevious},
+    setlineCustomSeries={setlineCustomSeries}
+
+  )
+
+
+  const WeekReadingLinePrimaryYAxis = {
+    labelFormat: '{value}',
+    rangePadding: 'None',
+    minimum: 0,
+    maximum: 9,
+    interval: 1,
+    lineStyle: { width: 0 },
+    majorTickLines: { width: 0 },
+    minorTickLines: { width: 0 },
+
+  };
+
+
+
+
+  // console.log(ReadingArray)
+
+
+  var thisDay = moment.utc(Day1).format('YYYY/MM/DD');
+  var lastDay1 = moment.utc(Day2).format('YYYY/MM/DD')
+  var lastDay2 = moment.utc(Day3).format('YYYY/MM/DD')
+  var lastDay3 = moment.utc(Day4).format('YYYY/MM/DD')
+  var lastDay4 = moment.utc(Day5).format('YYYY/MM/DD')
+  var lastDay5 = moment.utc(Day6).format('YYYY/MM/DD')
+  var lastDay6 = moment.utc(Day7).format('YYYY/MM/DD')
+  // let firstDayMain = moment.utc(thisFirstDay).format('YYYY/MM/DD')
+  // let main = ReadingArray.filter((w) => w.x == '2023/12/07');
+  let pushDay1 = ReadingArray.filter((w) => w.x == thisDay);
+  let pushDay2 = ReadingArray.filter((w) => w.x == lastDay1);
+  let pushDay3 = ReadingArray.filter((w) => w.x == lastDay2);
+  let pushDay4 = ReadingArray.filter((w) => w.x == lastDay3);
+  let pushDay5 = ReadingArray.filter((w) => w.x == lastDay4);
+  let pushDay6 = ReadingArray.filter((w) => w.x == lastDay5);
+  let pushDay7 = ReadingArray.filter((w) => w.x == lastDay6);
+
+  pushDay7.map((x) => {
+    let mainX = {
+      x: moment.utc(x.x).format('dddd'),
+      y: x.y
+    };
+    data1[0].y = mainX.y
+  })
+  pushDay6.map((x) => {
+    let mainX = {
+      x: moment.utc(x.x).format('dddd'),
+      y: x.y
+    };
+    data1[1].y = mainX.y
+  })
+  pushDay5.map((x) => {
+    let mainX = {
+      x: moment.utc(x.x).format('dddd'),
+      y: x.y
+    };
+    // data1.push(mainX)
+    data1[2].y = mainX.y
+  })
+  pushDay4.map((x) => {
+    let mainX = {
+      x: moment.utc(x.x).format('dddd'),
+      y: x.y
+    };
+    // data1.push(mainX)
+    data1[3].y = mainX.y
+  })
+  pushDay3.map((x) => {
+    let mainX = {
+      x: moment.utc(x.x).format('dddd'),
+      y: x.y
+    };
+    data1[4].y = mainX.y
+  })
+  pushDay2.map((x) => {
+    let mainX = {
+      x: moment.utc(x.x).format('dddd'),
+      y: x.y
+    };
+    data1[5].y = mainX.y
+  })
+
+  pushDay1.map((x) => {
+    let mainX = {
+      x: moment.utc(x.x).format('dddd'),
+      y: x.y
+    };
+    data1[6].y = mainX.y
+    // console.log(typeof x.x);
+    // console.log(x.x);
+    // console.log(mainX.x)
+  })
+
+
+
+
+  // console.log(data1)
+  return (
+    <div className='control-pane'>
+      <style>{SAMPLE_CSS}</style>
+      <div className='control-section'>
+        <ChartComponent id='charts-2' style={{ textAlign: "center", borderRadius: "25px", border: "2px solid blue" }}
+          primaryXAxis={{ valueType: 'Category', minorGridLines: { width: 0 }, majorGridLines: { width: 0 } }}
+          primaryYAxis={WeekReadingLinePrimaryYAxis}
+          // width={Browser.isDevice ? '100%' : '35%'}
+          // width={'30%'}
+          height={'55%'}
+          chartArea={{ border: { width: 0 } }}
+          legendSettings={{ visible: false }}
+          title='Reading weekly performance'
+          tooltip={{ enable: true }}
+        // background={"blue"}
+        >
+          <Inject services={[LineSeries, ColumnSeries, Category, Tooltip, SplineSeries, ChartAnnotation]} />
+          {/* <AxesDirective>
+            <AxisDirective majorGridLines={{ width: 0 }} rowIndex={0} opposedPosition={true} lineStyle={{ width: 0 }} minimum={24} maximum={36} interval={2} majorTickLines={{ width: 0 }} name='yAxis1' labelFormat='{value}°C' />
+          </AxesDirective> */}
+          <SeriesCollectionDirective>
+            <SeriesDirective dataSource={data1} xName='x' yName='y' width={2} name='Reading' type='Column' marker={{ visible: true, width: 7, height: 7 }} />
+          </SeriesCollectionDirective>
+        </ChartComponent>
+      </div>
+    </div>
+
+  )
+};
+export default WeekReadingChart;
+
 
 
 

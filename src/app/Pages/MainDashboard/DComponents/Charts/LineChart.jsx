@@ -1,7 +1,8 @@
 "use client";
 import React, { useEffect, useState } from 'react';
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, LineSeries, DateTime, Legend, Tooltip } from '@syncfusion/ej2-react-charts';
-import { lineCustomSeries, LinePrimaryXAxis, LinePrimaryYAxis, LinePrimaryXAxisPrevious } from '../../data/LineChartData';
+import { LinePrimaryXAxis, LinePrimaryYAxis, LinePrimaryXAxisPrevious } from '../../data/LineChartData';
+import LineChartData from '../../data/LineChartData';
 import { useStateContext } from '../../../../../contexts/ContextProvider';
 import { useRouter } from 'next/navigation';
 import { CiCalendarDate } from "react-icons/ci";
@@ -15,6 +16,10 @@ const LineChart = () => {
   const history = useRouter();
   const { currentMode } = useStateContext();
   const [previousMonth, setPreviousMonth] = useState(false);
+
+  let lineCustomSeries = LineChartData()
+  console.log(lineCustomSeries)
+
 
   return (
     <>
@@ -42,7 +47,6 @@ const LineChart = () => {
       >
         <Inject services={[LineSeries, DateTime, Legend, Tooltip]} />
         <SeriesCollectionDirective>
-          {/* eslint-disable-next-line react/jsx-props-no-spreading */}
           {lineCustomSeries.map((item, index) => <SeriesDirective key={index} {...item} />)}
         </SeriesCollectionDirective>
       </ChartComponent>  <br />

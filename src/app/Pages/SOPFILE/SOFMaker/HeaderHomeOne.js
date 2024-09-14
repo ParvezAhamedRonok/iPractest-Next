@@ -112,7 +112,7 @@ function HeaderHomeOne({ action }) {
                                             userInforbyFacebookGoogle || userLoginToken
                                                 ? (<div>
                                                     <a className="main-btn ml-30 p-2" style={{ cursor: "pointer" }}
-                                                        onClick={() => { history.push("/MainDashBoard/Dashboard") }}>
+                                                        onClick={() => { history.push("/Pages/MainDashboard/Dashboard") }}>
                                                         <p className='flex text-white text-[12px]'>
                                                             <FaBookReader className='text-[14px] translate-y-1 mr-2 text-green-400' />
                                                             Dashboard</p>
