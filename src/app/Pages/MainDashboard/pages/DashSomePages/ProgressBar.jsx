@@ -177,28 +177,28 @@ function ProgressBar() {
             <div className=' flex flex-wrap gap-2'>
 
               <button class=" transition duration-150 "
-                onClick={() => { history.push("/SpeakingPage") }}
+                onClick={() => { history.push("/Pages/Speaking-Module") }}
               >
                 <a className="w-auto text-black p-2 border-1 border-gray bg-sky-300 rounded-[30px] hover:bg-red-400 cursor-pointer border-r-t-[20px] text-[11px] sm:text-[16px]">
                   Speaking<i className="fal fa-arrow-right ml-2 text-[9px] sm:text-[10px]" />
                 </a>
               </button>
               <button class=" transition duration-150 "
-                onClick={() => { history.push("/WrittingPage") }}
+                onClick={() => { history.push("/Pages/Writing-Module/Actual-writing-tests") }}
               >
                 <a className="w-auto text-black p-2 border-1 border-gray bg-sky-300 rounded-[30px] hover:bg-red-400 cursor-pointer border-r-t-[20px] text-[11px] sm:text-[16px]">
                   Writing<i className="fal fa-arrow-right ml-2 text-[9px] sm:text-[10px]" />
                 </a>
               </button>
               <button class=" transition duration-150 "
-                onClick={() => { history.push("/ReadingPage/cambridgeAllTests") }}
+                onClick={() => { history.push("/Pages/Reading-Module/Cambridge-listening-tests") }}
               >
                 <a className="w-auto text-black p-2 border-1 border-gray bg-sky-300 rounded-[30px] hover:bg-red-400 cursor-pointer border-r-t-[20px] text-[11px] sm:text-[16px]">
                   Reading<i className="fal fa-arrow-right ml-2 text-[9px] sm:text-[10px]" />
                 </a>
               </button>
               <button class=" transition duration-150 "
-                onClick={() => { history.push("/ListeningPage/cambridgeAllTests") }}
+                onClick={() => { history.push("/Pages/Listening-Module/Cambridge-listening-tests") }}
               >
                 <a className="w-auto text-black p-2 border-1 border-gray bg-sky-300 rounded-[30px] hover:bg-red-400 cursor-pointer border-r-t-[20px] text-[11px] sm:text-[16px]">
                   Listening<i className="fal fa-arrow-right ml-2 text-[9px] sm:text-[10px]" />

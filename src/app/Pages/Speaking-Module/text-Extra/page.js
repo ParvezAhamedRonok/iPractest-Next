@@ -1,37 +1,28 @@
 "use client"
 import React, { useEffect, useState, useRef } from "react";
-import "../allStyle/ClickSpeaking.css";
+import "../Speaking-Func-Compoents/allStyle/ClickSpeaking.css";
 import { isMobile } from "react-device-detect";
-import { BiWifiOff } from "react-icons/bi";
 import { FcBusinesswoman } from "react-icons/fc";
 import { GiOldMicrophone } from "react-icons/gi";
-import Image from "next/image";
 import { useReactMediaRecorder } from "react-media-recorder";
 import axios from "axios";
 import hark from "hark";
-import createSpeechServicesPonyfill from 'web-speech-cognitive-services';
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 
-// import NotAnsweringTimer from "../Pages/TimerForNotRes";
-// import SStopTimer from "../Pages/S-secTimer";
-// import Timer from "../../WritingAllTests/Writing-All-Pages/Writing-Importand/Pages/Timer";
-
-import { ClockLoader } from "react-spinners";
 import { useRouter } from 'next/navigation';
-import PermissionDenieP from "../Pages/PermissionDenieP.jsx";
+import PermissionDenieP from "../Speaking-Func-Compoents/Pages/PermissionDenieP.jsx";
 //import NetworkCom from "../../Network/index";
-import audioPlaySound from "../../../../../assets/Audios/playAudioForSpeaking.wav"
-import { CheckPaymentStatus } from "../../../Payments/CkeckPayment/CheckPayments.js";
-import { useStateContext } from "../../../../../contexts/ContextProvider";
-import { localeCompare } from "../Pages/CompareFunction.js"
+import audioPlaySound from "../../../../assets/Audios/playAudioForSpeaking.wav"
+import { useStateContext } from "../../../../contexts/ContextProvider";
 
-import { SPEAKING_POST_FOR_SET_SCORES, SPEAKING_POST_TO_GET_RESPONSE_USERDATA } from "../../../../../assets/URL's/AllUrl.js";
-import { StepShowFunction } from "../Pages/StepShowFunction.js";
-import AnswerSelectCom from "../Pages/AnswerSelectCom.js";
-import ShowTestName from "../Pages/ShowTestName.jsx";
+import { SPEAKING_POST_FOR_SET_SCORES, SPEAKING_POST_TO_GET_RESPONSE_USERDATA } from "../../../../assets/URL's/AllUrl.js";
+import { StepShowFunction } from "../Speaking-Func-Compoents/Pages/StepShowFunction.js";
+import AnswerSelectCom from "../Speaking-Func-Compoents/Pages/AnswerSelectCom.js";
+import ShowTestName from "../Speaking-Func-Compoents/Pages/ShowTestName.jsx";
 
 
 // End of the importing==========================================
+
 
 var SpeechSDK;
 var synthesizer;
@@ -325,7 +316,6 @@ function ClickSpeaking({ testNo, setPassComment, setWaveTit }) {
         //if users is not in mobile in that case this package will be called && inisialized
         if (isMobile) {
             //start OpenAi speech recognation by function below
-            startRecording();
         } else {
             // alert("mobile...not")
             startListening();
@@ -834,7 +824,7 @@ function ClickSpeaking({ testNo, setPassComment, setWaveTit }) {
         str += "<say-as type=\"date:mdy\"> 1/29/2009 </say-as>";
         str += "</speak>";
         examinerSpeakProcessStart();
-        // window.starSynthesis(msgText);    //!very important..
+        window.starSynthesis(msgText);
 
 
     }
@@ -1304,7 +1294,7 @@ function ClickSpeaking({ testNo, setPassComment, setWaveTit }) {
                 tx.oncomplete = () => {
                     db.close();
                 }
-
+               
             }
 
         };
@@ -1535,3 +1525,20 @@ function ClickSpeaking({ testNo, setPassComment, setWaveTit }) {
 }
 
 export default ClickSpeaking;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

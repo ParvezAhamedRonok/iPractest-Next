@@ -29,7 +29,7 @@ function LetsPractice() {
                     </li>
                   </ul>
                 </div>
-                <a className="main-btn" href="/Speaking-Module">
+                <a className="main-btn" href="/Pages/Speaking-Module">
                   Let's Practice<i className="fal fa-arrow-right" />
                 </a>
                 <div className="thumb mr-30">
@@ -55,7 +55,7 @@ function LetsPractice() {
                     </li>
                   </ul>
                 </div>
-                <a className="main-btn" href="/Writing-Module/Actual-writing-tests">
+                <a className="main-btn" href="/Pages/Writing-Module/Actual-writing-tests">
                   Let's Practice<i className="fal fa-arrow-right" />
                 </a>
                 <div className="thumb mr-0 sm:mr-30">
@@ -84,7 +84,7 @@ function LetsPractice() {
                     </li>
                   </ul>
                 </div>
-                <a className="main-btn" href="/Reading-Module/Cambridge-Reding-tests">
+                <a className="main-btn" href="/Pages/Reading-Module/Cambridge-listening-tests">
                   Let's Practice<i className="fal fa-arrow-right" />
                 </a>
                 <div className="thumb mr-0 sm:mr-30">
@@ -110,7 +110,7 @@ function LetsPractice() {
                     </li>
                   </ul>
                 </div>
-                <a className="main-btn" href="/Listening-Module/Cambridge-listening-tests">
+                <a className="main-btn" href="/Pages/Listening-Module/Cambridge-listening-tests">
                   Let's Practice<i className="fal fa-arrow-right" />
                 </a>
                 <div className="thumb mr-0 sm:mr-30">

@@ -61,28 +61,6 @@ function HomeThree() {
 
     return (
         <>
-            {/* <Helmet>
-                <script type="application/ld+json">
-                    {JSON.stringify(schemaData)}
-                </script>
-                <title>IELTS Online Practice Test: Prepare for IELTS Exam.</title>
-                <meta name="description" content="Boost your IELTS score with our extensive range of practice tests. Track your daily band score and progressively enhance your skills in Speaking, Writing, Reading, and Listening for a successful exam!" />
-                <link rel="canonical" href="https://www.tacobell.com" />
-
-                <meta property="og:title" content="IELTS Online Practice Test: Prepare for IELTS Exam." />
-                <meta property="og:description" content="Boost your IELTS score with our extensive range of practice tests. Track your daily band score and progressively enhance your skills in Speaking, Writing, Reading, and Listening for a successful exam!" />
-                <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://ipractest.com" />
-                <meta property="og:image" content={logo} />
-                <meta property="og:site_name" content="https://ipracest.com" />
-
-                <meta name="twitter:card" content="IELTS Online Practice Test: Prepare for IELTS Exam." />
-                <meta name="twitter:title" content="IELTS Online Practice Test: Prepare for IELTS Exam." />
-                <meta name="twitter:description" content="Boost your IELTS score with our extensive range of practice tests. Track your daily band score and progressively enhance your skills in Speaking, Writing, Reading, and Listening for a successful exam!" />
-                <meta name="twitter:image" content={logo} />
-                <meta name="twitter:site" content="@ipractest.com" />
-                <meta name="twitter:creator" content="@ipractest.com" />
-            </Helmet> */}
 
             <NavigationBar drawer={drawer} action={drawerAction.toggle} />
             <HeaderHomeOne action={drawerAction.toggle} />

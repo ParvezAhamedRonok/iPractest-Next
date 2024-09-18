@@ -46,8 +46,7 @@ function Dashboard() {
           </div>
         </div>
       </div>
-      <div className="">
-        {/* All week charts will be here */}
+      {/* <div className="">
         <div className='w-full grid grid-cols-1 sm:grid-cols-3 gap-5 md:grid-cols-4 rounded p-3 mb-4'>
           <WeekSpeakingChart />
           <WeekReadingChart />
@@ -55,8 +54,7 @@ function Dashboard() {
           <WeekListeningChart />
         </div>
         <LineChart />
-      </div>
-
+      </div> */}
       <div className='invisible'>
         <DateGetAPI />
       </div>
