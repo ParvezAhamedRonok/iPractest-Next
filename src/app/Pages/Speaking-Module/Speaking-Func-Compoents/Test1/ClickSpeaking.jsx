@@ -834,7 +834,7 @@ function ClickSpeaking({ testNo, setPassComment, setWaveTit }) {
         str += "<say-as type=\"date:mdy\"> 1/29/2009 </say-as>";
         str += "</speak>";
         examinerSpeakProcessStart();
-        // window.starSynthesis(msgText);    //!very important..
+        window.starSynthesis(msgText);    //!very important..
 
 
     }
