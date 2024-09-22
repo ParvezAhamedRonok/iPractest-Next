@@ -1,3 +1,4 @@
+"use client";
 import React, { useRef } from 'react'
 import "../../../ListeningAllStyles/ListeningPage.css";
 import { useState } from 'react';

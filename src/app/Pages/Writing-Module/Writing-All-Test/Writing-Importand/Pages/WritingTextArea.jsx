@@ -1,4 +1,5 @@
 "use client"
+import dynamic from "next/dynamic";
 import React, { useRef, useState, useEffect } from "react";
 import "../../WrittingAllStyles/WrittingPage.css";
 import axios from "axios";
@@ -17,11 +18,6 @@ import { FaPenToSquare } from "react-icons/fa6";
 import { IoImages } from "react-icons/io5";
 import { MdOutlineCancel } from "react-icons/md";
 import { useRouter } from "next/navigation";
-import LoginPage from '../../../../LoginPage/LoginPage';
-import SignUpPage from '../../../../LoginPage/SignUpPage';
-import LoginPageForFeedback from '../../../../SOPFILE/LoginPage/LoginPage';
-import SignUpPageForFeedback from '../../../../SOPFILE/LoginPage/SignUpPage';
-import CountrySelect from '../../../../SOPFILE/LoginPage/CountrySelect2.jsx';
 import { FaPlus } from "react-icons/fa6";
 import Image from "next/image";
 import { useStateContext } from "../../../../../../contexts/ContextProvider";
@@ -30,8 +26,6 @@ import { CheckPaymentStatus } from "../../../../Payments/CkeckPayment/CheckPayme
 import { WRITING_POST_FOR_SET_SCORES, WRITING_POST_CHECK_ANSWER, WRITING_POST_UPLOAD_IMAGES, WRITING_POST_IPRACTEST_FEEDBACK, WRITING_GET_SINGLE_USER_IPRACTEST_FEEDBACK_DATA, WRITING_POST_SAVE_IPRACTEST_FEEDBACK_DATA_TO_DATABASE, WRITING_POST_UPLOAD_GCP_IMAGE_TO_GET_TEXT_FROM_IMAGE, WRITING_POST_GET_COHERENCE_SCORES_AFTER_EVALUATION } from "../../../../../../assets/URL's/AllUrl.js"
 
 import { Joyride } from "./Joyride.js";
-import QuestionUpload from "./QuestionUpload.js";
-
 import {
   CircularProgressbar,
   CircularProgressbarWithChildren,
@@ -47,6 +41,15 @@ import ResultEvaluations from "./ResultEvaluations.jsx";
 import ResultImprovement from "./ResultImprovement.jsx";
 import { IoMdLogIn } from "react-icons/io";
 import { dummyTextArr } from "../AllFunctions/DummyTextArr.jsx";
+
+//client components.....
+
+const LoginPageForFeedback = dynamic(() => import("../../../../SOPFILE/LoginPage/LoginPage"), { ssr: false });
+const SignUpPageForFeedback = dynamic(() => import("../../../../SOPFILE/LoginPage/SignUpPage"), { ssr: false });
+const CountrySelect = dynamic(() => import("../../../../SOPFILE/LoginPage/CountrySelect2.jsx"), { ssr: false });
+const LoginPage = dynamic(() => import("../../../../LoginPage/LoginPage"), { ssr: false });
+const SignUpPage = dynamic(() => import("../../../../LoginPage/SignUpPage"), { ssr: false });
+const QuestionUpload = dynamic(() => import("./QuestionUpload.js"), { ssr: false });
 
 //end importing-------->
 
@@ -1546,8 +1549,8 @@ function WritingTextArea(task) {
                         return (
                           <div key={image} className="image relative">
                             <Image src={image} className=" rounded-[15px]" alt="upload"
-                             width={75}
-                             height={72}
+                              width={75}
+                              height={72}
                             />
                             <button
                               className="bg-red-400 p-auto w-[17px] h-[17px] sm:w-[20px] sm:h-[20px] font-bold rounded-[50%] text-center text-[10px] sm:text-[12px] absolute top-[-5px] right-[-4px] text-white"

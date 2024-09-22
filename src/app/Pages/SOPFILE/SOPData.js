@@ -159,7 +159,7 @@ export const SOPDownloadedFiles = [
             {
                 ID: uuidv4(),
                 Image: ManagementsImg2,
-                Pdf:ManagementsPDF2,
+                Pdf: ManagementsPDF2,
                 SOP: 2,
                 SOPtitle: "Managements-SOP"
             },
@@ -341,29 +341,5 @@ export const SOPDownloadedFiles = [
         ],
     },
 
-    // {
-    //     title: "Other's SOP",
-    //     links: [
-    //         {
-    //             // Title: "Statement of Purpose Example of Managements",
-    //             ID: uuidv4(),
-    //             Image: OtherImg1,
-    //             Pdf: OtherPDF1
-    //         },
-    //         {
-    //             // Title: "Statement of Purpose Example of Managements",
-    //             ID: uuidv4(),
-    //             Image: OtherImg2,
-    //             Pdf: OtherPDF2
-    //         },
-    //         {
-    //             // Title: "Statement of Purpose Example of Managements",
-    //             ID: uuidv4(),
-    //             Image: OtherImg3,
-    //             Pdf: OtherPDF3
-    //         },
-
-    //     ],
-    // },
 ]
 

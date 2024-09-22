@@ -1,6 +1,5 @@
 "use client"
 import React, { useEffect, useState } from 'react';
-import "./LoginPage.css";
 import "./SignUpPage.css"
 import { useRouter } from 'next/navigation';
 import Axios from 'axios';
@@ -23,7 +22,6 @@ function LoginPage({ openLogInPage, openSignUpPage, finalFuncAfterLogInorSignUp 
 
   //all user localstorages data storing states.......
   const [userCountryInfo, setUserCountryInfo] = useState();
-  const [usersCountryName, setuserCountryName] = useState("");
   const [DeviceNumber, setUserDeviceName] = useState("")
   const [userEmail, setUserEmail] = useState("");
   const [userName, setUserName] = useState("");

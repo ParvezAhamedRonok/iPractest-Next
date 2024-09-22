@@ -1,30 +1,13 @@
 "use client"
+import dynamic from 'next/dynamic';
 import React, { useEffect, useState } from 'react';
 import "./index.css";
 import { useRouter } from 'next/navigation';
-import iconTwo from '../../../../assets/images/icon/2.png';
-
-import { FcNfcSign } from "react-icons/fc";
-import { isIOS, isIOS13, isIPad13, isIPhone13, isMacOs, isSafari, isMobile, isOpera } from "react-device-detect";
-import { CiPlay1 } from "react-icons/ci";
-import ImagePre from "../../../../assets/images/PremiumImage.jpg";
-import Axios from "axios";
-import "./index.css";
-import LoginPage from "../../LoginPage/LoginPage";
-import SignUpPage from '../../LoginPage/SignUpPage';
+import { isSafari, isMobile, isOpera } from "react-device-detect";
 import { useStateContext } from "../../../../contexts/ContextProvider";
-import { FaTeamspeak } from "react-icons/fa6";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
-import img1 from '../../../../assets/images/Carton-2.png';
-import img2 from '../../../../assets/images/Carton-1.png';
 import Image from 'next/image';
-import Motivation from './Motivation.jsx';
-import { AiOutlineLogin } from "react-icons/ai";
 
-import TellusReason from './TellusResoan';
-import LoadingCom from '../../LoginPage/ForgetPassword/LoadingCom.js';
-
-import ImagSide from "../../../../assets/images/Speaking-Images/ImgSide2.png"
 
 //section Images------------------
 import test1Sec1Images from "../../../../assets/images/Speaking-Images/test1Sec-1.png"
@@ -85,6 +68,14 @@ import test14Sec2Images from "../../../../assets/images/Speaking-Images/Test14Se
 import test15Sec1Images from "../../../../assets/images/Speaking-Images/Test15Sec1.jpg"
 import test15Sec2Images from "../../../../assets/images/Speaking-Images/Test15Sec2.jpg"
 import test15Sec3Images from "../../../../assets/images/Speaking-Images/Test15Sec3.jpg"
+
+
+//client components....
+const LoginPage = dynamic(() => import("../../LoginPage/LoginPage"))
+const SignUpPage = dynamic(() => import("../../LoginPage/SignUpPage"))
+const Motivation = dynamic(() => import("./Motivation.jsx"))
+const TellusReason = dynamic(() => import("./TellusResoan"))
+
 //End of the importing-------------
 
 
@@ -217,11 +208,6 @@ function SpeakingAfter10Tests({ openTestAfter20, setOpenTestsAfter20, mainDataAl
     }
 
 
-
-
-    //console.log(bdPaidStatus);
-    //console.log(otherPaidStatus);
-    //console.log(userPaymentStatusCheck)
 
     // Speaking-Test1-Section Functions
     const Test1Sec1 = (e) => {

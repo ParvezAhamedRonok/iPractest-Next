@@ -1,16 +1,20 @@
 "use client"
-import React, { useEffect, useState } from 'react';
+import dynamic from 'next/dynamic';
+import React, { useEffect, useState, Suspense } from 'react';
 import "./index.css";
 import useToggle from '../../../../hooks/useToggle';
 import BackToTop from '../../../../lib/BackToTop';
 import FooterHomeThree from '../../LandingHome/FooterHomeOne';
-import HeaderLanding from "../../LandingHome/HeaderHomeOne";
-import NavigationBar from '../../LandingHome/NavigationBar';
-import SpeakingTests from './SpekingTests';
 import { useStateContext } from "../../../../contexts/ContextProvider";
 import { CheckPaymentStatus } from "../../Payments/CkeckPayment/CheckPayments.js";
 import axios from "axios"
-import SpeakingAfter10Tests from './Speaking-After-10-Tests.jsx';
+
+//client components....
+const HeaderLanding = dynamic(() => import('../../LandingHome/HeaderHomeOne.js'), { ssr: false });
+const NavigationBar = dynamic(() => import('../../LandingHome/NavigationBar.js'), { ssr: false });
+const SpeakingTests = dynamic(() => import('./SpekingTests'), { ssr: false });
+const SpeakingAfter10Tests = dynamic(() => import('./Speaking-After-10-Tests.jsx'), { ssr: false });
+
 
 //end of the importing..........
 
@@ -106,23 +110,39 @@ function SpeakingAllTest() {
 
     return (
         <>
+            <Suspense fallback={<div className='w-full h-full m-auto justify-center '>Loading... </div>}>
+                <NavigationBar drawer={drawer} action={drawerAction.toggle} />
+            </Suspense>
 
-            <NavigationBar drawer={drawer} action={drawerAction.toggle} />
-            <HeaderLanding action={drawerAction.toggle} />
-            <SpeakingTests
-                setOpenTestsAfter10={setOpenTestsAfter10}
-                openTestAfter10={openTestAfter10}
-                mainDataAll={mainDataAll}
-            />
-            {
-                openTestAfter10 && (<SpeakingAfter10Tests
-                    setOpenTestsAfter20={setOpenTestsAfter20}
-                    openTestAfter20={openTestAfter20}
+            <Suspense fallback={<div className='w-full h-full m-auto justify-center '>Loading... </div>}>
+                <HeaderLanding action={drawerAction.toggle} />
+            </Suspense>
+
+            <Suspense fallback={<div className='w-full h-full m-auto justify-center '>Loading... </div>}>
+                <SpeakingTests
+                    setOpenTestsAfter10={setOpenTestsAfter10}
+                    openTestAfter10={openTestAfter10}
                     mainDataAll={mainDataAll}
-                />)
-            }
-            <FooterHomeThree />
-            <BackToTop />
+                />
+            </Suspense>
+
+            <Suspense fallback={<div className='w-full h-full m-auto justify-center '>Loading... </div>}>
+                {
+                    openTestAfter10 && (<SpeakingAfter10Tests
+                        setOpenTestsAfter20={setOpenTestsAfter20}
+                        openTestAfter20={openTestAfter20}
+                        mainDataAll={mainDataAll}
+                    />)
+                }
+            </Suspense>
+            <Suspense fallback={<div className='w-full h-full m-auto justify-center '>Loading... </div>}>
+                <FooterHomeThree />
+            </Suspense>
+
+            <Suspense fallback={<div className='w-full h-full m-auto justify-center '>Loading... </div>}>
+                <BackToTop />
+            </Suspense>
+
         </>
     );
 }

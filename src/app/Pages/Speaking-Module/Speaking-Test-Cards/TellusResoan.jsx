@@ -4,7 +4,6 @@ import "../../LoginPage/SignUpPage.css"
 import { useRouter } from 'next/navigation';
 import Axios from 'axios';
 import Image from 'next/image';
-// import Timer from "../WritingAllTests/Writing-All-Pages/Writing-Importand/Pages/Timer";
 import { useStateContext } from "../../../../contexts/ContextProvider";
 import { AiOutlineLogin } from "react-icons/ai";
 import NotPaidImg from "../../../../assets/images/Speaking-Images/sadGifs.gif"
@@ -23,7 +22,6 @@ function TellusReason() {
 
     //useState items------
     const [getUserReasons, setGetUserReasons] = useState("");
-    const [showReasonPage, setShowReasonPage] = useState(false);
     const [reason1, setReason1] = useState(false);
     const [reason2, setReason2] = useState(false);
     const [reason3, setReason3] = useState(false);
@@ -44,9 +42,6 @@ function TellusReason() {
         setuserProductID(localStorage.getItem("productID") && localStorage.getItem("productID"))
 
 
-        // if (history.goBack()) {
-        //     localStorage.removeItem("productID")
-        // }
         Axios({
             method: "get",
             // url: 'http://localhost:8080/api/user/getSpecificUserReasonDetail/' + userEmail,
@@ -71,41 +66,6 @@ function TellusReason() {
 
 
     }, [])
-
-    // useEffect(() => {
-    //     //for showing this page by pass those conditions below-----------------------            
-    //     showReasonFunc()
-    // }, [])
-
-
-    // const showReasonFunc = () => {
-    //     setTimeout(() => {
-    //         if (localStorage.getItem("productID") && getUserReasons != "") {
-    //             alert("condition--1")
-    //             console.log("condition-1")
-    //             if (!bdPaidStatus || !otherPaidStatus) {
-    //                 alert("condition--2")
-    //                 setShowReasonPage(true);
-    //             }
-    //         }
-    //     }, 2000);
-    // }
-
-
-
-    // console.log(getUserReasons)
-
-    // const handleChnage = (x) => {
-    //     const fullName = x.target.name;
-    //     const Values = x.target.value;
-    //     setUsers((previous) => {
-    //         return { ...previous, [fullName]: Values }
-    //     })
-
-    // }
-
-
-
 
 
     const handleSubmit = (x) => {

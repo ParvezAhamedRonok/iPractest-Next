@@ -1,4 +1,5 @@
 
+"use client";
 import React, { useState } from 'react';
 import FunFactThumb from '../../../assets/images/improvementThumb.png';
 import CounterUpCom from '../../../lib/CounterUpCom';

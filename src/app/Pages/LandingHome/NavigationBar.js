@@ -1,5 +1,6 @@
 
 
+"use client";
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import logo from '../../../assets/images/Practestlogo.png';
@@ -161,44 +162,12 @@ function NavigationBar({ drawer, action }) {
 
                                             <Link href="/">Home</Link>
 
-                                            {/* if we want we can use that.. */}
-                                            {/* <ul
-                                                                    className="sub-menu"
-                                                                    style={{
-                                                                        height: item === 'home' ? itemSize : '0px',
-                                                                    }}
-                                                                >
-                                                                    <li>
-                                                                        <Link href="/">Home 1 my type</Link>
-                                                                    </li>
-                                                                    <li>
-                                                                        <Link href="/home-two">Home 2</Link>
-                                                                    </li>
-                                                                    <li>
-                                                                        <Link href="/home-three">Home 3</Link>
-                                                                    </li>
-                                                                    <li>
-                                                                        <Link href="/home-four">Home 4</Link>
-                                                                    </li>
-                                                                    <li>
-                                                                        <Link href="/home-five">Home 5</Link>
-                                                                    </li>
-                                                                    <li>
-                                                                        <Link href="/home-six">Home 6</Link>
-                                                                    </li>
-                                                                    <li>
-                                                                        <Link href="/home-seven">Home 7</Link>
-                                                                    </li>
-                                                                    <li>
-                                                                        <Link href="/home-eight">Home 8</Link>
-                                                                    </li>
-                                                                </ul> */}
                                         </li>
 
                                         <li
                                             onClick={(e) => handler(e, 'service')}
                                             id="service"
-                                            // onClick={(e) => alert("Speaking page is under construction. This page will be live on 15th oct.")}
+
                                             className="menu-item-has-children active"
                                         >
                                             <Link href="/Pages/Speaking-Module">Speaking</Link>
@@ -229,56 +198,6 @@ function NavigationBar({ drawer, action }) {
                                             <Link href="/Listening-Module/Cambridge-listening-tests">Listening</Link>
                                         </li>
 
-                                        {/* <li
-                                            onClick={(e) => handler(e, 'pages')}
-                                            id="pages"
-                                            className="menu-item-has-children active"
-                                        >
-                                            <span className="menu-expand">
-                                                <i className="fa fa-angle-down"></i>
-                                            </span>
-                                            <a href="#">Pages</a>
-                                            <ul
-                                                className="sub-menu"
-                                                style={{
-                                                    height: item === 'pages' ? itemSize : '0px',
-                                                }}
-                                            >
-                                                <li>
-                                                    <Link href="/about-us">About Us</Link>
-                                                </li>
-
-                                                <li>
-                                                    <Link href="/error">Error</Link>
-                                                </li>
-                                            </ul>
-                                        </li> */}
-
-
-                                        {/* <li
-                                            onClick={(e) => handler(e, 'news')}
-                                            id="news"
-                                            className="menu-item-has-children active"
-                                        >
-                                            <span className="menu-expand">
-                                                <i className="fa fa-angle-down"></i>
-                                            </span>
-                                            <a href="#">News</a>
-                                            <ul
-                                                className="sub-menu"
-                                                style={{
-                                                    height: item === 'news' ? itemSize : '0px',
-                                                }}
-                                            >
-                                                <li>
-                                                    <Link href="/news">news page</Link>
-                                                </li>
-                                                <li>
-                                                    <Link href="/news/single-news">Single News</Link>
-                                                </li>
-                                            </ul>
-                                        </li> */}
-
 
                                         <li
                                             onClick={(e) => handler(e, 'contact')}
@@ -294,41 +213,6 @@ function NavigationBar({ drawer, action }) {
                                         >
                                             <Link href="/Pages/SOPFILE/SOPDownload">SOP</Link>
                                         </li>
-
-
-                                        {/* <li
-                                            onClick={(e) => handler(e, 'pages')}
-                                            id="pages"
-                                            className="menu-item-has-children active"
-                                        >
-                                            <span className="menu-expand">
-                                                <i className="fa fa-angle-down"></i>
-                                            </span>
-                                            <a href="#">Services</a>
-                                            <ul
-                                                className="sub-menu"
-                                                style={{
-                                                    height: item === 'pages' ? itemSize : '0px',
-                                                }}
-                                            >
-                                                <li>
-                                                    <Link href="/SOP-Download">SOP-Download</Link>
-                                                </li>
-
-                                                <li>
-                                                    <Link href="/Create-CV">Create CV</Link>
-                                                </li>
-                                            </ul>
-                                        </li> */}
-
-
-                                        {/* <li
-                                            onClick={(e) => handler(e, 'contact')}
-                                            id="contact"
-                                            className="menu-item-has-children active"
-                                        >
-                                            <Link href="/contact">Contact</Link>
-                                        </li> */}
                                     </ul>
                                 </div>
                                 <div className="offcanvas-social">

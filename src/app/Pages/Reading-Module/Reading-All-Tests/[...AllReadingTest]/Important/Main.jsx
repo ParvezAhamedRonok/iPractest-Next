@@ -1,16 +1,21 @@
 "use client"
+import dynamic from 'next/dynamic';
+import { useEffect, useState, Suspense } from 'react';
 import "../TestAllStyles/index.css";
-import Header from './Header';
-import Footer from './Footer';
-import Reading from "./reading";
-import { useEffect, useState } from 'react';
 import "../TestAllStyles/ReadingPageStyle.css";
 import RTips from "./Tips";
 import { MdRateReview } from "react-icons/md"
 import UserFeedBack from "../../../../../../components/UserComments";
 import { BsBalloonHeartFill } from "react-icons/bs";
 import { useStateContext } from "../../../../../../contexts/ContextProvider";
-import ExplanationsPopup from "./ExplanationsPopup";
+
+
+//client components....
+const Reading = dynamic(() => import('./reading'), { ssr: false });
+const ExplanationsPopup = dynamic(() => import('./ExplanationsPopup'), { ssr: false });
+const Header = dynamic(() => import('./Header'), { ssr: false });
+const Footer = dynamic(() => import('./Footer'), { ssr: false });
+
 //end importing-------
 
 
@@ -61,26 +66,6 @@ function Main({ testName }) {
 
 
 
-
-  // for(let x in UserData){
-  //   let Ques1 = "ques1";
-  //   let ekys = UserData.ekys;
-
-  //   let ques1 = UserData[x]
-  //   console.log(ques1);
-  // }
-
-
-
-
-
-
-
-
-
-
-
-
   //function for handle_Panel_Forms_Inputs---------------
   const handleChange = (x) => {
     const Names = x.target.name;
@@ -107,22 +92,32 @@ function Main({ testName }) {
   //main rendering---              
   return (
     <div className="Main">
-      <Header className="Header" handleDecressFontSize={handleDecressFontSize} handleIncressFontSize={handleIncressFontSize} />
-      <header className="App-header" style={{ fontSize: handlePanelfontSize }}>
-        <Reading
-          handleChange={handleChange}
-          AnswersData={AllAnswersData}
-          UserData={UserData}
-          testName={testName}
+      <Suspense fallback={<div className='w-full h-full m-auto justify-center '>Loading... </div>}>
+        <Header className="Header" handleDecressFontSize={handleDecressFontSize} handleIncressFontSize={handleIncressFontSize} />
+      </Suspense>
 
+      <Suspense fallback={<div className='w-full h-full m-auto justify-center '>Loading... </div>}>
+        <header className="App-header" style={{ fontSize: handlePanelfontSize }}>
+          <Reading
+            handleChange={handleChange}
+            AnswersData={AllAnswersData}
+            UserData={UserData}
+            testName={testName}
+
+          />
+        </header>
+      </Suspense>
+
+
+      <Suspense fallback={<div className='w-full h-full m-auto justify-center '>Loading... </div>}>
+        <Footer UserData={UserData}
+          AnswersData={AnswersData}
+          setPassComment={setPassComment}
+          setWaveTit={setWaveTit}
+          testName={testName}
         />
-      </header>
-      <Footer UserData={UserData}
-        AnswersData={AnswersData}
-        setPassComment={setPassComment}
-        setWaveTit={setWaveTit}
-        testName={testName}
-      />
+      </Suspense>
+
       {/* for some tips */}
       {userCountry === "Bangladesh" && <RTips />}
       {/* for pass user reviews */}
@@ -146,9 +141,12 @@ function Main({ testName }) {
       }
 
       {/* Explanations for reading sections........... */}
-      {
-        explainRLQuestions && <ExplanationsPopup />
-      }
+      <Suspense fallback={<div className='w-full h-full m-auto justify-center '>Loading... </div>}>
+        {
+          explainRLQuestions && <ExplanationsPopup />
+        }
+
+      </Suspense>
 
 
     </div>

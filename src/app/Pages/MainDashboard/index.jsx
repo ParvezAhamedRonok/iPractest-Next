@@ -1,8 +1,9 @@
 "use client";
-import React, { useEffect, useState } from 'react';
+import dynamic from 'next/dynamic';
+import React, { useEffect, useState, Suspense } from 'react';
 import "./index.css";
 import { useRouter } from 'next/navigation';
-import { Dashboard } from './pages';
+// import { Dashboard } from './pages';
 import { useStateContext } from "../../../contexts/ContextProvider";
 import { TooltipComponent } from "@syncfusion/ej2-react-popups";
 import { FiSettings } from "react-icons/fi";
@@ -11,14 +12,22 @@ import Footer from "../LandingHome/FooterHomeOne"
 import Axios from 'axios';
 import { POST_REFERRALS_USER_INTO_DATABASE } from '../../../assets/URL\'s/AllUrl';
 
-// IMPORT  all of the pages ....
-import { SpeakingCheck, LeaderBoard, LetsPractice, SOFFileReader, LORFileReader, Referrals } from "./pages/index.jsx"
-// const SpeakingCheck = React.lazy(() => import('./pages').then((module) => ({ default: module.SpeakingCheck })));
-// const LeaderBoard = React.lazy(() => import('./pages').then((module) => ({ default: module.LeaderBoard })));
-// const LetsPractice = React.lazy(() => import('./pages').then((module) => ({ default: module.LetsPractice })));
-// const SOFFileReader = React.lazy(() => import('./pages').then((module) => ({ default: module.SOFFileReader })));
-// const LORFileReader = React.lazy(() => import('./pages').then((module) => ({ default: module.LORFileReader })));
-// const Referrals = React.lazy(() => import('./pages').then((module) => ({ default: module.Referrals })));
+//client components....
+// const Dashboard = dynamic(() => import('./pages'), { ssr: false });
+// const SpeakingCheck = dynamic(() => import('./pages'), { ssr: false });
+// const LeaderBoard = dynamic(() => import('./pages'), { ssr: false });
+// const LetsPractice = dynamic(() => import('./pages'), { ssr: false });
+// const SOFFileReader = dynamic(() => import('./pages'), { ssr: false });
+// const LORFileReader = dynamic(() => import('./pages'), { ssr: false });
+// const Referrals = dynamic(() => import('./pages'), { ssr: false });
+
+const Dashboard = dynamic(() => import('./pages').then((module) => ({ default: module.Dashboard, ssr: false })));
+const SpeakingCheck = dynamic(() => import('./pages').then((module) => ({ default: module.SpeakingCheck, ssr: false })));
+const LeaderBoard = dynamic(() => import('./pages').then((module) => ({ default: module.LeaderBoard, ssr: false })));
+const LetsPractice = dynamic(() => import('./pages').then((module) => ({ default: module.LetsPractice, ssr: false })));
+const SOFFileReader = dynamic(() => import('./pages').then((module) => ({ default: module.SOFFileReader, ssr: false })));
+const LORFileReader = dynamic(() => import('./pages').then((module) => ({ default: module.LORFileReader, ssr: false })));
+const Referrals = dynamic(() => import('./pages').then((module) => ({ default: module.Referrals, ssr: false })));
 
 //end importing.......
 
@@ -120,15 +129,21 @@ export default function Index({ DashboardID }) {
           </div>
           {activeMenu ? (
             <div className="w-60 fixed sidebar dark:bg-secondary-dark-bg bg-white ">
-              <Sidebar
-                DashboardID={DashboardID}
-              />
+              <Suspense fallback={<div className='w-full h-full m-auto justify-center align-middle'>Loading... </div>}>
+                <Sidebar
+                  DashboardID={DashboardID}
+                />
+              </Suspense>
+
             </div>
           ) : (
             <div className="w-0 dark:bg-secondary-dark-bg">
-              <Sidebar
-                DashboardID={DashboardID}
-              />
+              <Suspense fallback={<div className='w-full h-full m-auto justify-center align-middle'>Loading... </div>}>
+                <Sidebar
+                  DashboardID={DashboardID}
+                />
+              </Suspense>
+
             </div>
           )}
           <div
@@ -139,7 +154,10 @@ export default function Index({ DashboardID }) {
             }
           >
             <div className="fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full  ">
-              <DashNavbar />
+              <Suspense fallback={<div className='w-full h-full m-auto justify-center align-middle'>Loading... </div>}>
+                <DashNavbar />
+              </Suspense>
+
             </div>
 
             {themeSettings && (<ThemeSettings />)}
@@ -153,10 +171,12 @@ export default function Index({ DashboardID }) {
             {DashboardID == "LORFile" && (<LORFileReader />)}
             {DashboardID == "Referrals" && (<Referrals />)}
             {/* <Notification /> */}
+            <Suspense fallback={<div className='w-full h-full m-auto justify-center align-middle'>Loading... </div>}>
+              <div>
+                <Footer />
+              </div>
+            </Suspense>
 
-            <div>
-              <Footer />
-            </div>
           </div>
         </div>
       </div>

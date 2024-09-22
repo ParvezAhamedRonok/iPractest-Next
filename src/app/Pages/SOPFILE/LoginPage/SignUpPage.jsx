@@ -109,11 +109,7 @@ function SignUpPage({ openSignUpPage, openLogInPage, finalFuncAfterLogInorSignUp
                                     setLoadingMsg(false);
                                     openSignUpPage()  // this is for close popUp
                                     finalFuncAfterLogInorSignUp();
-                                    // if (loginRedirectStatus == "") {
-                                    //       nextPath("/MainDashBoard/Dashboard");
-                                    // } else {
-                                    //       setLoginRedirectUrl("")
-                                    // }
+
                               }, 500);
 
                         }

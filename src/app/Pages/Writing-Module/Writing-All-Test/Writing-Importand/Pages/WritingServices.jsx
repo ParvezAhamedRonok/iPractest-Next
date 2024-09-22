@@ -22,16 +22,6 @@ function WritingServices() {
                 };
 
 
-
-
-
-
-
-
-
-
-
-
     return (
         <>
             <section style={{background:'#eef1f6'}} className=" appie-service-area appie-service-3-area pb-100" id="service">

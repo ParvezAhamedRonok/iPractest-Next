@@ -1,14 +1,19 @@
-import React, { useState , useEffect } from 'react';
+"use client";
+import dynamic from 'next/dynamic';
+import React, { useState, useEffect } from 'react';
 import "./index.css";
 import { useRouter } from 'next/navigation';
-import WritingTextArea from '../Writing-All-Test/Writing-Importand/Pages/WritingTextArea.jsx';
 import WSlider from './WSlider';
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 import { BiIntersect } from "react-icons/bi";
-import Task2Component from "../Writing-All-Test/Writing-Importand/Pages/Task2Compoennt.jsx"
 import { TbVocabulary } from "react-icons/tb";
 import Image from 'next/image';
-import WritingCardMainImg from "../../../../assets/images/about-writing-pic-1.png"
+import WritingCardMainImg from "../../../../assets/images/about-writing-pic-1.png";
+
+//client components......
+const WritingTextArea = dynamic(() => import("../Writing-All-Test/Writing-Importand/Pages/WritingTextArea.jsx"), { ssr: false })
+const Task2Component = dynamic(() => import("../Writing-All-Test/Writing-Importand/Pages/Task2Compoennt.jsx"), { ssr: false })
+
 // end importing------>
 
 
@@ -293,7 +298,7 @@ function AllWritingTestServices(task) {
                                             <div
                                                 className="relative flex flex-row md:space-x-5 space-y-3 md:space-y-0 rounded-xl shadow-xl p-[17px] pb-[0px] sm:pb-[10px]  max-w-xs md:max-w-3xl mx-auto border border-white bg-white sha">
                                                 <div className="w-1/3 bg-white grid place-items-center">
-                                                      <Image src={WritingCardMainImg} className="rounded-xl h-[80%] translate-y-[-10px] sm:translate-x-[0px]" />
+                                                    <Image src={WritingCardMainImg} className="rounded-xl h-[80%] translate-y-[-10px] sm:translate-x-[0px]" />
                                                 </div>
                                                 <div className="w-2/3 bg-white flex flex-col space-y-2 p-3 translate-y-[-3px] sm:translate-y-[0px]">
                                                     <div className="flex justify-between item-center gap-1">

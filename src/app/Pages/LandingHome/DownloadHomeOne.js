@@ -1,6 +1,7 @@
 import React from 'react';
 import downloadThumb from '../../../assets/images/download-thumb-1.png';
 import downloadThumbTwo from '../../../assets/images/download-thumb-2.png';
+import Image from 'next/image';
 
 function DownloadHomeOne({ className }) {
     return (
@@ -31,7 +32,7 @@ function DownloadHomeOne({ className }) {
                                     </a>
                                 </div>
                                 <div className="thumb text-center">
-                                    <img src={downloadThumb} alt="IELTS Practice download img-1" />
+                                    <Image src={downloadThumb} alt="IELTS Practice download img-1" />
                                 </div>
                             </div>
                         </div>
@@ -50,7 +51,7 @@ function DownloadHomeOne({ className }) {
                                     </a>
                                 </div>
                                 <div className="thumb text-right">
-                                    <img src={downloadThumbTwo} alt="IELTS Practice download img-2" />
+                                    <Image src={downloadThumbTwo} alt="IELTS Practice download img-2" />
                                 </div>
                             </div>
                         </div>

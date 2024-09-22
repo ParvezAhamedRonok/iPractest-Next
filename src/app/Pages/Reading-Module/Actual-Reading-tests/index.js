@@ -1,15 +1,16 @@
 "use client"
-import React, { useEffect } from 'react';
+import dynamic from 'next/dynamic';
+import React, { useEffect, Suspense } from 'react';
 import "./index.css";
 import useToggle from '../../../../hooks/useToggle';
 import BackToTop from '../../../../lib/BackToTop';
 import FooterHomeThree from '../../LandingHome/FooterHomeOne';
-import NavigationBar from '../../LandingHome/NavigationBar';
 import AllTestComponent from "./AllTestsReading"
-import HeaderLanding from "../../LandingHome/HeaderHomeOne";
 import { useStateContext } from "../../../../contexts/ContextProvider";
 import { CheckPaymentStatus } from "../../Payments/CkeckPayment/CheckPayments.js";
-
+//client components....
+const HeaderLanding = dynamic(() => import('../../LandingHome/HeaderHomeOne'), { ssr: false });
+const NavigationBar = dynamic(() => import('../../LandingHome/NavigationBar'), { ssr: false });
 //end of the importing......
 
 
@@ -28,13 +29,22 @@ function ReadingAllTest() {
 
     return (
         <>
+            <Suspense fallback={<div className='w-full h-full m-auto justify-center '>Loading... </div>}>
+                <NavigationBar drawer={drawer} action={drawerAction.toggle} />
+            </Suspense>
 
-            <NavigationBar drawer={drawer} action={drawerAction.toggle} />
-            <HeaderLanding action={drawerAction.toggle} />
-            <AllTestComponent />
-
-            <FooterHomeThree />
-            <BackToTop />
+            <Suspense fallback={<div className='w-full h-full m-auto justify-center '>Loading... </div>}>
+                <HeaderLanding action={drawerAction.toggle} />
+            </Suspense>
+            <Suspense fallback={<div className='w-full h-full m-auto justify-center '>Loading... </div>}>
+                <AllTestComponent />
+            </Suspense>
+            <Suspense fallback={<div className='w-full h-full m-auto justify-center '>Loading... </div>}>
+                <FooterHomeThree />
+            </Suspense>
+            <Suspense fallback={<div className='w-full h-full m-auto justify-center '>Loading... </div>}>
+                <BackToTop />
+            </Suspense>
 
 
         </>

@@ -1,15 +1,19 @@
-"use client";
-import React, { useEffect, useState } from 'react';
+
+import dynamic from 'next/dynamic';
+import React, { useEffect } from 'react';
 import {
   LineChart, DateFillCom, WeekWritingChart,
   WeekSpeakingChart, WeekListeningChart, WeekReadingChart
 } from '../DComponents';
-import ProgressBar from './DashSomePages/ProgressBar';
+
 import { useRouter } from 'next/navigation';
 import DateGetAPI from "../pages/DashSomePages/DateGetAPI";
 import "../StyleAll/Style-Dashboard.css";
+const ProgressBar = dynamic(() => import('./DashSomePages/ProgressBar'), { ssr: false });
 
 //end of importings..............
+
+
 
 function Dashboard() {
   const history = useRouter();

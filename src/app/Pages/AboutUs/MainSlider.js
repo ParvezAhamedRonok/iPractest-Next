@@ -11,20 +11,6 @@ import image4 from '../../../assets/images/about-writing-pic-1.png';
 export default function MainSlider() {
     return (
         <div className='w-full h-[500px] mt-[200px] mb-[40px] p-[20px] bg-white flex gap-[10px] sm:gap-[40px] box-border overflow-hidden'>
-            {/* <section className="section">
-                <span className="span"></span>
-                <span className="span"></span>
-                <span className="span"></span>
-                <span className="span"></span>
-                <span className="span"></span>
-                <span className="span"></span>
-                <span className="span"></span>
-                <span className="span"></span>
-                <span className="span"></span>
-                <span className="span"></span>
-                <span className="span"></span>
-                <span className="span"></span>
-            </section> */}
             <div className="w-full h-full flex justify-center box-border overflow-auto">
                 <div className="m-auto p-[10px] sm:p-[25px] md:p-[40px]">
                     <p className="text-xl sm:text-2xl md:text-4xl  mb-3 font-bold">Let's Practice<br />

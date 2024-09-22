@@ -1,26 +1,21 @@
 "use client"
 import React, { useEffect, useState } from 'react';
-import { useStateContext } from "../../../../../../contexts/ContextProvider";
 import Axios from "axios";
 import { WRITING_POST_FOR_SET_SCORES } from "../../../../../../assets/URL's/AllUrl";
-import { useRouter } from 'next/navigation';
 //END OF THE IMPORTING.....
 
 
 
 
 export const PostWritingScors = (x) => {
-    const { setStoreCounrtyData } = useStateContext();
-    const history = useRouter();
     //all localstorage data storing states.......
-    const [userLoginCountry, setUserloginCountry] = useState("");
     const [userLoginEmail, setUserLoginEmail] = useState("");
     const [userLoginToken, setUserloginToken] = useState("")
     const [getCountryName, setGetCountryName] = useState("");
     const [userLoginUserName, setUserLoginName] = useState("")
 
     useEffect(() => {
-        setUserloginCountry(localStorage.getItem("setCountry"));
+        setGetCountryName(localStorage.getItem("setCountry"));
         setUserLoginEmail(localStorage.getItem('userEmail'));
         setUserloginToken(localStorage.getItem("loginTOken"));
         setUserLoginName(localStorage.getItem("userName"))

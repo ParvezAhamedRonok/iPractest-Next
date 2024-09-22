@@ -1,25 +1,33 @@
 
+"use client"
+import dynamic from 'next/dynamic';
 import React, { useEffect, useState, Suspense } from 'react';
-import useToggle from '../../../hooks/useToggle';
+import "./index.css"
 // import logo from '../../../assets/images/Practestlogo.png';
 // import { Helmet } from 'react-helmet-async';
 import { useRouter } from 'next/navigation';
 import { useSearchParams } from 'next/navigation'
 
-import HeaderHomeOne from './HeaderHomeOne';
-import NavigationBar from "./NavigationBar";
+//..not client components
 import HeroHomeLanding from './HeroHomeLanding';
-import "./index.css"
 import ShowContent from './ShowContent';
-import HowitWorks from "./HowitWorks"
-
 import AboutHomeOne from "./AboutHomeOne"
 import Carousal from "./Carouasal"
-import BackToTop from "../../../lib/BackToTop"
 import FooterHomeOne from "./FooterHomeOne"
-import FunFactHomeOne from "./FunFactHomeOne"
 import ProjectHomeOne from "./ProjectHomeOne"
 import ServicesHomeOne from "./ServicesHomeOne"
+import useToggle from "../../../hooks/useToggle"
+import NavigationBar from "./NavigationBar";
+
+//client components...
+const HeaderHomeOne = dynamic(() => import('./HeaderHomeOne'), { ssr: false });
+const HowitWorks = dynamic(() => import('./HowitWorks'), { ssr: false });
+const BackToTop = dynamic(() => import('./../../../lib/BackToTop'), { ssr: false });
+const FunFactHomeOne = dynamic(() => import('./FunFactHomeOne'), { ssr: false });
+//end of importings.............
+
+
+
 
 
 function HomeThree() {
@@ -61,29 +69,54 @@ function HomeThree() {
 
     return (
         <>
+            <Suspense fallback={<div className='w-full h-full m-auto justify-center align-middle'>Loading... </div>}>
+                <NavigationBar drawer={drawer} action={drawerAction.toggle} />
+            </Suspense>
 
-            <NavigationBar drawer={drawer} action={drawerAction.toggle} />
-            <HeaderHomeOne action={drawerAction.toggle} />
+            <Suspense fallback={<div className='w-full h-full m-auto justify-center align-middle'>Loading... </div>}>
+                <HeaderHomeOne action={drawerAction.toggle} />
+            </Suspense>
 
-            <HeroHomeLanding />
-            <Carousal />
-            <HowitWorks />
-            <ServicesHomeOne />
-            <FunFactHomeOne />
+            <Suspense fallback={<div className='w-full h-full m-auto justify-center align-middle'>Loading... </div>}>
+                <HeroHomeLanding />
+            </Suspense>
 
-            <ShowContent />
-            <AboutHomeOne />
-            <ProjectHomeOne />
-            <FooterHomeOne />
-            <BackToTop className="back-to-top-3" />
+            <Suspense fallback={<div className='w-full h-full m-auto justify-center align-middle'>Loading... </div>}>
+                <Carousal />
+            </Suspense>
+
+            <Suspense fallback={<div className='w-full h-full m-auto justify-center align-middle'>Loading... </div>}>
+                <HowitWorks />
+            </Suspense>
+
+            <Suspense fallback={<div className='w-full h-full m-auto justify-center align-middle'>Loading... </div>}>
+                <ServicesHomeOne />
+            </Suspense>
+
+            <Suspense fallback={<div className='w-full h-full m-auto justify-center align-middle'>Loading... </div>}>
+                <FunFactHomeOne />
+            </Suspense>
+
+            <Suspense fallback={<div className='w-full h-full m-auto justify-center align-middle'>Loading... </div>}>
+                <ShowContent />
+            </Suspense>
+
+            <Suspense fallback={<div className='w-full h-full m-auto justify-center align-middle'>Loading... </div>}>
+                <AboutHomeOne />
+            </Suspense>
+
+            <Suspense fallback={<div className='w-full h-full m-auto justify-center align-middle'>Loading... </div>}>
+                <ProjectHomeOne />
+            </Suspense>
+
+            <Suspense fallback={<div className='w-full h-full m-auto justify-center align-middle'>Loading... </div>}>
+                <FooterHomeOne />
+            </Suspense>
 
 
-
-
-
-
-
-
+            <Suspense fallback={<div className='w-full h-full m-auto justify-center align-middle'>Loading... </div>}>
+                <BackToTop className="back-to-top-3" />
+            </Suspense>
 
         </>
     );

@@ -3,8 +3,6 @@ import React, { useEffect, useState } from 'react';
 import "../../LoginPage/SignUpPage.css";
 import "./Motivation.css";
 import { useRouter } from 'next/navigation';
-// import Timer from "../WritingAllTests/Writing-All-Pages/Writing-Importand/Pages/Timer";
-import { useStateContext } from "../../../../contexts/ContextProvider";
 import { FaAngleRight } from "react-icons/fa6";
 import Image from 'next/image';
 
@@ -69,8 +67,6 @@ function Motivation({
     Test20Sec2,
     Test20Sec3 }) {
     const history = useRouter();
-    const { writingText, setWritingText, loginRedirectStatus, setLoginRedirectUrl, bdPaidStatus, setBdPaidSatus, otherPaidStatus, userPaymentStatusCheck, setuserPaymentStatusCheck } = useStateContext();
-
     const [SpeakingScores, setSpeakingScores] = useState("")
 
 
@@ -90,15 +86,6 @@ function Motivation({
     let testName = TestWithSection.replace(sectiooname, "");
     let nextTextNo = testName.replace(/[^0-9]/g, '');
     console.log(nextTextNo)
-
-
-
-
-    // var DeviceNumber = localStorage.getItem('DeviceNo');
-    // let userEmail = localStorage.getItem("userEmail");
-    // let countryName = localStorage.getItem("setCountry");
-    // var useremail = localStorage.getItem('userEmail');
-    // var userCountry = localStorage.getItem("setCountry");
 
     const [makeAnimations, setMakeAnimations] = useState(true)
 
@@ -170,13 +157,6 @@ function Motivation({
 
 
     const makeComments = () => {
-
-        //nicher ta hobe jokhon user tar nijer last score take vangbe tokhon--
-        // if (sectiooname == "sec1") {
-        //     setStorePersonalComment(sec1CommentsArr[Math.floor(Math.random() * sec1CommentsArr.length)])
-        // } 
-
-
         if (sectiooname == "Sec1" || sectiooname == "Sec2") {
             setStorePersonalComment(sec2CommentsArr[Math.floor(Math.random() * sec2CommentsArr.length)])
         } else if (sectiooname == "Sec3") {
@@ -579,12 +559,9 @@ function Motivation({
                                 <div className='p-3 relative'>
                                     <Image src={MotivationalImg} alt="" className='w-full mt-3 rounded-[15px]' />
                                     <div className='absolute top-0 left-0 right-0 bottom-0 z-[-10]'>
-                                        {/* <Image src={imagesAnimationsArry[Math.floor(Math.random() * imagesAnimationsArry.length)]} alt="motivational Animation celevrate" className='w-full h-full opacity-75' /> */}
                                     </div>
                                 </div>
                                 <div className='text-center font-bold text-3xl mb-1 congratulateText text-green-600'>Congratulation!</div>
-                                {/* <p className='text-center mb-2 congratulateText'>{storePersonalComment}</p> */}
-
                                 <p className='text-center text-xl font-bold mb-2'>{storeModivationalComment}</p>
 
                                 {

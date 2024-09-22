@@ -46,11 +46,6 @@ export default function QuestionUpload({ setStoreQuestionText }) {
 
 
     const getImage = (event) => {
-        //  for showing comment icon
-        // console.log(event)
-        // console.log(event.target.files[0])
-        // setFile(event.target.files[0]);
-
         const selectedFiles = event.target.files;
         const selectedFilesArray = Array.from(selectedFiles);
         // console.log(selectedFilesArray);
@@ -64,8 +59,6 @@ export default function QuestionUpload({ setStoreQuestionText }) {
             // console.log(imageSelected)
             return urlOfimage;
         });
-        // console.log(imagesArray)
-        // console.log(ImageArray)
         setPreview((previousImages) => previousImages.concat(imagesArray));
         setTimeout(() => {
             handleLogInPageForUpload()
@@ -74,7 +67,6 @@ export default function QuestionUpload({ setStoreQuestionText }) {
         event.target.value = "";
 
     }
-    // console.log(ImageArray)
 
 
     function deleteHandler(image) {
@@ -85,7 +77,6 @@ export default function QuestionUpload({ setStoreQuestionText }) {
         // var resultOne = ImageArray.filter(v => v !==image  );
         ImageArray = filteredImage;
         setStoreQuestionText("")
-        // console.log(ImageArray)
     }
 
 
@@ -182,8 +173,8 @@ export default function QuestionUpload({ setStoreQuestionText }) {
                                                         return (
                                                             <div key={image} className="image relative">
                                                                 <Image src={image} className=" rounded-[15px]" alt="upload"
-                                                                 width={85} 
-                                                                 height={72}
+                                                                    width={85}
+                                                                    height={72}
                                                                 />
                                                                 <button
                                                                     className="bg-red-400 p-auto w-[17px] h-[17px] sm:w-[20px] sm:h-[20px] font-bold rounded-[50%] text-center text-[10px] sm:text-[12px] absolute top-[-5px] right-[-4px] text-white"

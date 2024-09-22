@@ -1,7 +1,6 @@
 
-
+"use client";
 import React, { useState } from 'react';
-import workThumb from '../../../assets/images/how-it-work-thumb.png';
 import Slider from "react-slick";
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
@@ -54,9 +53,6 @@ function HowitWords() {
     };
 
 
-    // background: #2b70fa;
-    // box-shadow: 0px 14px 20px 0px rgba(0, 43, 130, 0.3);
-    // color: #fff;
     return (
         <>
             <div className="appie-how-it-work-area pt-10  pb-100">

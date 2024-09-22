@@ -1,7 +1,6 @@
+"use client";
 import React, { useEffect, useState } from 'react';
 import "./SignUpPage.css"
-// import { LoginSocialGoogle } from "reactjs-social-login";
-// import { LoginSocialFacebook } from "reactjs-social-login";
 import { useRouter } from 'next/navigation';
 import axios from 'axios';
 import GoogleFacebooklog from './GoogleFacebooklog';
@@ -100,11 +99,6 @@ function SignUpPage({ openSignUpPage, openLogInPage }) {
                                     // this is for close popUp
                                     openSignUpPage()
                                     nextPath("/Pages/MainDashboard/Dashboard");
-                                    // if (loginRedirectStatus == "") {
-                                    //       nextPath("/MainDashBoard/Dashboard");
-                                    // } else {
-                                    //       setLoginRedirectUrl("")
-                                    // }
                               }, 500);
 
                         }

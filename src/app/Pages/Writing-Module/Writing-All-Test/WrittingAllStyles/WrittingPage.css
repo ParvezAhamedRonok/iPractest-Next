@@ -190,51 +190,6 @@ span {
 }
 
 
-
-
-/* .dropdown {
-  position: relative;
-  display: inline-block;
-  margin-left: 20px;
-}
-
-.dropdown-content {
-  display: none;
-  width: 250px;
-  padding: 15px;
-  position: absolute;
-  margin-top: 6px;
-  background-color: #f1f1f1;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  border-radius: 8px;
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: flex;
-  gap: 10px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-.dropdown-content a > p{
-   font-size: 28px;
-   color: blue;
-   margin-top: -6px;
-   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
-.dropdown-content a:hover {background-color: #ddd;}
-
-.dropdown:hover .dropdown-content {display: block;}
-
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
-
-
- */
-
-
 .zoom-in-out-box {
   animation: zoom-in-zoom-out 1s ease 5;
 }
@@ -451,11 +406,12 @@ span {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left:12px;
+  margin-left: 12px;
   transform: translateY(-50%);
   /* border: 20px solid white; */
   background-color: rgb(235 201 235);
 }
+
 :where(.css-1k979oh).ant-progress.ant-progress-circle .ant-progress-text {
   position: absolute;
   inset-block-start: 50%;
@@ -473,6 +429,6 @@ span {
 }
 
 /* setBackground-color-for-result-page-in-writing-when-it-comes-in-premium */
-.setBackgroundColorsInResultPremium{
+.setBackgroundColorsInResultPremium {
   background-color: rgba(255, 255, 255, .60);
 }

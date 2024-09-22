@@ -3,17 +3,12 @@ import "react-slideshow-image/dist/styles.css";
 import { Zoom } from "react-slideshow-image";
 import { RiFacebookCircleFill } from "react-icons/ri";
 import { GrLinkedin } from "react-icons/gr";
-import { useRouter } from 'next/navigation';
 import FacePageImg from "../../../../assets/images/otherImgs/LinkFacePage.png";
 import Image from 'next/image';
 //end importing.........
 
 
 function WSlider() {
-    // style was imported in index.css
-    // import "react-slideshow-image/dist/styles.css";
-    // const images = [image1, image2, image3 , image4];
-    const history = useRouter();
     const zoomOutProperties = {
         duration: 6000,
         transitionDuration: 500,

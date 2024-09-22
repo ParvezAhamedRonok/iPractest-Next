@@ -1,13 +1,12 @@
+
 import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { RiStarSFill } from "react-icons/ri";
 import { RiDoubleQuotesR } from "react-icons/ri";
 import { RiDoubleQuotesL } from "react-icons/ri";
-import Img1 from "../../../assets/images/LandingImgs/Owl1.jpg"
-import Img2 from "../../../assets/images/LandingImgs/Owl2.jpg"
-import Img3 from "../../../assets/images/LandingImgs/Owl3.jpeg";
 import Image from "next/image";
+
 
 export default function TestimonialHomeTwo() {
     const responsive = {

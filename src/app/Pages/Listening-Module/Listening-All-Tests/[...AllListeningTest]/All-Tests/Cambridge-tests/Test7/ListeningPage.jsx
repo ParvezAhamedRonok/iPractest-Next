@@ -1,6 +1,6 @@
-import React, { useRef } from 'react'
+"use client";
+import React, { useRef , useState } from 'react'
 import "../../../ListeningAllStyles/ListeningPage.css";
-import { useState } from 'react';
 import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
 import { BsFillRewindCircleFill } from "react-icons/bs";

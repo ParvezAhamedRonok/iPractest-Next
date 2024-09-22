@@ -1,5 +1,9 @@
-import React from 'react';
-import Main from './Important/Main';
+import dynamic from 'next/dynamic';
+import React, { Suspense } from 'react';
+import Loader from "@/Helper/Loader";
+
+//client components....
+const Main = dynamic(() => import('./Important/Main'), { ssr: false });
 
 
 export default function page({ params }) {
@@ -7,10 +11,11 @@ export default function page({ params }) {
   console.log(testName)
 
   return (
-    <div>
+    <Suspense fallback={<div className='w-[100%] h-[100vh] flex justify-center align-middle'> {<Loader />}</div>}>
       <Main
         testName={testName}
       />
-    </div>
+    </Suspense>
+
   )
 }

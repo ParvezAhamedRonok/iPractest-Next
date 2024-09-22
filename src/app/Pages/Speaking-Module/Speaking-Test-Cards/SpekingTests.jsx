@@ -1,24 +1,18 @@
 "use client"
+import dynamic from 'next/dynamic';
 import React, { useEffect, useState } from 'react';
 import "./index.css";
 import { useRouter } from 'next/navigation';
 import { isSafari, isMobile, isOpera } from "react-device-detect";
-import "./index.css";
-import LoginPage from "../../LoginPage/LoginPage";
-import SignUpPage from '../../LoginPage/SignUpPage';
+
 import { useStateContext } from "../../../../contexts/ContextProvider";
 import { FaTeamspeak } from "react-icons/fa6";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
-
 import Image from 'next/image';
-import Motivation from './Motivation.jsx';
 import { AiOutlineLogin } from "react-icons/ai";
-
-import TellusReason from './TellusResoan';
 import LoadingCom from '../../LoginPage/ForgetPassword/LoadingCom.js';
 
 import ImagSide from "../../../../assets/images/Speaking-Images/ImgSide2.png"
-
 //section Images------------------
 import test1Sec1Images from "../../../../assets/images/Speaking-Images/test1Sec-1.png"
 import test1Sec2Images from "../../../../assets/images/Speaking-Images/test1Sec-2.png"
@@ -60,27 +54,22 @@ import test10Sec1Images from "../../../../assets/images/Speaking-Images/test10Se
 import test10Sec2Images from "../../../../assets/images/Speaking-Images/test10Sec-2.png"
 import test10Sec3Images from "../../../../assets/images/Speaking-Images/test10Sec-3.png"
 
-import test11Sec1Images from "../../../../assets/images/Speaking-Images/test11Sec-1.png"
-import test11Sec2Images from "../../../../assets/images/Speaking-Images/test11Sec-2.png"
-import test11Sec3Images from "../../../../assets/images/Speaking-Images/test11Sec-3.png"
-
-import test12Sec1Images from "../../../../assets/images/Speaking-Images/test5Sec-1.png"
-import test12Sec2Images from "../../../../assets/images/Speaking-Images/test12Sec-2.png"
-import test12Sec3Images from "../../../../assets/images/Speaking-Images/test12Sec-3.png"
-
-import test13Sec1Images from "../../../../assets/images/Speaking-Images/Test13Sec1.jpg"
-import test13Sec2Images from "../../../../assets/images/Speaking-Images/test2Sec-2.png"
-import test13Sec3Images from "../../../../assets/images/Speaking-Images/test2Sec-3.png"
-
-import test14Sec1Images from "../../../../assets/images/Speaking-Images/Test14Sec1.jpg"
-import test14Sec2Images from "../../../../assets/images/Speaking-Images/Test14Sec2.jpg"
-
-import test15Sec1Images from "../../../../assets/images/Speaking-Images/Test15Sec1.jpg"
-import test15Sec2Images from "../../../../assets/images/Speaking-Images/Test15Sec2.jpg"
-import test15Sec3Images from "../../../../assets/images/Speaking-Images/Test15Sec3.jpg"
-
-
+//client components....
+const LoginPage = dynamic(() => import("../../LoginPage/LoginPage"))
+const SignUpPage = dynamic(() => import("../../LoginPage/SignUpPage"))
+const Motivation = dynamic(() => import("./Motivation.jsx"))
+const TellusReason = dynamic(() => import("./TellusResoan"))
 //End of the importing-------------
+
+
+
+
+
+
+
+
+
+
 function SpeakingTests({ openTestAfter10, setOpenTestsAfter10, mainDataAll }) {
     const { setWritingText, bdPaidStatus, setBdPaidSatus, otherPaidStatus, setOtherPaidStatus, billPopUp, setBillPopUp, userPaymentStatusCheck, setuserPaymentStatusCheck } = useStateContext();
     const history = useRouter();
@@ -184,12 +173,6 @@ function SpeakingTests({ openTestAfter10, setOpenTestsAfter10, mainDataAll }) {
     //         .catch((e) => { console.log(e); })
     // }, []);
 
-
-
-    console.log(useremail)
-    console.log(userCountry);
-    console.log(userToken)
-
     //Function for open login & SignUp pages Base on state    
     const openLogInPage = (x) => {
         setTimeout(() => {
@@ -205,12 +188,6 @@ function SpeakingTests({ openTestAfter10, setOpenTestsAfter10, mainDataAll }) {
         }, 250);
     }
 
-
-
-
-    console.log(bdPaidStatus);
-    console.log(otherPaidStatus);
-    console.log(userPaymentStatusCheck)
 
     // Speaking-Test1-Section Functions
     const Test1Sec1 = (e) => {

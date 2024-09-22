@@ -1,13 +1,18 @@
 "use client"
-import React, { useEffect } from 'react';
+import dynamic from 'next/dynamic';
+import React, { useEffect, Suspense } from 'react';
 import useToggle from '../../../../hooks/useToggle';
+//not client components...
 import BackToTop from '../../../../lib/BackToTop';
 import FooterHomeThree from '../../LandingHome/FooterHomeOne';
-import HeaderLanding from "../../LandingHome/HeaderHomeOne";
-import NavigationBar from '../../LandingHome/NavigationBar';
-import AllListeningTest from "./AllListeningTests"
 import { useStateContext } from "../../../../contexts/ContextProvider";
 import { CheckPaymentStatus } from "../../Payments/CkeckPayment/CheckPayments.js";
+import AllListeningTest from "./AllListeningTests"
+
+//client components....
+const HeaderLanding = dynamic(() => import('../../LandingHome/HeaderHomeOne'), { ssr: false });
+const NavigationBar = dynamic(() => import('../../LandingHome/NavigationBar'), { ssr: false });
+
 
 //end of the importing section................
 
@@ -31,15 +36,25 @@ function ListeningAllTest() {
 
     return (
         <>
+            <Suspense fallback={<div className='w-full h-full m-auto justify-center align-middle'>Loading... </div>}>
+                <NavigationBar drawer={drawer} action={drawerAction.toggle} />
+            </Suspense>
 
-            <NavigationBar drawer={drawer} action={drawerAction.toggle} />
-            <HeaderLanding action={drawerAction.toggle} />
-            <AllListeningTest />
+            <Suspense fallback={<div className='w-full h-full m-auto justify-center align-middle'>Loading... </div>}>
+                <HeaderLanding action={drawerAction.toggle} />
+            </Suspense>
 
-            <FooterHomeThree />
-            <BackToTop />
+            <Suspense fallback={<div className='w-full h-full m-auto justify-center align-middle'>Loading... </div>}>
+                <AllListeningTest />
+            </Suspense>
 
+            <Suspense fallback={<div className='w-full h-full m-auto justify-center align-middle'>Loading... </div>}>
+                <FooterHomeThree />
+            </Suspense>
 
+            <Suspense fallback={<div className='w-full h-full m-auto justify-center align-middle'>Loading... </div>}>
+                <BackToTop />
+            </Suspense>
         </>
     );
 }

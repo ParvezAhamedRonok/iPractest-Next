@@ -1,6 +1,10 @@
 "use client"
-import React, { useEffect } from 'react';
-import SpeakingTestMain from "../Speaking-Func-Compoents/Test1/Main"
+import dynamic from 'next/dynamic';
+import React, { useEffect, Suspense } from 'react';
+import Loader from "@/Helper/Loader";
+//client components...
+const SpeakingTestMain = dynamic(() => import("../Speaking-Func-Compoents/Test1/Main"), { ssr: false })
+
 
 export default function page({ params }) {
     // console.log(params.AllSpeakingTest[0]);
@@ -201,10 +205,11 @@ export default function page({ params }) {
 
 
     return (
-        <div>
+        <Suspense fallback={<div className='w-[100%] h-[100vh] flex justify-center align-middle'> {<Loader />}</div>}>
             <SpeakingTestMain
                 testNo={testNo}
             />
-        </div>
+        </Suspense>
+
     )
 }

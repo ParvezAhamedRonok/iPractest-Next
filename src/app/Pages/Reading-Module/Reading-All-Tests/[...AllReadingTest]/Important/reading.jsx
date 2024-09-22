@@ -5,10 +5,11 @@ import 'split-pane-react/esm/themes/default.css'
 import '../TestAllStyles/ReadingPageStyle.css'
 import "../TestAllStyles/Panel1All.css";
 import { isMobile } from "react-device-detect";
-// import { useParams } from "react-router-dom";
+// import { useParams } from "react-router-dom"; 
 import { BsFillPatchQuestionFill } from "react-icons/bs";
 import { LiaReadme } from "react-icons/lia";
 // all Actual-tests Components--------------->
+//const Test1Panel2_Page1 = dynamic(() => import('../All-Tests/Actual-all-tests/Test1/Panel2_Page1'), { ssr: false });
 //test1---
 import Test1Panel1_Page1 from "../All-Tests/Actual-all-tests/Test1/Panel1_Page1";
 import Test1Panel1_Page2 from "../All-Tests/Actual-all-tests/Test1/Panel1_Page2";

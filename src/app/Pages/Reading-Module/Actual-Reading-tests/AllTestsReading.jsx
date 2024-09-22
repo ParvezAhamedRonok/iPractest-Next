@@ -1009,7 +1009,7 @@ function ServicesReadingAllTest() {
                                         <div
                                             className="relative flex flex-row md:space-x-5 space-y-3 md:space-y-0 rounded-xl shadow-xl p-[17px] pb-[0px] sm:pb-[10px] w-auto h-auto border border-white bg-white">
                                             <div className="w-1/3 bg-white grid place-items-center">
-                                                <Image src="https://images.pexels.com/photos/4381392/pexels-photo-4381392.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="tailwind logo" className="rounded-xl" />
+                                                <Image src={ActualImage8} alt="tailwind logo" className="rounded-xl" />
                                             </div>
                                             <div className="w-2/3 bg-white flex flex-col space-y-2 p-3 translate-y-[-3px] sm:translate-y-[0px]">
                                                 <div className="flex justify-between item-center gap-1">
@@ -1101,7 +1101,7 @@ function ServicesReadingAllTest() {
                                         <div
                                             className="relative flex flex-row md:space-x-5 space-y-3 md:space-y-0 rounded-xl shadow-xl p-[17px] pb-[0px] sm:pb-[10px] w-auto h-auto border border-white bg-white">
                                             <div className="w-1/3 bg-white grid place-items-center">
-                                                <Image src="https://images.pexels.com/photos/4381392/pexels-photo-4381392.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="tailwind logo" className="rounded-xl" />
+                                                <Image src={ActualImage8} alt="tailwind logo" className="rounded-xl" />
                                             </div>
                                             <div className="w-2/3 bg-white flex flex-col space-y-2 p-3 translate-y-[-3px] sm:translate-y-[0px]">
                                                 <div className="flex justify-between item-center gap-1">
@@ -1189,7 +1189,7 @@ function ServicesReadingAllTest() {
                                         <div
                                             className="relative flex flex-row md:space-x-5 space-y-3 md:space-y-0 rounded-xl shadow-xl p-[17px] pb-[0px] sm:pb-[10px] w-auto h-auto border border-white bg-white">
                                             <div className="w-1/3 bg-white grid place-items-center">
-                                                <Image src="https://images.pexels.com/photos/4381392/pexels-photo-4381392.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="tailwind logo" className="rounded-xl" />
+                                                <Image src={ActualImage8} alt="tailwind logo" className="rounded-xl" />
                                             </div>
                                             <div className="w-2/3 bg-white flex flex-col space-y-2 p-3 translate-y-[-3px] sm:translate-y-[0px]">
                                                 <div className="flex justify-between item-center gap-1">
@@ -1277,7 +1277,7 @@ function ServicesReadingAllTest() {
                                         <div
                                             className="relative flex flex-row md:space-x-5 space-y-3 md:space-y-0 rounded-xl shadow-xl p-[17px] pb-[0px] sm:pb-[10px] w-auto h-auto border border-white bg-white">
                                             <div className="w-1/3 bg-white grid place-items-center">
-                                                <Image src="https://images.pexels.com/photos/4381392/pexels-photo-4381392.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="tailwind logo" className="rounded-xl" />
+                                                <Image src={ActualImage8} alt="tailwind logo" className="rounded-xl" />
                                             </div>
                                             <div className="w-2/3 bg-white flex flex-col space-y-2 p-3 translate-y-[-3px] sm:translate-y-[0px]">
                                                 <div className="flex justify-between item-center gap-1">

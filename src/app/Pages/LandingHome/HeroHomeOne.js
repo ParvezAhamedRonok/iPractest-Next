@@ -1,4 +1,5 @@
 
+"use client";
 import React, { useState } from 'react';
 import heroThumb from '../../../assets/images/successpic.png';
 import PopupVideo from './PopupVideo';

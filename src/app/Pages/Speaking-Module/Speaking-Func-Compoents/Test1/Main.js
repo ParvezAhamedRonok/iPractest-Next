@@ -1,22 +1,24 @@
 "use client"
-import React, { useEffect, useState } from 'react';
+import dynamic from 'next/dynamic';
+import React, { useEffect, useState, Suspense } from 'react';
 import useToggle from '../../../../../hooks/useToggle';
 import BackToTop from '../../../../../lib/BackToTop';
 import FooterHomeThree from '../../../LandingHome/FooterHomeOne';
-import HeaderAbout from '../../../SOPFILE/SOFMaker/HeaderHomeOne';
-import ClickSpeaking from './ClickSpeaking';
-import ClickSpeakingSec3 from './SpeakingForSection3';
-import NavigationBar from '../../../LandingHome/NavigationBar';
 import STips from './Tips';
 import { usePathname } from 'next/navigation';
 import { MdRateReview } from "react-icons/md"
 import UserFeedBack from "../../../../../components/UserComments";
 import { BsBalloonHeartFill } from "react-icons/bs"
 
+//client components....
+const HeaderAbout = dynamic(() => import('../../../SOPFILE/SOFMaker/HeaderHomeOne'), { ssr: false });
+const NavigationBar = dynamic(() => import('../../../LandingHome/NavigationBar'), { ssr: false });
+const ClickSpeaking = dynamic(() => import('./ClickSpeaking'), { ssr: false });
+const ClickSpeakingSec3 = dynamic(() => import('./SpeakingForSection3'), { ssr: false });
 //end of the importing.............
 
 
-function Main({testNo}) {
+function Main({ testNo }) {
   let getPathName = usePathname()
   const [userCountry, setuserCountry] = useState("")
   const [forPassComment, setPassComment] = useState(false);
@@ -47,16 +49,30 @@ function Main({testNo}) {
 
   return (
     <>
+      <Suspense fallback={<div className='w-full h-full m-auto justify-center '>Loading... </div>}>
+        <NavigationBar drawer={drawer} action={drawerAction.toggle} />
+      </Suspense>
 
-      <NavigationBar drawer={drawer} action={drawerAction.toggle} />
-      <HeaderAbout action={drawerAction.toggle} />
-      {testNo.includes('Sec2') ? <ClickSpeakingSec3 testNo={testNo} setPassComment={setPassComment} setWaveTit={setWaveTit} /> : <ClickSpeaking testNo={testNo} setPassComment={setPassComment} setWaveTit={setWaveTit} />}
+      <Suspense fallback={<div className='w-full h-full m-auto justify-center '>Loading... </div>}>
+        <HeaderAbout action={drawerAction.toggle} />
+      </Suspense>
+
+      <Suspense fallback={<div className='w-full h-full m-auto justify-center '>Loading... </div>}>
+        {testNo.includes('Sec2') ? <ClickSpeakingSec3 testNo={testNo} setPassComment={setPassComment} setWaveTit={setWaveTit} /> : <ClickSpeaking testNo={testNo} setPassComment={setPassComment} setWaveTit={setWaveTit} />}
+
+      </Suspense>
 
 
-      <FooterHomeThree />
+      <Suspense fallback={<div className='w-full h-full m-auto justify-center '>Loading... </div>}>
+        <FooterHomeThree />
+      </Suspense>
+
       <BackToTop />
       {/* for some tips */}
-      {userCountry === "Bangladesh" && <STips />}
+      <Suspense fallback={<div className='w-full h-full m-auto justify-center '>Loading... </div>}>
+        {userCountry === "Bangladesh" && <STips />}
+      </Suspense>
+
       {/* for pass user reviews */}
       {
         forShowCommentPopUp && <UserFeedBack closeCommentPopUp={closeCommentPopUp} setPassComment={setPassComment} />

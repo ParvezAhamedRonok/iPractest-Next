@@ -1,19 +1,14 @@
 "use client"
 import React, { useEffect, useState } from 'react';
-// import { LoginSocialGoogle } from "reactjs-social-login";
-// import { LoginSocialFacebook } from "reactjs-social-login";
 import { useRouter } from 'next/navigation';
 import axios from "axios"
 import { ClockLoader } from "react-spinners";
 import Timer from "../Writing-Module/Writing-All-Test/Writing-Importand/Pages/Timer";
-// import { GoogleLogin } from 'react-google-login'; 
 import "./GoogleFace.css";
-import { isMobile } from "react-device-detect"
 import { GoogleLogin } from '@react-oauth/google';
 import { jwtDecode } from "jwt-decode";
 import { useStateContext } from "../../../contexts/ContextProvider";
 import { LOGIN_URL, SIGNUP_URL } from "../../../assets/URL's/AllUrl"
-
 
 // End of the Importing--------------
 
@@ -103,11 +98,6 @@ function GoogleFacebooklog() {
               setLoadingMsg(false);
               // openSignUpPage()   this is for close popUp
               nextPath("/Pages/MainDashboard/Dashboard");
-              // if (loginRedirectStatus == "") {
-              //   nextPath("/MainDashBoard/Dashboard");
-              // } else {
-              //   setLoginRedirectUrl("")
-              // }
             }, 1000);
 
           }
@@ -169,39 +159,11 @@ function GoogleFacebooklog() {
     }
 
   };
-  // const onFailure = (res) => {
-  //   console.log('Login failed: res:', res);
-  //   // alert(
-  //   //   `Failed to login. 😢 Please Try again`
-  //   // );
-  // };
-
 
 
 
   return (
     <>
-      {/* <LoginSocialGoogle
-        client_id={
-          clientId}
-        scope='openid profile email'
-        discoveryDocs='claims_supported'
-        access_type='offline'
-        auto_select={true}
-        onResolve={({ provider, data }) => {
-          console.log(data)
-          console.log(data.name)
-          console.log(data.email)
-          console.log(provider)
-
-          let userName = data.name;
-          let email = data.email;
-          let password = userName + "32/2sda/zxwxzX";
-     
-        }}
-        onReject={(err) => { console.log(err) }}
-      >
-      </LoginSocialGoogle> */}
       <div className={`mainGoogleAuth flex pt-[3px]  rounded justify-center align-middle cursor-pointer`}>
         <GoogleLogin
           onSuccess={credentialResponse => {
@@ -216,125 +178,6 @@ function GoogleFacebooklog() {
           }} />
 
       </div>
-
-      {/* log-in by the facebook */}
-      {/* <LoginSocialFacebook
-        appId='613582557209667'
-        onResolve={(Response) => {
-          let userName = Response.data.name;
-          let email = Response.data.email;
-          let password = userName + "32/2sda/zxwxzX"
-          console.log(userName);
-          console.log(email)
-          //showing user facebook data into the colsole
-          console.log(Response.data);
-          if (Response) {
-            setLoadingMsg(true);
-            axios({
-              method: "post",
-              url: "https://ipractestuser.azurewebsites.net/api/auth/signup",
-              // url:"http://localhost:8080/api/auth/signup",
-              data: {
-                "username": userName,
-                "email": email,
-                "password": password,
-                    "country": countryInfo ? retrivedCountryInfo.countryName : "",
-                    "countryFlag": countryInfo ? retrivedCountryInfo.countryFlag : "",
-               "referID":localStorage.getItem("referID") ? localStorage.getItem("referID") : "",
-                "roles": ["user"]
-              },
-            })
-              .then((res) => {
-                console.log(res);
-                // setLoadingMsg(true);
-                if (res) {
-                  // setsignUpMsg(true);
-                  localStorage.setItem('loginTOken', res.data.token);
-                  localStorage.setItem('userName', res.data.username);
-                  localStorage.setItem('userEmail', res.data.email);
-                    if (res.data.referID != "") {
-                        localStorage.setItem("referID", res.data.referID);
-                      }
-                  setTimeout(() => {
-                    // setsignUpMsg(false);
-                    // openSignUpPage()  // this is for close popUp
-                    setTimeout(() => {
-                      setLoadingMsg(false);
-                       nextPath("/MainDashBoard/Dashboard");
-              //  if(loginRedirectStatus == ""){
-              //   nextPath("/MainDashBoard/Dashboard");
-              // }else{
-              //   setLoginRedirectUrl("")
-              // }
-                    }, 1000);
-                  }, 1000);
-
-                }
-
-              })
-              .catch((e) => {
-                console.log(e)
-                if (e) {
-                  axios({
-                    method: "post",
-                    url: LOGIN_URL,
-                    // url:"http://localhost:8080/api/auth/signin",
-                    data: {
-                      "username": userName,
-                      "password": password,
-                    },
-                  })
-                    .then((res) => {
-                      console.log(res)
-                      // setLoadingMsg(true);
-                      // console.log(res.data.token);
-                      // console.log(res.data.username);
-                      localStorage.setItem('loginTOken', res.data.token);
-                      localStorage.setItem('userName', res.data.username);
-                      localStorage.setItem('userEmail', res.data.email);
-                      localStorage.setItem('setCountry', res.data.country);
-                      localStorage.setItem('setCountryFlag', res.data.countryFlag);
-                        if (res.data.referID != "") {
-                             localStorage.setItem("referID", res.data.referID);
-                              }
-                      if (res) {
-                        setTimeout(() => {
-                          // setsignUpMsg(false);
-                          setLoadingMsg(false);
-                          // openSignUpPage()  this is for close popUp
-                           nextPath("/MainDashBoard/Dashboard");
-              //             if(loginRedirectStatus == ""){
-              //   nextPath("/MainDashBoard/Dashboard");
-              // }else{
-              //   setLoginRedirectUrl("")
-              // }
-                        }, 1000);
-                      }
-
-                    })
-                    .catch((e) => {
-                      console.log(e);
-                      setLoadingMsg(false);
-                    })
-                }
-              })
-          }
-        }
-
-        }
-        onReject={(error) => { console.log(error) }}
-
-      >
-
-        <div className="flex p-2 rounded bg-sky-200 gap-2 justify-center align-middle cursor-pointer">
-          <i className='text-2xl sm:text-3xl text-blue-600'><IoLogoFacebook /></i>
-          <p className='text-[11px] sm:text-[14px]  mt-1'>Continue with Facebook</p>
-        </div>
-      </LoginSocialFacebook> */}
-
-
-
-
 
       {/* for loading after successfully login */}
       {loadingMsg && <section className="fixed top-2 left-2 w-[90%] sm:w-[100%] box-border overflow-y-scroll p-4 h-[90vh]  text-black z-[100000] grid-cols-1 grid-rows-5">

@@ -1,6 +1,6 @@
 "use client";
 import Header from "./Pages/WrittingHeader"
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Suspense } from 'react';
 // import WritingPricingPage from "../../../HomeThree/PricingHomeThree"
 import WritingServices from "./Pages/WritingServices";
 import Timer from "./Pages/Timer";
@@ -62,7 +62,10 @@ function Main({ testID }) {
   //main rendering---              
   return (
     <div className="Main-Container bg-[#eef1f6]">
-      <Header handleDecressFontSize={handleDecressFontSize} handleIncressFontSize={handleIncressFontSize} />
+      <Suspense fallback={<div className='w-full h-full m-auto justify-center '>Loading... </div>}>
+        <Header handleDecressFontSize={handleDecressFontSize} handleIncressFontSize={handleIncressFontSize} />
+      </Suspense>
+
       <div className="w-full sm:w-2/3 p-5 " style={{ fontSize: handlePanelfontSize }}>
         {testID === "Actual-test-1" && (<WrittingTest1 />)}
         {testID === "Actual-test-2" && (<WrittingTest2 />)}
@@ -99,7 +102,10 @@ function Main({ testID }) {
 
 
       </div>
-      <WritingServices />
+      <Suspense fallback={<div className='w-full h-full m-auto justify-center '>Loading... </div>}>
+        <WritingServices />
+      </Suspense>
+
 
       <div
         className="W-timer p-1 text-white font-bold text-[30px] fixed text-center
@@ -109,7 +115,10 @@ function Main({ testID }) {
         </i>
       </div>
       {/* for Tip's */}
-      {userCountry === "Bangladesh" && <WTips />}
+      <Suspense fallback={<div className='w-full h-full m-auto justify-center '>Loading... </div>}>
+        {userCountry === "Bangladesh" && <WTips />}
+      </Suspense>
+
 
     </div>
   )

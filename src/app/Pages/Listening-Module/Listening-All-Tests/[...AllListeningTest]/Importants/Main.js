@@ -1,43 +1,47 @@
 "use client"
-import { useState, useEffect } from 'react';
+import dynamic from 'next/dynamic';
+import { useState, useEffect, Suspense } from 'react';
 import { MdRateReview } from "react-icons/md"
-import UserFeedBack from "../../../../../../components/UserComments";
 import { BsBalloonHeartFill } from "react-icons/bs";
 import './index.css';
-import ListeningHeader from './ListeningHeader';
-import ListeningFooter from './ListeninhgFooter';
 import LTips from './Tips';
 
 import { useStateContext } from '../../../../../../contexts/ContextProvider';
 import ExplanationsPopup from "../../../../Reading-Module/Reading-All-Tests/[...AllReadingTest]/Important/ExplanationsPopup";
 
+
+//client components...
+const ListeningHeader = dynamic(() => import('./ListeningHeader'), { ssr: false });
+const ListeningFooter = dynamic(() => import('./ListeninhgFooter'), { ssr: false });
+const UserFeedBack = dynamic(() => import('../../../../../../components/UserComments'), { ssr: false });
+
 //Actual Tests
-import ListeningTest1 from '../All-Tests/Actual-tests/Test1/ListeningPage';
-import ListeningTest2 from '../All-Tests/Actual-tests/Test2/ListeningPage';
-import ListeningTest3 from '../All-Tests/Actual-tests/Test3/ListeningPage';
-import ListeningTest4 from '../All-Tests/Actual-tests/Test4/ListeningPage';
-import ListeningTest5 from '../All-Tests/Actual-tests/Test5/ListeningPage';
-import ListeningTest6 from '../All-Tests/Actual-tests/Test6/ListeningPage';
-import ListeningTest7 from '../All-Tests/Actual-tests/Test7/ListeningPage';
-import ListeningTest8 from '../All-Tests/Actual-tests/Test8/ListeningPage';
+const ListeningTest1 = dynamic(() => import('../All-Tests/Actual-tests/Test1/ListeningPage'), { ssr: false });
+const ListeningTest2 = dynamic(() => import('../All-Tests/Actual-tests/Test2/ListeningPage'), { ssr: false });
+const ListeningTest3 = dynamic(() => import('../All-Tests/Actual-tests/Test3/ListeningPage'), { ssr: false });
+const ListeningTest4 = dynamic(() => import('../All-Tests/Actual-tests/Test4/ListeningPage'), { ssr: false });
+const ListeningTest5 = dynamic(() => import('../All-Tests/Actual-tests/Test5/ListeningPage'), { ssr: false });
+const ListeningTest6 = dynamic(() => import('../All-Tests/Actual-tests/Test6/ListeningPage'), { ssr: false });
+const ListeningTest7 = dynamic(() => import('../All-Tests/Actual-tests/Test7/ListeningPage'), { ssr: false });
+const ListeningTest8 = dynamic(() => import('../All-Tests/Actual-tests/Test8/ListeningPage'), { ssr: false });
+
 // import ListeningTest9 from '../All-Tests/Actual-tests/Test9/ListeningPage';
 // import ListeningTest10 from '../All-Tests/Actual-tests/Test10/ListeningPage';
 // import ListeningTest11 from '../All-Tests/Actual-tests/Test11/ListeningPage';
 // import ListeningTest12 from '../All-Tests/Actual-tests/Test12/ListeningPage';
 //Cambridge-Tests-------
-import CambridgeTest1 from "../All-Tests/Cambridge-tests/Test1/ListeningPage";
-import CambridgeTest2 from "../All-Tests/Cambridge-tests/Test2/ListeningPage"
-import CambridgeTest3 from "../All-Tests/Cambridge-tests/Test3/ListeningPage"
-import CambridgeTest4 from "../All-Tests/Cambridge-tests/Test4/ListeningPage"
-import CambridgeTest5 from "../All-Tests/Cambridge-tests/Test5/ListeningPage"
-import CambridgeTest6 from "../All-Tests/Cambridge-tests/Test6/ListeningPage"
-import CambridgeTest7 from "../All-Tests/Cambridge-tests/Test7/ListeningPage"
-import CambridgeTest8 from "../All-Tests/Cambridge-tests/Test8/ListeningPage"
-import CambridgeTest9 from "../All-Tests/Cambridge-tests/Test9/ListeningPage"
-import CambridgeTest10 from "../All-Tests/Cambridge-tests/Test10/ListeningPage"
-import CambridgeTest11 from "../All-Tests/Cambridge-tests/Test11/ListeningPage"
-import CambridgeTest12 from "../All-Tests/Cambridge-tests/Test12/ListeningPage"
-
+const CambridgeTest1 = dynamic(() => import('../All-Tests/Cambridge-tests/Test1/ListeningPage'), { ssr: false });
+const CambridgeTest2 = dynamic(() => import('../All-Tests/Cambridge-tests/Test2/ListeningPage'), { ssr: false });
+const CambridgeTest3 = dynamic(() => import('../All-Tests/Cambridge-tests/Test3/ListeningPage'), { ssr: false });
+const CambridgeTest4 = dynamic(() => import('../All-Tests/Cambridge-tests/Test4/ListeningPage'), { ssr: false });
+const CambridgeTest5 = dynamic(() => import('../All-Tests/Cambridge-tests/Test5/ListeningPage'), { ssr: false });
+const CambridgeTest6 = dynamic(() => import('../All-Tests/Cambridge-tests/Test6/ListeningPage'), { ssr: false });
+const CambridgeTest7 = dynamic(() => import('../All-Tests/Cambridge-tests/Test7/ListeningPage'), { ssr: false });
+const CambridgeTest8 = dynamic(() => import('../All-Tests/Cambridge-tests/Test8/ListeningPage'), { ssr: false });
+const CambridgeTest9 = dynamic(() => import('../All-Tests/Cambridge-tests/Test9/ListeningPage'), { ssr: false });
+const CambridgeTest10 = dynamic(() => import('../All-Tests/Cambridge-tests/Test10/ListeningPage'), { ssr: false });
+const CambridgeTest11 = dynamic(() => import('../All-Tests/Cambridge-tests/Test11/ListeningPage'), { ssr: false });
+const CambridgeTest12 = dynamic(() => import('../All-Tests/Cambridge-tests/Test12/ListeningPage'), { ssr: false });
 
 
 //end importing-------

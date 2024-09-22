@@ -244,12 +244,12 @@ function AllListeningTests() {
                     <div className='grid justify-center align-middle'>
                         <button className=' flex gap-2 rounded borde-1 border-gray-300 bg-white h-full '>
                             <button className='p-2 flex gap-1 w-auto h-[40px] text-[15px] text-center translate-y-[-1px] sm:w-[200px]  bg-white text-blue-900 cursor-pointer border-b-[4px] border-b-green-700 font-bold'
-                                onClick={() => { history.push("/ListeningPage/cambridgeAllTests") }}
+                                onClick={() => { history.push("/Pages/Listening-Module/Cambridge-listening-tests") }}
                             >Cambridge tests
-                                <img src={cambrigeIcon} className='w-[15px] translate-y-[2px]' />
+                                <Image src={cambrigeIcon} className='w-[15px] translate-y-[2px]' />
                             </button>
                             <button className='p-2 flex gap-1 w-auto text-[12px] translate-y-[1px] text-center h-[40px] sm:w-[200px] bg-white text-black cursor-pointer opacity-50 font-bold hover:border-b-[3px] hover:border-b-green-700 transition-all hover:opacity-90'
-                                onClick={() => { history.push("/ListeningPage") }}
+                                onClick={() => { history.push("/Pages/Listening-Module/Actual-listening-tests") }}
                             >Actual Tests
                                 <BiIntersect className='text-xl text-black' />
                             </button>
@@ -268,7 +268,7 @@ function AllListeningTests() {
                                         <div
                                             class="relative flex flex-row md:space-x-5 space-y-3 md:space-y-0 rounded-xl shadow-xl p-[17px] pb-[0px]   w-auto h-auto border border-white bg-white sha">
                                             <div class="w-1/3 bg-white grid place-items-center">
-                                                <img src={Cambridge18} class="rounded-xl h-[80%] translate-y-[-10px] sm:translate-y-[-3px]" />
+                                                <Image src={Cambridge18} class="rounded-xl h-[80%] translate-y-[-10px] sm:translate-y-[-3px]" />
                                                 {/* <p className='text-center font-bold flex gap-2'>ACADEMIC-18 
                                                 <span className='p-1 bg-purple-700 text-white rounded-[50%]'>1</span></p> */}
                                             </div>
@@ -384,7 +384,7 @@ function AllListeningTests() {
                                         <div
                                             class="relative flex flex-row md:space-x-5 space-y-3 md:space-y-0 rounded-xl shadow-xl p-[17px] pb-[0px]   w-auto h-auto border border-white bg-white sha">
                                             <div class="w-1/3 bg-white grid place-items-center">
-                                                <img src={Cambridge18} class="rounded-xl h-[80%] translate-y-[-10px] sm:translate-y-[-3px]" />
+                                                <Image src={Cambridge18} class="rounded-xl h-[80%] translate-y-[-10px] sm:translate-y-[-3px]" />
                                                 {/* <p className='text-center font-bold flex gap-2'>ACADEMIC-18 
                                                 <span className='p-1 bg-purple-700 text-white rounded-[50%]'>1</span></p> */}
                                             </div>
@@ -479,7 +479,7 @@ function AllListeningTests() {
                                         <div
                                             class="relative flex flex-row md:space-x-5 space-y-3 md:space-y-0 rounded-xl shadow-xl p-[17px] pb-[0px]   w-auto h-auto border border-white bg-white sha">
                                             <div class="w-1/3 bg-white grid place-items-center">
-                                                <img src={Cambridge18} class="rounded-xl h-[80%] translate-y-[-10px] sm:translate-y-[-3px]" />
+                                                <Image src={Cambridge18} class="rounded-xl h-[80%] translate-y-[-10px] sm:translate-y-[-3px]" />
                                             </div>
                                             <div class="w-2/3 bg-white flex flex-col space-y-2 p-3 translate-y-[-3px] sm:translate-y-[0px]">
                                                 <div class="flex justify-between item-center gap-1">
@@ -574,7 +574,7 @@ function AllListeningTests() {
                                         <div
                                             class="relative flex flex-row md:space-x-5 space-y-3 md:space-y-0 rounded-xl shadow-xl p-[17px] pb-[0px]   w-auto h-auto border border-white bg-white sha">
                                             <div class="w-1/3 bg-white grid place-items-center">
-                                                <img src={Cambridge18} class="rounded-xl h-[80%] translate-y-[-10px] sm:translate-y-[-3px]" />
+                                                <Image src={Cambridge18} class="rounded-xl h-[80%] translate-y-[-10px] sm:translate-y-[-3px]" />
                                             </div>
                                             <div class="w-2/3 bg-white flex flex-col space-y-2 p-3 translate-y-[-3px] sm:translate-y-[0px]">
                                                 <div class="flex justify-between item-center gap-1">
@@ -666,7 +666,7 @@ function AllListeningTests() {
                                         <div
                                             class="relative flex flex-row md:space-x-5 space-y-3 md:space-y-0 rounded-xl shadow-xl p-[17px] pb-[0px]   w-auto h-auto border border-white bg-white sha">
                                             <div class="w-1/3 bg-white grid place-items-center">
-                                                <img src={Cambridge17} class="rounded-xl h-[81%] translate-y-[-10px] sm:translate-y-[-3px]" />
+                                                <Image src={Cambridge17} class="rounded-xl h-[81%] translate-y-[-10px] sm:translate-y-[-3px]" />
                                             </div>
                                             <div class="w-2/3 bg-white flex flex-col space-y-2 p-3 translate-y-[-3px] sm:translate-y-[0px]">
                                                 <div class="flex justify-between item-center gap-1">
@@ -758,7 +758,7 @@ function AllListeningTests() {
                                         <div
                                             class="relative flex flex-row md:space-x-5 space-y-3 md:space-y-0 rounded-xl shadow-xl p-[17px] pb-[0px]   w-auto h-auto border border-white bg-white sha">
                                             <div class="w-1/3 bg-white grid place-items-center">
-                                                <img src={Cambridge17} class="rounded-xl h-[80%] translate-y-[-10px] sm:translate-y-[-3px]" />
+                                                <Image src={Cambridge17} class="rounded-xl h-[80%] translate-y-[-10px] sm:translate-y-[-3px]" />
                                             </div>
                                             <div class="w-2/3 bg-white flex flex-col space-y-2 p-3 translate-y-[-3px] sm:translate-y-[0px]">
                                                 <div class="flex justify-between item-center gap-1">
@@ -854,7 +854,7 @@ function AllListeningTests() {
                                         <div
                                             class="relative flex flex-row md:space-x-5 space-y-3 md:space-y-0 rounded-xl shadow-xl p-[17px] pb-[0px]   w-auto h-auto border border-white bg-white sha">
                                             <div class="w-1/3 bg-white grid place-items-center">
-                                                <img src={Cambridge17} class="rounded-xl h-[82%] translate-y-[-10px] sm:translate-x-[0px]" />
+                                                <Image src={Cambridge17} class="rounded-xl h-[82%] translate-y-[-10px] sm:translate-x-[0px]" />
                                             </div>
                                             <div class="w-2/3 bg-white flex flex-col space-y-2 p-3 translate-y-[-3px] sm:translate-y-[0px]">
                                                 <div class="flex justify-between item-center gap-1">
@@ -947,7 +947,7 @@ function AllListeningTests() {
                                         <div
                                             class="relative flex flex-row md:space-x-5 space-y-3 md:space-y-0 rounded-xl shadow-xl p-[17px] pb-[0px]   w-auto h-auto border border-white bg-white sha">
                                             <div class="w-1/3 bg-white grid place-items-center">
-                                                <img src={Cambridge17} class="rounded-xl h-[81%] translate-y-[-10px] sm:translate-y-[-3px]" />
+                                                <Image src={Cambridge17} class="rounded-xl h-[81%] translate-y-[-10px] sm:translate-y-[-3px]" />
                                             </div>
                                             <div class="w-2/3 bg-white flex flex-col space-y-2 p-3 translate-y-[-3px] sm:translate-y-[0px]">
                                                 <div class="flex justify-between item-center gap-1">
@@ -1039,7 +1039,7 @@ function AllListeningTests() {
                                         <div
                                             class="relative flex flex-row md:space-x-5 space-y-3 md:space-y-0 rounded-xl shadow-xl p-[17px] pb-[0px]   w-auto h-auto border border-white bg-white sha">
                                             <div class="w-1/3 bg-white grid place-items-center">
-                                                <img src={Cambridge16} class="rounded-xl h-[80%] translate-y-[-10px] sm:translate-y-[-3px]" />
+                                                <Image src={Cambridge16} class="rounded-xl h-[80%] translate-y-[-10px] sm:translate-y-[-3px]" />
                                             </div>
                                             <div class="w-2/3 bg-white flex flex-col space-y-2 p-3 translate-y-[-3px] sm:translate-y-[0px]">
                                                 <div class="flex justify-between item-center gap-1">
@@ -1135,7 +1135,7 @@ function AllListeningTests() {
                                         <div
                                             class="relative flex flex-row md:space-x-5 space-y-3 md:space-y-0 rounded-xl shadow-xl p-[17px] pb-[0px]   w-auto h-auto border border-white bg-white sha">
                                             <div class="w-1/3 bg-white grid place-items-center">
-                                                <img src={Cambridge16} class="rounded-xl h-[80%] translate-y-[-10px] sm:translate-y-[-3px]" />
+                                                <Image src={Cambridge16} class="rounded-xl h-[80%] translate-y-[-10px] sm:translate-y-[-3px]" />
                                             </div>
                                             <div class="w-2/3 bg-white flex flex-col space-y-2 p-3 translate-y-[-3px] sm:translate-y-[0px]">
                                                 <div class="flex justify-between item-center gap-1">
@@ -1228,7 +1228,7 @@ function AllListeningTests() {
                                         <div
                                             class="relative flex flex-row md:space-x-5 space-y-3 md:space-y-0 rounded-xl shadow-xl p-[17px] pb-[0px]   w-auto h-auto border border-white bg-white sha">
                                             <div class="w-1/3 bg-white grid place-items-center">
-                                                <img src={Cambridge16} class="rounded-xl h-[80%] translate-y-[-10px] sm:translate-y-[-3px]" />
+                                                <Image src={Cambridge16} class="rounded-xl h-[80%] translate-y-[-10px] sm:translate-y-[-3px]" />
                                             </div>
                                             <div class="w-2/3 bg-white flex flex-col space-y-2 p-3 translate-y-[-3px] sm:translate-y-[0px]">
                                                 <div class="flex justify-between item-center gap-1">
@@ -1320,7 +1320,7 @@ function AllListeningTests() {
                                         <div
                                             class="relative flex flex-row md:space-x-5 space-y-3 md:space-y-0 rounded-xl shadow-xl p-[17px] pb-[0px]   w-auto h-auto border border-white bg-white sha">
                                             <div class="w-1/3 bg-white grid place-items-center">
-                                                <img src={Cambridge16} class="rounded-xl h-[80%] translate-y-[-10px] sm:translate-y-[-3px]" />
+                                                <Image src={Cambridge16} class="rounded-xl h-[80%] translate-y-[-10px] sm:translate-y-[-3px]" />
                                             </div>
                                             <div class="w-2/3 bg-white flex flex-col space-y-2 p-3 translate-y-[-3px] sm:translate-y-[0px]">
                                                 <div class="flex justify-between item-center gap-1">

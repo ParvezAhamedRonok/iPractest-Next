@@ -1,13 +1,16 @@
 "use client"
+import dynamic from 'next/dynamic';
 import React, { useEffect, useState } from 'react';
 import logo from '../../../../assets/images/Practestlogo.png';
 import StickyMenu from '../../../../lib/StickyMenu';
-import NavigationHome from '../../LandingHome/NavigationHome';
-import LoginPage from '../../LoginPage/LoginPage';
-import SignUpPage from '../../LoginPage/SignUpPage';
 import { FaBookReader } from "react-icons/fa";
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
+
+//client components...
+const LoginPage = dynamic(() => import("../../LoginPage/LoginPage"), { ssr: false })
+const SignUpPage = dynamic(() => import("../../LoginPage/SignUpPage"), { ssr: false })
+const NavigationHome = dynamic(() => import("../../LandingHome/NavigationHome"), { ssr: false })
 //end importing----->
 
 

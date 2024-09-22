@@ -12,7 +12,7 @@ import "react-circular-progressbar/dist/styles.css";
 // Animation
 import { easeQuadInOut } from "d3-ease";
 import AnimatedProgressProvider from "../../../../Speaking-Module/Speaking-Func-Compoents/Pages/SpeakingResult/AnimatedProgressProvider.js";
-import Compare from "./Compare.jsx";
+
 //end of importing.........
 
 
@@ -398,76 +398,6 @@ export default function ResultEvaluations({ userTextToPassResultEvaluation, lexi
                     </div>
 
 
-                    {/* <div className={`bg-purple-700 w-full sm:w-[300px] grid rounded-[20px] ${show4content ? "h-auto" : "h-[100px]"}`}>
-                        <div className='w-full'>
-                            <div className='flex justify-between w-full align-middle pl-[10px] pt-[17px] pr-[10px]'>
-                                <div className='p-1 flex justify-center align-middle gap-1'>
-                                    <div className='p-1 rounded-[50%] bg-white w-[60px] h-[60px]'>
-
-                                        <AnimatedProgressProvider
-                                            valueStart={0}
-                                            valueEnd={Number(retriveJsonData.PronaunacationsScore) / 10 * 100}
-                                            duration={1.5}
-                                            easingFunction={easeQuadInOut}
-                                        // repeat
-                                        >
-                                            {value => {
-                                                let roundedValue = Math.round(value);
-                                                let mainNumber = String(roundedValue).split("").join(".");
-                                                // console.log(mainNumber)
-                                                return (
-                                                    <CircularProgressbar
-                                                        value={value}
-                                                        text={`${mainNumber}`}
-                                                        strokeWidth={12}
-
-                                                        styles={buildStyles({
-                                                            pathTransition: "none",
-                                                            //  textColor: "red",
-                                                            pathColor: "purple",
-
-                                                            // trailColor: "gold"
-                                                        })}
-                                                    />
-                                                );
-                                            }}
-                                        </AnimatedProgressProvider>
-                                    </div>
-                                    <p className='font-bold text-center m-auto text-[14px] text-white'>
-                                        Pronunciation
-                                    </p>
-
-                                </div>
-                                <div className=' flex justify-center align-middle'>
-                                    <div className='rounded-[50%] m-auto bg-gray-50 w-[20px] h-[20px] '><span className="text-gray-950  font-bold cursor-pointer"
-                                        onClick={() => {
-                                            setShow4Content(!show4content);
-                                            setShow3Content(false);
-                                        }}
-                                    >
-                                        {
-                                            show4content ? <IoMdArrowDropup className='text-2xl translate-y-[-2px] translate-x-[-2px]' /> : <IoMdArrowDropdown className='text-2xl translate-x-[-2px]' />
-                                        }
-                                    </span></div>
-                                </div>
-
-                            </div>
-                        </div>
-                        {
-                            show4content && (
-                                <div className={`w-full flex justify-center align-middle bg-white text-black border-r-2 border-l-2 border-b-2 border-gray-300 p-2`}>
-
-                                    <div className='w-full bg-transparent  text-black text-center ma-to text-xl'>
-                                        {
-                                            pronaunicationStatement
-                                        }
-                                    </div>
-
-                                </div>
-                            )
-                        }
-
-                    </div> */}
                 </div>
             </div>
         </div>

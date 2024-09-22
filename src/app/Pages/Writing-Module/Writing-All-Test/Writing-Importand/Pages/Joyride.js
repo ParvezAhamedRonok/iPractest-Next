@@ -90,7 +90,7 @@ export const Joyride = (props) => {
 
   const handleJoyrideCallback = (data) => {
     const { status, type } = data;
-    console.log({ type, status, action: data.action, data });
+    // console.log({ type, status, action: data.action, data });
     const finishedStatuses = [STATUS.FINISHED, STATUS.SKIPPED];
     if (finishedStatuses.includes(status)) {
       setRun(false);
