@@ -12,10 +12,6 @@ import Image from "next/image";
 // end of the importing........
 
 
-
-
-
-// res.data.replace(/(?:\r\n|\r|\n)/g, '<br />')
 const SOFFileReader = () => {
   const inputRef = useRef(null);
   const history = useRouter();
@@ -125,10 +121,6 @@ const SOFFileReader = () => {
                     <div className="flex justify-end box-border w-full sm:w-[700px] overflow-auto  mb-4">
                       <div className="flex gap-1">
                         <Image src={PdfImage} alt="" className="w-[35px] mt-[-2px] h-[40px] mr-1" />
-                        {/* <button className="bg-blue-300 w-[120px] text-center text-[14px] rounded h-[40px] mt-1 cursor-pointer hover:bg-red-200"
-                          onClick={() => { printDocument(items.SOPData) }}
-                        >Download</button> */}
-
                         <button className="bookmarkBtn"
                           onClick={() => { printDocument(items.SOPData) }}>
                           <span class="IconContainer">

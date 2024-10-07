@@ -45,7 +45,7 @@ function TellusReason() {
         Axios({
             method: "get",
             // url: 'http://localhost:8080/api/user/getSpecificUserReasonDetail/' + userEmail,
-            url: 'https://node-js-express-login-example.onrender.com/api/user/getSpecificUserReasonDetail/' + userEmail,
+            url: 'https://node-js-express-login-example.onrender.com/api/user/getSpecificUserReasonDetail/' + localStorage.getItem('userEmail'),
             headers: {
                 "Authorization": `Bearer ${localStorage.getItem("loginTOken")}`,
                 'Content-Type': 'application/json'

@@ -1,11 +1,11 @@
 "use client";
-import dynamic  from 'next/dynamic';
+import dynamic from 'next/dynamic';
 import React, { Suspense, useEffect } from 'react';
 import "./index.css";
 import useToggle from '../../../../hooks/useToggle.js';
 import BackToTop from '../../../../lib/BackToTop.js';
 import FooterHomeThree from '../../LandingHome/FooterHomeOne.js';
-import AllTestComponent from "./AllTestsReding.jsx"
+import AllTestComponent from "./Test-Cards.jsx"
 import { useStateContext } from "../../../../contexts/ContextProvider.jsx";
 import { CheckPaymentStatus } from "../../Payments/CkeckPayment/CheckPayments.js";
 

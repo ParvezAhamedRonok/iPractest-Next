@@ -4,13 +4,16 @@ import React, { useEffect, useState } from 'react'
 
 //connect the indexDB for storing data -----------------------
 //prefixes of implementation that we want to test
-const windowIndexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
 
-//prefixes of window.IDB objects
-window.IDBTransaction = window.IDBTransaction || window.webkitIDBTransaction || window.msIDBTransaction;
-window.IDBKeyRange = window.IDBKeyRange || window.webkitIDBKeyRange || window.msIDBKeyRange
-
+let windowIndexedDB;
 const createCollectionsInIndexesDB = () => {
+    windowIndexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
+
+    //prefixes of window.IDB objects
+    window.IDBTransaction = window.IDBTransaction || window.webkitIDBTransaction || window.msIDBTransaction;
+    window.IDBKeyRange = window.IDBKeyRange || window.webkitIDBKeyRange || window.msIDBKeyRange
+
+
     if (!windowIndexedDB) {
         window.alert("Your browser doesn't support a stable version of IndexedDB.")
     }
@@ -58,6 +61,7 @@ const createCollectionsInIndexesDB = () => {
 function ShowUserSpeechMainData() {
     const [showUserdata, setShowUserData] = useState([]);
     const [showingUserSpeechData, setShowingUserSpeechData] = useState([]);
+    const [storeAudio64STR, setStoreAudio64] = useState("")
 
     //connect the indexedDb with calling the functions below--- 
     useEffect(() => {
@@ -93,7 +97,8 @@ function ShowUserSpeechMainData() {
                 // setgetUSerSectionName(userData[0] && userData[0].section);
                 let sentences = userData[0].userSpeech.split('~');
                 setShowingUserSpeechData(sentences);
-                updateAudioForPlaySpeech(userData[0].userAudio)
+                setStoreAudio64(userData[0].userAudio)
+                // updateAudioForPlaySpeech(userData[0].userAudio)
 
 
             };
@@ -114,15 +119,15 @@ function ShowUserSpeechMainData() {
 
 
     //play audio function -----
-    function updateAudioForPlaySpeech(changePath) {
-        console.log(changePath);
-        const player = document.getElementsByTagName("audio")[0];
-        player.pause();
-        player.setAttribute('src', changePath);
-        // player.play();
-        player.load();
+    // function updateAudioForPlaySpeech(changePath) {
+    //     console.log(changePath);
+    //     const player = document.getElementsByTagName("audio")[0];
+    //     player.pause();
+    //     player.setAttribute('src', changePath);
+    //     player.play();
+    //     player.load();
 
-    }
+    // }
 
     return (
         <div className='w-full sm:w-[670px] p-[10px] sm:p-[20px] bg-[#fafafa]'>
@@ -131,7 +136,7 @@ function ShowUserSpeechMainData() {
                     <>
                         <div className='pt-3 pl-2 pr-2'>
                             <div>
-                                <audio controls className='m-auto'></audio>
+                                <audio controls src={storeAudio64STR} className='m-auto'></audio>
                             </div>
                             <hr />
                             <div className='pt-3 pl-2 pr-2 bg-white rounded-[15px] shadow-md'>

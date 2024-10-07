@@ -20,7 +20,11 @@ import motiveImg10 from "../../../../assets/images/Speaking-Images/backGroundImg
 // end importing--->
 
 
-
+let sectionName;
+let testName;
+let nextTextNo;
+let TestWithSection;
+let ieltsScors;
 
 function Motivation({
     setopenCongressPopup,
@@ -70,22 +74,11 @@ function Motivation({
     const [SpeakingScores, setSpeakingScores] = useState("")
 
 
-    //section name
-    let TestWithSection = retriveJsonData.sectionNo
-
-    // make ielts scores
-    let ieltsScors = retriveJsonData.ieltsResult
 
     //animation Images Array -----------
     let imagesAnimationsArry = [motiveImg1, motiveImg2, motiveImg3, motiveImg4, motiveImg5, motiveImg5, motiveImg6, motiveImg7, motiveImg8, motiveImg9, motiveImg10]
 
 
-
-
-    let sectiooname = TestWithSection.substr(TestWithSection.length - 4);
-    let testName = TestWithSection.replace(sectiooname, "");
-    let nextTextNo = testName.replace(/[^0-9]/g, '');
-    console.log(nextTextNo)
 
     const [makeAnimations, setMakeAnimations] = useState(true)
 
@@ -125,16 +118,30 @@ function Motivation({
         let SpeakingScores = localStorage.getItem("showSpeakingResult")
         let retriveJsonData = JSON.parse(SpeakingScores);
         setSpeakingScores(SpeakingScores && retriveJsonData);
+        //make section name || get section number etc...
 
-        //use make commnet function here
-        makeComments();
+        setTimeout(() => {
+            //section name
+            TestWithSection = retriveJsonData.sectionNo
+            // make ielts scores
+            ieltsScors = retriveJsonData.ieltsResult
+
+            sectionName = TestWithSection.substr(TestWithSection.length - 4);
+            testName = TestWithSection.replace(sectionName, "");
+            nextTextNo = testName.replace(/[^0-9]/g, '');
+            console.log(nextTextNo)
+        }, 500);
+
+
         //use animation in motivational popUp...
         setTimeout(() => {
-            setMakeAnimations(false)
+            setMakeAnimations(false);
         }, 5000);
         setTimeout(() => {
-            zoomAnimations()
-        }, 700);
+            zoomAnimations();
+            //use make commnet function here
+            makeComments();
+        }, 800);
     }, [])
 
 
@@ -157,9 +164,10 @@ function Motivation({
 
 
     const makeComments = () => {
-        if (sectiooname == "Sec1" || sectiooname == "Sec2") {
+        console.log(sectionName)
+        if (sectionName == "Sec1" || sectionName == "Sec2") {
             setStorePersonalComment(sec2CommentsArr[Math.floor(Math.random() * sec2CommentsArr.length)])
-        } else if (sectiooname == "Sec3") {
+        } else if (sectionName == "Sec3") {
             setStorePersonalComment(sec3CommentsArr[Math.floor(Math.random() * sec3CommentsArr.length)])
         }
 
@@ -534,7 +542,7 @@ function Motivation({
     return (
         <>
             <div className='fixed top-0  left-0 right-0 bottom-0 bg-transparent z-[1000000]'>
-                <div className="min-h-screen py-3 sm:px-6 lg:px-8 px-6 relative">
+                <div className="min-h-screen  lg:px-8 px-6 relative">
                     <div className='absolute top-0 left-0 right-0 bottom-0 z-[-10]'>
 
                         {
@@ -544,7 +552,7 @@ function Motivation({
                         }
                     </div>
 
-                    <div className="sm:mx-auto sm:w-full sm:max-w-md pt-[30px] sm:pt-[10px] relative ">
+                    <div className="sm:mx-auto sm:w-full sm:max-w-md  relative ">
                         <div className="popup">
 
                             <div className='relative top-0 left-0 bottom-0 right-0'>
@@ -565,11 +573,11 @@ function Motivation({
                                 <p className='text-center text-xl font-bold mb-2'>{storeModivationalComment}</p>
 
                                 {
-                                    sectiooname != "Sec3" && <p className='text-center'>Try the next section of  <span className='text-xl font-bold'>{testName}</span></p>
+                                    sectionName != "Sec3" && <p className='text-center'>Try the next section of  <span className='text-xl font-bold'>{testName}</span></p>
 
                                 }
                                 {
-                                    sectiooname == "Sec3" && <p className='text-center'>Try the Test <span className='text-2xl font-bold ml-1 mr-1'>{Number(nextTextNo) + 1}</span> for more Improvement</p>
+                                    sectionName == "Sec3" && <p className='text-center'>Try the Test <span className='text-2xl font-bold ml-1 mr-1'>{Number(nextTextNo) + 1}</span> for more Improvement</p>
 
                                 } <br />
 

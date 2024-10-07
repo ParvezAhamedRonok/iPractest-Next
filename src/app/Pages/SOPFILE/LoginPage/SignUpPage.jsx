@@ -1,15 +1,11 @@
 "use client"
 import React, { useEffect, useState } from 'react';
 import "./SignUpPage.css";
-import { useRouter } from 'next/navigation';
 import axios from 'axios';
 import GoogleFacebooklog from './GoogleFacebooklog';
 import { ClockLoader } from "react-spinners";
 import Timer from "../../Writing-Module/Writing-All-Test/Writing-Importand/Pages/Timer";
-
-import { useStateContext } from "../../../../contexts/ContextProvider";
 import { SIGNUP_URL } from "../../../../assets/URL's/AllUrl";
-
 import { FaRegUser } from "react-icons/fa";
 import { PiUserPlusBold } from "react-icons/pi";
 import { FaUser } from "react-icons/fa";
@@ -21,19 +17,13 @@ import { FaUser } from "react-icons/fa";
 
 
 function SignUpPage({ openSignUpPage, openLogInPage, finalFuncAfterLogInorSignUp }) {
-      const { writingText, setWritingText, loginRedirectStatus, setLoginRedirectUrl } = useStateContext();
-      let history = useRouter()
 
       //all user localstorages data storing states.......
       const [userCountryInfo, setUserCountryInfo] = useState();
-      const [usersCountryName, setuserCountryName] = useState("");
       const [DeviceNumber, setUserDeviceName] = useState("")
-      const [userEmail, setUserEmail] = useState("");
-      const [userName, setUserName] = useState("");
       const [refferDID, setRefferdID] = useState("")
 
       const [errormsg, setErrorMsg] = useState("");
-      const [signUpMsg, setsignUpMsg] = useState(false);
       const [loadingMsg, setLoadingMsg] = useState(false);
       const [signUpData, setSignUpData] = useState({
             username: "",
@@ -41,11 +31,6 @@ function SignUpPage({ openSignUpPage, openLogInPage, finalFuncAfterLogInorSignUp
             password: ""
       });
       const { username, email, password } = signUpData
-
-      const nextPath = (path) => {
-            history.push(path);
-      }
-
 
       useEffect(() => {
             //user all localstorage storing into states into this useEffect below...

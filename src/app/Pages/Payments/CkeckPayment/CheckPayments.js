@@ -66,9 +66,9 @@ export const CheckPaymentStatus = () => {
         Axios({
             method: "get",
             // url: 'http://localhost:8080/api/user/checkforDBAmerPayAccess/' + useremail,
-            url: AAMARPAY_GET_USER_DATA_FROM_DATABASE + userEmail,
+            url: AAMARPAY_GET_USER_DATA_FROM_DATABASE + localStorage.getItem("userEmail"),
             headers: {
-                "Authorization": `Bearer ${userLoginToken}`,
+                "Authorization": `Bearer ${localStorage.getItem("loginTOken")}`,
                 'Content-Type': 'application/json'
             }
         })
@@ -102,9 +102,9 @@ export const CheckPaymentStatus = () => {
 
         Axios({
             method: "get",
-            url: PAYPAL_GET_USER_DATA_FROM_DATABASE + userEmail,
+            url: PAYPAL_GET_USER_DATA_FROM_DATABASE + localStorage.getItem("userEmail"),
             headers: {
-                "Authorization": `Bearer ${userLoginToken}`,
+                "Authorization": `Bearer ${localStorage.getItem("loginTOken")}`,
                 'Content-Type': 'application/json'
             }
         }).then((res) => {

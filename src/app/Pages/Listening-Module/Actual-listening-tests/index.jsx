@@ -7,11 +7,12 @@ import BackToTop from '../../../../lib/BackToTop';
 import FooterHomeThree from '../../LandingHome/FooterHomeOne';
 import { useStateContext } from "../../../../contexts/ContextProvider";
 import { CheckPaymentStatus } from "../../Payments/CkeckPayment/CheckPayments.js";
-import AllListeningTest from "./AllListeningTests"
+
 
 //client components....
 const HeaderLanding = dynamic(() => import('../../LandingHome/HeaderHomeOne'), { ssr: false });
 const NavigationBar = dynamic(() => import('../../LandingHome/NavigationBar'), { ssr: false });
+const AllListeningTest = dynamic(() => import('./Test_Cards'), { ssr: false });
 
 
 //end of the importing section................

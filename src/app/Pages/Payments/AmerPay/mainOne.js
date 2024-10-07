@@ -80,13 +80,6 @@ function Index({ setAmerPayPayment }) {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(userInfo
-        // {
-        //       userName:userInfo.userName,
-        //       userEmail:userInfo.userEmail,
-        //       postcode:userInfo.postcode,
-        //       price:userInfo.price,
-        //       number:userInfo.number,
-        // }
       )
     })
       .then((e) => e.json())

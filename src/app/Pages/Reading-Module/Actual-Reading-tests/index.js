@@ -5,7 +5,7 @@ import "./index.css";
 import useToggle from '../../../../hooks/useToggle';
 import BackToTop from '../../../../lib/BackToTop';
 import FooterHomeThree from '../../LandingHome/FooterHomeOne';
-import AllTestComponent from "./AllTestsReading"
+import AllTestComponent from "./Test-Cards"
 import { useStateContext } from "../../../../contexts/ContextProvider";
 import { CheckPaymentStatus } from "../../Payments/CkeckPayment/CheckPayments.js";
 //client components....

@@ -10,7 +10,7 @@ import BackToTop from '../../../../lib/BackToTop';
 //client components....
 const HeaderLanding = dynamic(() => import('../../LandingHome/HeaderHomeOne'), { ssr: false });
 const NavigationBar = dynamic(() => import('../../LandingHome/NavigationBar'), { ssr: false });
-const AllListeningTest = dynamic(() => import('./AllListeningTests'), { ssr: false });
+const AllListeningTest = dynamic(() => import('./Test_Cards'), { ssr: false });
 
 //end of the importing............
 

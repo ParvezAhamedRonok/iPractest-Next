@@ -7,7 +7,8 @@
   padding: 18px;
   animation: blinkforBorder 2.5s ease infinite;
 }
-.removeBorder{
+
+.removeBorder {
   position: relative;
   font-family: sans-serif;
   width: 100%;
@@ -16,6 +17,7 @@
   padding: 18px;
   border: none;
 }
+
 @keyframes blinkforBorder {
   0% {
     outline: 3px solid red;
@@ -30,7 +32,7 @@
   }
 }
 
-.bubble-bottom-left{
+.bubble-bottom-left {
   width: 25px;
   height: 20px;
   position: absolute;
@@ -41,7 +43,8 @@
   background-color: white;
   animation: blinkforBorderChild 2.5s ease infinite;
 }
-.bubble-bottom-left::after{
+
+.bubble-bottom-left::after {
   content: " ";
   position: absolute;
   top: -5px;
@@ -52,7 +55,7 @@
   border-bottom-right-radius: 100%;
 }
 
-.removeChildBorder{
+.removeChildBorder {
   width: 25px;
   height: 22px;
   position: absolute;
@@ -64,14 +67,17 @@
   border-left: 1px solid white;
   border-right: 1px solid white;
   border-bottom: 1px solid white;
-}  
+}
+
 @keyframes blinkforBorderChild {
   0% {
     outline: 3px solid red;
   }
+
   50% {
     outline: none;
   }
+
   100% {
     outline: 3px solid red;
   }
@@ -90,11 +96,13 @@
   height: 60px;
   font-size: 110px;
 }
+
 .shadowLine {
   box-shadow: 2px 2px 2px 2px gray;
 }
+
 /*styling the Answer that we have give after the examiner end the speech.....*/
-.showAnsStyling{
+.showAnsStyling {
   padding: 10px;
   border: none;
   border-top: 3px solid gray;
@@ -109,7 +117,8 @@
   justify-content: center;
   align-items: center;
 }
-.center_div .wave_next{
+
+.center_div .wave_next {
   width: 0.3rem;
   height: 8px;
   background-color: #4bcffa;
@@ -127,54 +136,67 @@
 
 }
 
-@keyframes waves{
-  0%{
+@keyframes waves {
+  0% {
     transform: scale(0);
   }
-  50%{
+
+  50% {
     transform: scale(1);
   }
-  100%{
+
+  100% {
     transform: scale(0);
   }
 }
 
 
 
-.wave:nth-child(2){
+.wave:nth-child(2) {
   animation-delay: 0.1s;
 }
-.wave:nth-child(3){
+
+.wave:nth-child(3) {
   animation-delay: 0.2s;
 }
-.wave:nth-child(4){
+
+.wave:nth-child(4) {
   animation-delay: 0.3s;
 }
-.wave:nth-child(5){
+
+.wave:nth-child(5) {
   animation-delay: 0.4s;
 }
-.wave:nth-child(6){
+
+.wave:nth-child(6) {
   animation-delay: 0.5s;
 }
-.wave:nth-child(7){
+
+.wave:nth-child(7) {
   animation-delay: 0.6s;
 }
-.wave:nth-child(8){
+
+.wave:nth-child(8) {
   animation-delay: 0.7s;
 }
-.wave:nth-child(9){
+
+.wave:nth-child(9) {
   animation-delay: 0.8s;
 }
-.wave:nth-child(10){
+
+.wave:nth-child(10) {
   animation-delay: 0.9s;
 }
-.wave:nth-child(11){
+
+.wave:nth-child(11) {
   animation-delay: 0.10s;
 }
-.wave:nth-child(12){
+
+.wave:nth-child(12) {
   animation-delay: 0.11s;
 }
-.wave:nth-child(13){
+
+.wave:nth-child(13) {
   animation-delay: 0.12s;
 }
 
@@ -205,27 +227,6 @@
   width: 100%;
 }
 
-/* .Click-container{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.Click-container .video-popup  {
-    width: 100px;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    border: 3px solid purple;
-}
-.Click-container .video-popup > a i{
-    font-size: 2.1rem;
-    color: white;
-}
-.Click-container .video-popup > a i:hover{
-    color: peru;
-} */
 
 /* User Comments component styling---------- */
 .S-commentsIcon {
@@ -430,7 +431,7 @@
 
 
 /* need to know text effecting */
-.needEffect{
+.needEffect {
   position: relative;
   text-transform: uppercase;
   font-weight: 600;
@@ -439,7 +440,7 @@
 
 
 
-.needEffect::before{
+.needEffect::before {
   content: attr(data-text);
   position: absolute;
   top: 1px;
@@ -455,47 +456,17 @@
 }
 
 
-@keyframes  animate{
+@keyframes animate {
 
-0%{
+  0% {
     width: 0;
+  }
+
+  80% {
+
+    width: 100%;
+  }
+
+
+
 }
-80%{
-
-  width: 100%;
-}
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-/* All of those code below for Proggress bars added at (27/2/24); */
-
-/* :where(.css-dev-only-do-not-override-1k979oh).ant-progress.ant-progress-circle .ant-progress-text {
-  width: 69%;
-  height: 69%;
-  border-radius: 50%;
-  margin: 0;
-  padding: 0;
-  color: rgba(0, 0, 0, 0.88);
-  font-size: 1.4em;
-  line-height: 1;
-  font-weight: 600;
-  white-space: normal;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 13px;
-  transform: translateY(-50%);
-  background-color: rgb(235 201 235);
-} */

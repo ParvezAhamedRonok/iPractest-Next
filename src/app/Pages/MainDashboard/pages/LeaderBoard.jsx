@@ -4,7 +4,7 @@ import Axios from 'axios';
 import { IoMdBook } from "react-icons/io";
 import { TfiWrite } from "react-icons/tfi";
 import { FaAssistiveListeningSystems } from "react-icons/fa";
-import "../pages/DashSomePages/Style.css";
+import "./Dash-Page-Component/Style.css";
 
 import { WRITING_GET__ALL_USER__DATA_FORM_DATABASE, READING_GET__ALL_USER__DATA_FORM_DATABASE, LISTENING_GET__ALL_USER__DATA_FORM_DATABASE } from "../../../../assets/URL's/AllUrl";
 
@@ -30,6 +30,10 @@ function LeaderBoard() {
   }, [])
 
 
+
+
+  //get all users not a specific user data here is all 3 modules data's from database for showing into 
+  // the leader board....
   useEffect(() => {
     Axios({
       method: "get",

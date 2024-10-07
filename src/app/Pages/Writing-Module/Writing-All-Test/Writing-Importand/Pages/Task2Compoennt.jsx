@@ -71,7 +71,8 @@ let writingFeedbackStatus = false;
 
 
 
-// let storeUserAnswerTextGlobally = "";
+//storing user answer text for passign to into lexical * suggestion function API..
+let userTextToPassResultEvaluation;
 
 function Task2Compoennt(task) {
     const history = useRouter();
@@ -127,7 +128,6 @@ function Task2Compoennt(task) {
     const [Mainsrc, setSelectImageForCrop] = useState(null);
     const [cropImage, setCropImage] = useState(null);
     const [crop, setCrop] = useState({ aspect: 16 / 9 });
-    const [userTextToPassResultEvaluation, setUserTextToPassResultEvaluations] = useState("")
 
     const [storeQuestionText, setStoreQuestionText] = useState("")
 
@@ -442,7 +442,7 @@ function Task2Compoennt(task) {
     let retry;
     function checkWritingAnswer(text, number) {
         //store this text into a state for pass to the resultEvaluation component for getting the evaluations
-        setUserTextToPassResultEvaluations(text);
+        userTextToPassResultEvaluation = text
         // storeUserAnswerTextGlobally = text
         // CheckWords(text);
         setImageUploadMsg("Checking..");

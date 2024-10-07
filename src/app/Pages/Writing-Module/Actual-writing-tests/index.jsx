@@ -9,7 +9,7 @@ import FooterHomeThree from '../../LandingHome/FooterHomeOne';
 //client components...
 const HeaderLanding = dynamic(() => import("../../LandingHome/HeaderHomeOne"), { ssr: false });
 const NavigationBar = dynamic(() => import("../../LandingHome/NavigationBar"), { ssr: false })
-const AllWritingTestServices = dynamic(() => import("./AllWritingTestServices"), { ssr: false })
+const AllWritingTestServices = dynamic(() => import("./Test-Cards"), { ssr: false })
 
 //end of importings.....
 

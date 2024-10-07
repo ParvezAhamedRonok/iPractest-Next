@@ -163,7 +163,7 @@ export const AAMARPAY_GET_USER_DATA_FROM_DATABASE = 'https://node-js-express-log
 //Paypal Url's....
 export const PAYPAL_POST_FOR_OPEN_CHECKOUTPAGE = "https://node-js-express-login-example.onrender.com/api/user/PaypalPay"
 
-export const PAYPAL_POST_FOR_UPGRADE_USER_PAYMENT_INFO_WITH_AMOUNT= "https://node-js-express-login-example.onrender.com/api/user/upgrade-Paypay-Payment-Infor"
+export const PAYPAL_POST_FOR_UPGRADE_USER_PAYMENT_INFO_WITH_AMOUNT = "https://node-js-express-login-example.onrender.com/api/user/upgrade-Paypay-Payment-Infor"
 
 export const PAYPAL_GET_USER_DATA_FROM_DATABASE = 'https://node-js-express-login-example.onrender.com/api/user/AccesPaypalPaid/'
 
@@ -190,6 +190,21 @@ export const POST_REFERRALS_USER_INTO_DATABASE = "https://node-js-express-login-
 export const POST_EXPLANATIONS_DATA_FOR_STORE_INTO_DATABASE = "https://node-js-express-login-example.onrender.com/api/user/PostRequestion-For-Store-user-Explanaion-data"
 
 export const GET_EXPLANATIONS_USER_DATA_FOR_CHECK_WITH_CONDITIONS = "https://node-js-express-login-example.onrender.com/api/user/Get-Request-for-Get-user-Explanation-data/"
+
+
+
+//OTP All API URL's.........................
+export const POST_SENDOTP_TO_USER_VIA_SMSNET_BD = "http://localhost:8080/api/user/sendOTP-To-User-via-smsNet-BD"
+
+export const POST_OTP_ADD_USER_TO_DATABASE_AFTER_SUCCESSFULL_VARIFICATION = "http://localhost:8080/api/user/Add-User-To-Database-after-Successfull-Varification"
+
+export const GET_OTP_REQUEST_API_TO_CHECK_USER_HAVE_NUMBER_OR_NOT = "http://localhost:8080/api/user/Get-Request-API-To-Check-User-Have-Number-Or-Not/"
+
+
+
+
+
+
 
 
 

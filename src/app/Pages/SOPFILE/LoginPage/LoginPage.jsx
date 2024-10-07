@@ -118,10 +118,10 @@ function LoginPage({ openLogInPage, openSignUpPage, finalFuncAfterLogInorSignUp 
           localStorage.setItem('DeviceNo', res.data.Devices)
         }
         setTimeout(() => {
-          // setsignUpMsg(false);
           setLoadingMsg(false);
-          openLogInPage()  // this is for close popUp
-          // SOP Submit function call
+          // this is for close popUp
+          openLogInPage()
+          // SOP Submit function call....
           finalFuncAfterLogInorSignUp();
         }, 1000);
 

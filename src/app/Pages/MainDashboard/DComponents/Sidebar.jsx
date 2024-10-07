@@ -1,8 +1,6 @@
 "use client";
 import React, { useState } from 'react';
-import Link from 'next/link';
 import { MdOutlineCancel } from 'react-icons/md';
-import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 import logo from '../../../../assets/images/Practestlogo.png';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
@@ -42,8 +40,7 @@ const Sidebar = ({ DashboardID }) => {
               />
             </div>
 
-            <TooltipComponent content="Menu" position="BottomCenter">
-              <button
+            <button
                 type="button"
                 onClick={() => setActiveMenu(!activeMenu)}
                 style={{ color: currentColor }}
@@ -51,7 +48,6 @@ const Sidebar = ({ DashboardID }) => {
               >
                 <MdOutlineCancel />
               </button>
-            </TooltipComponent>
           </div>
           <div className="mt-10 w-[1000px]">
             {links.map((item) => (

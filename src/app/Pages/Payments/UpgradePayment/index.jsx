@@ -20,22 +20,13 @@ function PersonalMentor({ setopenUpgradeComponet }) {
     //all locaStorags data store into those states.....
     const [countryName, setcountryName] = useState('')
     const [useremail, setuserEmail] = useState('');
-    const [moduleName, setmoduleName] = useState('')
-    const [userName, setuserName] = useState('')
+
     const [countryFlag, setcountryFlag] = useState('')
 
     //all state diclare here---------------
     const [storeBDCurrency, setStoreBDCurrency] = useState("BDT")
 
-    let objectMain = {
-        anc: 'asjdka',
-        name: "bangladesh",
-        age: "23",
-        email: "mdpervez946@gmail.com",
-        address: "jmalpur",
-        thana: "fulbariyaMunshipara"
-    }
-
+ 
     //use useEffect for getting all user data
     useEffect(() => {
         setcountryFlag(localStorage.getItem('setCountryFlag') && localStorage.getItem('setCountryFlag'));

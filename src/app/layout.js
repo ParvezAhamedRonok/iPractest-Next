@@ -10,7 +10,6 @@ import '../assets/css/style.css';
 import { ContextProvider } from '../contexts/ContextProvider';
 import { GoogleOAuthProvider } from '@react-oauth/google';
 import Script from "next/script"; // Import next/script for external scripts
-
 //end of the importing...........
 
 
@@ -42,6 +41,7 @@ export default function RootLayout({ children }) {
             <Script
               src="https://aka.ms/csspeech/jsbrowserpackageraw" async
             />
+            <Script type="text/javascript" src="/static/script.js" />
           </head>
           <body className={inter.className}>{children}</body>
         </html>

@@ -186,13 +186,6 @@ function Index({ setAmerPayPayment }) {
           <section className=' grid grid-cols-1 translate-y-[-37px] rounded  justify-center align-middle w-[100vw] sm:w-[630px] p-4 min-h-[300px] max-h-auto overflow-auto   bg-blue-100 shadow-2xl z-[100000] '>
             {
               changeForm == "sendMail" && (<form onSubmit={handleSubmitforSendMailToUser} className='p-4'>
-                {/* <div className='flex w-full justify-end'>
-            <button
-              style={{ color: 'rgb(153, 171, 180)' }}
-              className="text-2xl  hover:drop-shadow-xl rounded-[50%] pt-[9px] sm:mr-5 mr-1 hover:bg-light-gray w-[43px] h-[43px] flex justify-center align-middle"
-              onClick={() => { setAmerPayPayment(false) }}>  <MdOutlineCancel />
-            </button>
-          </div> */}
                 <div className='grid w-full justify-center align-middle'>
                   <div className='m-auto text-center'>
                     <FaLock className='text-6xl mb-1 text-center m-auto' /> <br />

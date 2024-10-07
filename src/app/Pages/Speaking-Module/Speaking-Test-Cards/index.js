@@ -12,8 +12,8 @@ import axios from "axios"
 //client components....
 const HeaderLanding = dynamic(() => import('../../LandingHome/HeaderHomeOne.js'), { ssr: false });
 const NavigationBar = dynamic(() => import('../../LandingHome/NavigationBar.js'), { ssr: false });
-const SpeakingTests = dynamic(() => import('./SpekingTests'), { ssr: false });
-const SpeakingAfter10Tests = dynamic(() => import('./Speaking-After-10-Tests.jsx'), { ssr: false });
+const SpeakingTests = dynamic(() => import('./Cards-To-10'), { ssr: false });
+const SpeakingAfter10Tests = dynamic(() => import('./Cards-To-20.jsx'), { ssr: false });
 
 
 //end of the importing..........

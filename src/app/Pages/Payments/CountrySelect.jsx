@@ -101,21 +101,6 @@ function CountrySelect({ setSelectCountry }) {
                                         />
                                     </div>
 
-                                    {/* 
-                                    <select
-                                        name="name"
-                                        id="name"
-                                        className='p-[13px] w-full sm:w-[260px] bg-white border-2 border-gray-400 rounded cursor-pointer'
-                                        onChange={(e) => setCountryValue(e.target.value)}>
-                                        <option selected>Country</option>
-                                        {
-                                            country.map((e) => {
-                                                return <option className='bg-white'
-                                                    key={e.name.common} value={e.name.common}>{e.name.common}
-                                                </option>
-                                            })
-                                        }
-                                    </select> */}
                                 </div>
                             </div>
                             <div className='w-full text-center mt-[40px]'>

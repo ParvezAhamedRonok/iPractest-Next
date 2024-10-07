@@ -1,8 +1,5 @@
-"use client";
-import React, { useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation';
-import { useStateContext } from "../../../../contexts/ContextProvider";
-// end importing--->
+
+import React from 'react';
 import CEO_Sir from '../../../../assets/images/ceo.jpg';
 import { FaFacebook } from "react-icons/fa";
 import Image from 'next/image';
@@ -14,10 +11,6 @@ import { SiWhatsapp } from "react-icons/si";
 
 
 function PersonalMentor({ setOpenMentorPopUp }) {
-    const { writingText, setWritingText, loginRedirectStatus, setLoginRedirectUrl } = useStateContext();
-    const history = useRouter();
-
-
 
     return (
         <>

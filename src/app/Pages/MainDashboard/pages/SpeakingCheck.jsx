@@ -3,26 +3,27 @@ import React, { useEffect, useState } from 'react';
 import { useStateContext } from '../../../../contexts/ContextProvider';
 import { useRouter } from 'next/navigation';
 import CountrySelect from '../../Payments/CountrySelect';
+import { CiPlay1 } from "react-icons/ci";
 import "./Style.css"
 
 
-
+//indexedDB database creating....
+let windowIndexedDB;
 const createCollectionsInIndexesDB = () => {
     //connect the indexDB for storing data -----------------------
     //prefixes of implementation that we want to test
-    const windowIndexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
+    windowIndexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
 
     //prefixes of window.IDB objects
     window.IDBTransaction = window.IDBTransaction || window.webkitIDBTransaction || window.msIDBTransaction;
     window.IDBKeyRange = window.IDBKeyRange || window.webkitIDBKeyRange || window.msIDBKeyRange
-
 
     if (!windowIndexedDB) {
         window.alert("Your browser doesn't support a stable version of IndexedDB.")
     }
 
     // var db;
-    var request = windowIndexedDB.open("newDatabase", 1);
+    var request = windowIndexedDB.open("newDatabase", 2);
 
     request.onerror = function (event) {
         console.log("error: ", event);
@@ -35,7 +36,7 @@ const createCollectionsInIndexesDB = () => {
         // });
         if (!db.objectStoreNames.contains("userData")) {
             db.createObjectStore("userData", {
-                keyPath: "testSections",
+                keyPath: "ID",
             }
             )
         }
@@ -58,6 +59,7 @@ const createCollectionsInIndexesDB = () => {
     };
 
 }
+
 
 
 
@@ -102,21 +104,12 @@ function SpeakingCheck() {
     const [showingUserSpeechData, setShowingUserSpeechData] = useState([]);
     const [SelectCountry, setSelectCountry] = useState(false);
 
-    const { setCurrentColor, setCurrentMode, currentMode, activeMenu, currentColor, themeSettings, setThemeSettings } = useStateContext();
+    const { setCurrentColor, setCurrentMode } = useStateContext();
 
     //end of importing....
     useEffect(() => {
         setUserEmail(localStorage.getItem('userEmail'));
         setgetCountry(localStorage.getItem("setCountry"));
-
-        //check country if needed...
-        // setTimeout(() => {
-        //     if (!getCountry || getCountry === "null" || getCountry === "undefined") {
-        //         setTimeout(() => {
-        //             setSelectCountry(true)
-        //         }, 4000);
-        //     }
-        // }, 2000);
 
     }, [])
 
@@ -139,23 +132,6 @@ function SpeakingCheck() {
 
 
 
-
-    //!important may be ineed in future..
-    // let keys = [
-    //     "Test1Sec1", "Test1Sec2", "Test1Sec3",
-    //     "Test2Sec1", "Test2Sec2", "Test2Sec3",
-    //     "Test3Sec1", "Test3Sec2", "Test3Sec3",
-    //     "Test4Sec1", "Test4Sec2", "Test4Sec3",
-    //     "Test5Sec1", "Test5Sec2", "Test5Sec3",
-    //     "Test6Sec1", "Test6Sec2", "Test6Sec3",
-    //     "Test7Sec1", "Test7Sec2", "Test7Sec3",
-    //     "Test8Sec1", "Test8Sec2", "Test8Sec3",
-    //     "Test9Sec1", "Test9Sec2", "Test9Sec3",
-    //     "Test10Sec1", "Test10Sec2", "Test10Sec3", 
-    //     "Test11Sec1", "Test11Sec2", "Test11Sec3",
-    //     "Test12Sec1", "Test12Sec2", "Test12Sec3"
-
-    // ]
     const getAllUserAudioData = (event) => {
         let dbPromise = windowIndexedDB.open("newDatabase", 2);
         console.log("Getting-Console added...")
@@ -167,15 +143,11 @@ function SpeakingCheck() {
             const users = userData.getAll();
             console.log(users)
 
-            // const users = userData.get('Users', ['age'], {name:"Ander"}, console.log);
-            // const users = userData.get(localStorage.getItem("userEmail") + event);
             users.onsuccess = (query) => {
                 let userAudios = query.srcElement.result
                 console.log(userAudios)
-                // setAllusersAudioData(userAudios);
                 setAllusersAudioData(
-                    // userAudios.filter((item) => item.ID === userEmail + keys.filter((e) => e === item.testSections))
-                    userAudios.filter((item) => item.userEmail === userEmail));
+                    userAudios.filter((item) => item.userEmail == localStorage.getItem('userEmail')));
 
             };
             users.onerror = (error) => {
@@ -189,9 +161,6 @@ function SpeakingCheck() {
 
         }
     }
-
-    // console.log(AllusersAudioData);
-
 
 
     let Test1Sec1 = AllusersAudioData.filter((item) => item.ID === userEmail + "Test1Sec1");
@@ -385,25 +354,6 @@ function SpeakingCheck() {
     //play audio function -----
     function updateAudioForPlaySpeech(changePath) {
         console.log(changePath);
-        // var myBaseString = changePath;
-
-        // // Split the base64 string in data and contentType
-        // var block = myBaseString.split(";");
-        // console.log(block)
-        // // Get the content type
-        // var dataType = block[0].split(":")[1];// In this case "audio/mpeg"
-        // // get the real base64 content of the file
-        // var realData = block[2].split(",");// In this case "SUQzAwAAAAAD...."
-        // var realMain = realData[1];
-        // // The path where the file will be created
-        // var folderpath = "file:///storage/emulated/0/";
-        // // The name of your file
-        // var filename = "MyAwesomeAudio.mp3";
-
-        // console.log("data:audio/mp3;base64,"+realMain);
-        // console.log(folderpath,filename,realMain,dataType);
-        // player.setAttribute('src', `data:audio/mp3;base64,<${changePath}>`); extra--------
-
         const player = document.getElementsByTagName("audio")[0];
         player.pause();
         player.setAttribute('src', changePath);
@@ -447,16 +397,13 @@ function SpeakingCheck() {
             const userData = tx.objectStore("userSpeech");
 
             const users = userData.getAll();
-            console.log(users)
 
-            // const users = userData.get('Users', ['age'], {name:"Ander"}, console.log);
-            // const users = userData.get(localStorage.getItem("userEmail") + event);
             users.onsuccess = (query) => {
                 let userSpeechSTR = query.srcElement.result
                 // console.log(userSpeechSTR);
                 setAllusersSpeechDataSTR(
                     // userAudios.filter((item) => item.ID === userEmail + keys.filter((e) => e === item.testSections))
-                    userSpeechSTR.filter((item) => item.userEmail === userEmail));
+                    userSpeechSTR.filter((item) => item.userEmail == localStorage.getItem('userEmail')));
 
             };
             users.onerror = (error) => {
@@ -559,60 +506,12 @@ function SpeakingCheck() {
     let SpeechSTRTest20Sec3 = AllusersSpeechDataSTR.filter((item) => item.ID === userEmail + "Test20Sec3");
 
 
-    //test ------21-30--------
-    // let SpeechSTRTest21Sec1 = AllusersSpeechDataSTR.filter((item) => item.ID === userEmail + "Test21Sec1");
-    // let SpeechSTRTest21Sec2 = AllusersSpeechDataSTR.filter((item) => item.ID === userEmail + "Test21Sec2");
-    // let SpeechSTRTest21Sec3 = AllusersSpeechDataSTR.filter((item) => item.ID === userEmail + "Test21Sec3");
-
-
-    console.log(AllusersSpeechDataSTR);
-
-
-
-
-
-
-
-
-
-
-
     // function for showing the user data as a String
     const functionForShowingUserData = (userData) => {
         console.log(userData);
         let sentences = userData.split('~');
         setShowingUserSpeechData(sentences)
         console.log(sentences);
-
-
-
-        // for change the color of Question & Answer word to make change it's color
-        // with the help of those code below       
-        //    setTimeout(() => {
-        //     var a = {
-        //         Question: ["Question1", "Question2"],
-        //       };
-        //     var b = {
-        //         Answer: ["Answer1", "Answer2"]
-        //     }
-
-
-        //       var p = document.getElementById("properWord"),
-        //           keys = Object.keys(a);
-
-        //           var p2 = document.getElementById("properWord"),
-        //           keys2 = Object.keys(b);
-
-        //       for (var j = 0; j < keys.length; j++) {
-        //         p.innerHTML = p.innerHTML.replace( new RegExp("\\b"+keys[j]+"\\b","g"),"<span style='color:red;font-weight:900; font-size:21px;margin-right:4px;'>" + keys[j] + "</span>")
-        //       }
-        //       for (var j2 = 0; j2 < keys2.length; j2++) {
-        //         p2.innerHTML = p2.innerHTML.replace( new RegExp("\\b"+keys2[j2]+"\\b","g"),"<span style='color:green;font-weight:900; font-size:21px; margin-right:4px;'>" + keys2[j2] + "</span>")
-        //       }
-
-
-        //    }, 2000);
-
     }
 
 
@@ -1846,32 +1745,12 @@ function SpeakingCheck() {
                 )
             }
 
-            {/* {!AllusersAudioData[0] && (
-                // <div className='w-full h-[70vh] text-center'>
-                //     <div className=''><h2 className='text-gray-600'>You did not give any test yet</h2>
-                //         <br />
-                //         <p className='text-blue-600 cursor-pointer underline italic'
-                //             onClick={() => { history.push("/SpeakingPage") }}
-                //         ></p>
-                //     </div>
-
-                // </div>
-
-
-
-            )
-            } */}
 
 
             {/* for select the user Country.... */}
             {
                 SelectCountry && (<CountrySelect setSelectCountry={setSelectCountry} />)
             }
-            {/* 
-<CountrySelect  setSelectCountry={setSelectCountry}/> */}
-
-
-
 
         </>
 

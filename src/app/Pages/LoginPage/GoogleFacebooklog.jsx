@@ -4,7 +4,6 @@ import { useRouter } from 'next/navigation';
 import axios from "axios"
 import { ClockLoader } from "react-spinners";
 import Timer from "../Writing-Module/Writing-All-Test/Writing-Importand/Pages/Timer";
-import "./GoogleFace.css";
 import { GoogleLogin } from '@react-oauth/google';
 import { jwtDecode } from "jwt-decode";
 import { useStateContext } from "../../../contexts/ContextProvider";
@@ -139,11 +138,6 @@ function GoogleFacebooklog() {
                   setTimeout(() => {
                     setLoadingMsg(false);
                     nextPath("/Pages/MainDashboard/Dashboard");
-                    // if (loginRedirectStatus == "") {
-                    //   nextPath("/MainDashBoard/Dashboard");
-                    // } else {
-                    //   setLoginRedirectUrl("")
-                    // }
                   }, 1000);
                 }
               })

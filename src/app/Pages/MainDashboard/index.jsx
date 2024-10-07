@@ -5,21 +5,11 @@ import "./index.css";
 import { useRouter } from 'next/navigation';
 // import { Dashboard } from './pages';
 import { useStateContext } from "../../../contexts/ContextProvider";
-import { TooltipComponent } from "@syncfusion/ej2-react-popups";
 import { FiSettings } from "react-icons/fi";
 import { Sidebar, DashNavbar, ThemeSettings } from './DComponents';
 import Footer from "../LandingHome/FooterHomeOne"
 import Axios from 'axios';
 import { POST_REFERRALS_USER_INTO_DATABASE } from '../../../assets/URL\'s/AllUrl';
-
-//client components....
-// const Dashboard = dynamic(() => import('./pages'), { ssr: false });
-// const SpeakingCheck = dynamic(() => import('./pages'), { ssr: false });
-// const LeaderBoard = dynamic(() => import('./pages'), { ssr: false });
-// const LetsPractice = dynamic(() => import('./pages'), { ssr: false });
-// const SOFFileReader = dynamic(() => import('./pages'), { ssr: false });
-// const LORFileReader = dynamic(() => import('./pages'), { ssr: false });
-// const Referrals = dynamic(() => import('./pages'), { ssr: false });
 
 const Dashboard = dynamic(() => import('./pages').then((module) => ({ default: module.Dashboard, ssr: false })));
 const SpeakingCheck = dynamic(() => import('./pages').then((module) => ({ default: module.SpeakingCheck, ssr: false })));
@@ -56,10 +46,10 @@ export default function Index({ DashboardID }) {
 
 
   useEffect(() => {
-    // if (!localStorage.getItem("loginTOken") && !localStorage.getItem("GoogleFacebookToken")
-    //   && !localStorage.getItem("userSignupInfo")) {
-    //   history.push("/");
-    // };
+    if (!localStorage.getItem("loginTOken") && !localStorage.getItem("GoogleFacebookToken")
+      && !localStorage.getItem("userSignupInfo")) {
+      history.push("/");
+    };
 
     //below function is for auto call if users is refered by someone or not
     PostResIfUserReferedByAnyOne()
@@ -112,11 +102,7 @@ export default function Index({ DashboardID }) {
       <div className={currentMode === 'Dark' ? 'dark' : ''}>
         <div className="flex relative dark:bg-main-dark-bg overflow-auto">
           <div className="fixed right-4 bottom-4" style={{ zIndex: '1000' }}>
-            <TooltipComponent
-              content="Settings"
-              position="Top"
-            >
-              <button
+          <button
                 type="button"
                 onClick={() => setThemeSettings(true)}
                 style={{ background: currentColor, borderRadius: '50%' }}
@@ -125,7 +111,6 @@ export default function Index({ DashboardID }) {
                 <FiSettings />
               </button>
 
-            </TooltipComponent>
           </div>
           {activeMenu ? (
             <div className="w-60 fixed sidebar dark:bg-secondary-dark-bg bg-white ">

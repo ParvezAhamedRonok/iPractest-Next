@@ -92,7 +92,7 @@ const PaypalCheckoutButton = ({ productName }) => {
         setOtherPaidStatus(true);
         setBillPopUp(false);
         setTimeout(() => {
-            history.push(`/${moduleName}`);
+            history.push(`/Pages/Payments/PaymentSuccess`);
             localStorage.removeItem("productID");
         }, 2000);
     }

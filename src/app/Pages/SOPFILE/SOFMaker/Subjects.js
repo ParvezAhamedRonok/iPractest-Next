@@ -1,4 +1,4 @@
-export  const options = [
+export const options = [
     {
         name: "Computer Science and Engineering (CSE)"
     },
