@@ -10,9 +10,7 @@ import '../assets/css/style.css';
 import { ContextProvider } from '../contexts/ContextProvider';
 import { GoogleOAuthProvider } from '@react-oauth/google';
 import Script from "next/script"; // Import next/script for external scripts
-//end of the importing...........
-
-
+import logo from '../assets/images/Practestlogo.png';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,22 +20,66 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  // Schema.org JSON-LD structured data
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "iPractest",
+    "url": "https://ipractest.com",
+    "description": "Boost your IELTS score with our extensive range of practice tests.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://ipractest.com/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  };
 
   return (
     <GoogleOAuthProvider clientId='287013083759-c4uucpj3quv7s7l85ge4p1955khd2mi7.apps.googleusercontent.com'>
       <ContextProvider>
         <html lang="en">
           <head>
-            <title>{metadata.title}</title>
-            <meta name="description" content={metadata.description} />
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <meta name="theme-color" content="#000000" />
+
+            <title>IELTS Online Practice Test: Prepare for IELTS Exam.</title>
+            <link rel="canonical" href="https://www.tacobell.com" />
+
+            <meta
+              name="description"
+              content="Boost your IELTS score with our extensive range of practice tests. Track your daily band score and progressively enhance your skills in Speaking, Writing, Reading, and Listening for a successful exam!"
+            />
+
+            {/* Open Graph / Facebook */}
+            <meta property="og:title" content="IELTS Online Practice Test: Prepare for IELTS Exam." />
+            <meta
+              property="og:description"
+              content="Boost your IELTS score with our extensive range of practice tests. Track your daily band score and progressively enhance your skills in Speaking, Writing, Reading, and Listening for a successful exam!"
+            />
+            <meta property="og:type" content="website" />
+            <meta property="og:url" content="https://ipractest.com" />
+            <meta property="og:image" content={logo.src} /> {/* Assuming logo is imported correctly */}
+            <meta property="og:site_name" content="ipractest.com" />
+
+            {/* Twitter */}
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:title" content="IELTS Online Practice Test: Prepare for IELTS Exam." />
+            <meta
+              name="twitter:description"
+              content="Boost your IELTS score with our extensive range of practice tests. Track your daily band score and progressively enhance your skills in Speaking, Writing, Reading, and Listening for a successful exam!"
+            />
+            <meta name="twitter:image" content={logo.src} />
+            <meta name="twitter:site" content="@ipractest" />
+            <meta name="twitter:creator" content="@ipractest" />
+
+            {/* JSON-LD Schema Markup */}
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
+
             {/* External Script: jQuery */}
             <Script
               src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.6.0.min.js" async
             />
             {/* External Script: Example SDK or any other external script */}
-            <Script
-              src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.6.0.min.js" async
-            />
             <Script
               src="https://aka.ms/csspeech/jsbrowserpackageraw" async
             />
@@ -47,6 +89,5 @@ export default function RootLayout({ children }) {
         </html>
       </ContextProvider>
     </GoogleOAuthProvider>
-
   );
 }

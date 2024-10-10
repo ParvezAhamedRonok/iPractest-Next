@@ -35,13 +35,16 @@ function Dashboard() {
         </div>
       </div>
       <div className="">
+        <div className='text-center text-xl sm:text-2xl p-2 font-bold'>
+          Your daily performance for the last 7 days.
+        </div>
         <div className='w-full grid grid-cols-1 sm:grid-cols-3 gap-5 md:grid-cols-4 rounded p-3 mb-4'>
           <WeekSpeakingChart />
           <WeekWritingChart />
           <WeekReadingChart />
-         <WeekListeningChart />
+          <WeekListeningChart />
         </div>
-         <LineCharts />
+        <LineCharts />
       </div>
       <div className='invisible'>
         <DateGetAPI />

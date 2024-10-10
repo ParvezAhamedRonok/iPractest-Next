@@ -100,6 +100,10 @@ const MultiLineChart = () => {
     return (
         <>
             {/* call this component for getting all modules data... */}
+            <div className='text-center text-xl sm:text-2xl p-2 font-bold'>
+            Your performance for the current month  <br />
+            and the previous month, day by day.
+            </div>
             <LineChartData />
             <div className="w-full flex justify-end ">
                 <div className="flex gap-3 mr-[25px] mb-3">
