@@ -46,6 +46,8 @@ import ResultEvaluations from "./ResultEvaluations.jsx";
 import ResultImprovement from "./ResultImprovement.jsx";
 import { IoMdLogIn } from "react-icons/io";
 import { dummyTextArr } from "../AllFunctions/DummyTextArr.jsx";
+import { Post_to_save_data_in_databse } from "../AllFunctions/Post-To-Save-data-in-Database";
+import { Store_writing_scores_in_localstg } from "../AllFunctions/Store-writing-Score-in-localstg";
 
 
 //client components.....
@@ -570,9 +572,13 @@ function Task2Compoennt(task) {
                     setGeammarScore(res.data.GrammaticalScore);
                     setCoherenceScore(res.data.CoherenceScore)
 
-                    PostWritingScors(res.data, totalscore);
-                    if (res.data && userLoginName && useremail) {
-                        ShowTestcors(res.data);
+
+                    //store data into database ....
+                    Post_to_save_data_in_databse(res_data, totalscore)
+
+                    //storing scores into localstorage if user gave any texts as like writing test-1 to test-14
+                    if (ModulesWriting && useremail) {
+                        Store_writing_scores_in_localstg(postIeltsRate, ModulesWriting)
                     }
 
 

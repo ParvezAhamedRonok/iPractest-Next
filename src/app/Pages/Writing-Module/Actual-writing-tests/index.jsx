@@ -20,6 +20,8 @@ const AllWritingTestServices = dynamic(() => import("./Test-Cards"), { ssr: fals
 function WritingAllTest() {
   const [drawer, drawerAction] = useToggle(false);
   useEffect(() => {
+    //remove writing test-no if user giving tests without going any test..
+    localStorage.removeItem("ModulesWriting")
     //for remove speaking motivational popup if user come here after opening speaking tests...
     localStorage.removeItem("forSpeakingMotivation")
   }, [])

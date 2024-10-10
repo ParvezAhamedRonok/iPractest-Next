@@ -1,6 +1,6 @@
 //may be it will not need if i get all scores from database...
-export const Store_writing_scores_in_localstg = (postIeltsRate, ModulesWriting) => {
-
+export async function Store_writing_scores_in_localstg(postIeltsRate, ModulesWriting) {
+    // alert(ModulesWriting , postIeltsRate);
 
     if (ModulesWriting == "1") {
         localStorage.setItem("W_OkmoduleNo1", "Test1_Ok");

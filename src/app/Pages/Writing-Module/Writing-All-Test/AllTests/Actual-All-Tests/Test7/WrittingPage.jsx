@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 import "../../../WrittingAllStyles/WrittingPage.css";
 import Image1 from "../../../../../../../assets/images/writingTest7Img1.jpg";
 import Image2 from "../../../../../../../assets/images/writingTest7Img2.jpg"
-import TextAreaTask1 from "../../../Writing-Importand/Pages/WritingTextArea";
-import TextAreaTask2 from "../../../Writing-Importand/Pages/WritingTextArea";
+import TextAreaTask1 from "../../../Writing-Importand/Pages/Task-1-Component";
+import TextAreaTask2 from "../../../Writing-Importand/Pages/Task-1-Component";
 import logo from "../../../../../../../assets/images/Practestlogo.png";
 import { MdOutlineCancel } from "react-icons/md";
 import { useRouter } from 'next/navigation';

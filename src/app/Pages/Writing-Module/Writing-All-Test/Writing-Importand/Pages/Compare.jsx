@@ -1,3 +1,4 @@
+
 import React from 'react'
 import Diff from "./Diff";
 import Diff2 from "./Diff2";
@@ -5,6 +6,8 @@ import Diff2 from "./Diff2";
 
 
 function Compare({ itemsSet, imageText, writingData, correctData }) {
+
+
     return (
         <div>
             <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-2 box-border">
@@ -13,7 +16,7 @@ function Compare({ itemsSet, imageText, writingData, correctData }) {
                     <br />
                     <div className="p-3 bg-[#f9f9f9] shadow-md translate-y-[-12px]">
                         <Diff
-                            string1={itemsSet == "1" && imageText || itemsSet == "2" && writingData}
+                            string1={itemsSet == "uploaded-text" && imageText || itemsSet == "writing-text" && writingData}
                             string2={correctData}
                             mode="words"
                         />
@@ -25,7 +28,7 @@ function Compare({ itemsSet, imageText, writingData, correctData }) {
                     </i> <br />
                     <div className="bg-[#e6f2fc] p-3 shadow-md translate-y-[-12px]">
                         <Diff2
-                            string1={itemsSet === "1" && imageText || itemsSet === "2" && writingData}
+                            string1={itemsSet === "uploaded-text" && imageText || itemsSet === "writing-text" && writingData}
                             string2={correctData}
                             mode="words"
                         />

@@ -44,6 +44,7 @@ function LoginPage({ openLogInPage, openSignUpPage, finalFuncAfterLogInorSignUp 
     //user all localstorage storing into states into this useEffect below...
     let countryInfo = localStorage.getItem("CountryInfo");
     setUserCountryInfo(countryInfo && JSON.parse(countryInfo));
+    console.log(countryInfo)
     setUserDeviceName(localStorage.getItem('DeviceNo') && localStorage.getItem('DeviceNo'));
     setRefferdID(localStorage.getItem("referID") && localStorage.getItem("referID"))
 
@@ -56,22 +57,6 @@ function LoginPage({ openLogInPage, openSignUpPage, finalFuncAfterLogInorSignUp 
       setDeviceNo("anyThing")
     }
   }, [])
-
-
-
-
-  // for redirect into into the dashboard
-  const nextPath = (path) => {
-    history.push(path);
-  }
-
-
-
-
-
-
-
-
 
 
 

@@ -11,8 +11,8 @@ import Image from 'next/image';
 import WritingCardMainImg from "../../../../assets/images/about-writing-pic-1.png";
 
 //client components......
-const WritingTextArea = dynamic(() => import("../Writing-All-Test/Writing-Importand/Pages/WritingTextArea.jsx"), { ssr: false })
-const Task2Component = dynamic(() => import("../Writing-All-Test/Writing-Importand/Pages/Task2Compoennt.jsx"), { ssr: false })
+const WritingTextArea = dynamic(() => import("../Writing-All-Test/Writing-Importand/Pages/Task-1-Component.jsx"), { ssr: false })
+const Task2Component = dynamic(() => import("../Writing-All-Test/Writing-Importand/Pages/Task-2-Compoennt.jsx"), { ssr: false })
 
 // end importing------>
 
