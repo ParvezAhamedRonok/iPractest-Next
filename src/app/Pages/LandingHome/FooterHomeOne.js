@@ -1,4 +1,5 @@
 
+"use client"
 import React from 'react';
 import Link from 'next/link';
 import logo from '../../../assets/images/Practestlogo.png';
@@ -54,16 +55,11 @@ function FooterHomeOne({ className }) {
                                 <h4 className="title">Company</h4>
                                 <ul>
                                     <li>
-                                        <Link href="/about-us">About Us</Link>
+                                        <Link href="/Pages/AboutUs">About Us</Link>
                                     </li>
+
                                     <li>
-                                        <Link href="/Service" >Service</Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/contact">Contact</Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/Disclaimer">Disclaimer</Link>
+                                        <Link href="/Pages/Footer-Pages/Disclaimer">Disclaimer</Link>
                                     </li>
                                 </ul>
                             </div>
@@ -73,22 +69,22 @@ function FooterHomeOne({ className }) {
                                 <h4 className="title">Support</h4>
                                 <ul>
                                     <li>
-                                        <Link href="/about-us">Community</Link>
+                                        <Link href="/Pages/AboutUs">Community</Link>
                                     </li>
                                     <li>
-                                        <Link href="/iPractest-Privacy-Policy">Privacy Policy</Link>
+                                        <Link href="/Pages/Footer-Pages/Privacy-Policy">Privacy Policy</Link>
                                     </li>
                                     <li>
-                                        <Link href="/iPractest-Terms-Conditions">Terms & Conditions</Link>
+                                        <Link href="/Pages/Footer-Pages/Term-Conditions">Terms & Conditions</Link>
                                     </li>
                                     <li>
-                                        <Link href="/Ipractest-Refund-Policy">Refunds Policy</Link>
+                                        <Link href="/Pages/Footer-Pages/Refund-Policy">Refunds Policy</Link>
                                     </li>
                                     <li>
-                                        <Link href="/Ipractest-Cencel-Policy">Cancellation Policy</Link>
+                                        <Link href="/Pages/Footer-Pages/Canclation-Policy">Cancellation Policy</Link>
                                     </li>
                                     <li>
-                                        <Link href="/iPractest-Deletion-Account-Policy">User Data Deletion Policy</Link>
+                                        <Link href="/Pages/Footer-Pages/Deletaion-Policy">User Data Deletion Policy</Link>
                                     </li>
                                 </ul>
                             </div>
