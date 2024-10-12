@@ -5,7 +5,7 @@ import { CiCalendarDate } from "react-icons/ci";
 import { RxUpdate } from "react-icons/rx";
 import { isMobile } from 'react-device-detect';
 import LineChartData from '../../data/LineChartData';
-import { DashboardCurrentmonthData , DashboardLastmonthData } from '../../data/LineChartData';
+import { DashboardCurrentmonthData, DashboardLastmonthData } from '../../data/LineChartData';
 //end of the importing....
 
 
@@ -58,6 +58,16 @@ const previousMonthDataValues = [
     // Ensure you have 30 entries here
 ];
 
+// Function to replace null values with 0
+const fillNullValues = (data) => {
+    return data.map((item) => ({
+        value1: item.value1 === null ? 0 : item.value1,
+        value2: item.value2 === null ? 0 : item.value2,
+        value3: item.value3 === null ? 0 : item.value3,
+        value4: item.value4 === null ? 0 : item.value4,
+    }));
+};
+
 
 
 // Function to combine dates with data values
@@ -93,16 +103,16 @@ const MultiLineChart = () => {
 
     // Toggle between current month and previous month data and dates
     // const uniqueDashboardCurrentmonthData = DashboardCurrentmonthData && DashboardCurrentmonthData.
-    let  data = showPreviousMonth
-        ? combineDatesWithData(previousMonthDates, DashboardLastmonthData)
-        : combineDatesWithData(currentMonthDates, DashboardCurrentmonthData);
+    let data = showPreviousMonth
+        ? combineDatesWithData(previousMonthDates, fillNullValues(DashboardLastmonthData))
+        : combineDatesWithData(currentMonthDates, fillNullValues(DashboardCurrentmonthData));
 
     return (
         <>
             {/* call this component for getting all modules data... */}
             <div className='text-center text-xl sm:text-2xl p-2 font-bold'>
-            Your performance for the current month  <br />
-            and the previous month, day by day.
+                Your performance for the current month  <br />
+                and the previous month, day by day.
             </div>
             <LineChartData />
             <div className="w-full flex justify-end ">
