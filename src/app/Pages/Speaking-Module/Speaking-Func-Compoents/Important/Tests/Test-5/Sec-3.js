@@ -16,7 +16,7 @@ export async function Test5Sec3(converstionStepsText, userSpeakingTestNo, testNo
             setSampleAns([` You can simply repeat your previous answer`])
         } else if (converstionSteps == 2) {
             if (converstionStepsText.length < 5) {
-                await smallTalkError(" I will as you the qustion related of question two. so , Are you ready?");
+                await smallTalkError(" I will ask you the qustions related of section two. so , Are you ready?");
             }
             else if (converstionStepsText.match(/repeat/gi) || converstionStepsText.match(/don't understand/gi)) {
                 await playScript("I am repeating.Are you ready?");

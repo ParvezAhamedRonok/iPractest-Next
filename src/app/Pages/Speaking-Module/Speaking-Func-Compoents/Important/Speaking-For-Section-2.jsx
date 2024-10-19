@@ -50,9 +50,29 @@ import { Test17Sec2 } from "./Tests/Test-17/Sec-2";
 import { Test18Sec2 } from "./Tests/Test-18/Sec-2";
 import { Test19Sec2 } from "./Tests/Test-19/Sec-2";
 import { Test20Sec2 } from "./Tests/Test-20/Sec-2";
+import { Test21Sec2 } from "./Tests/Test-21/Sec-2";
+import { Test22Sec2 } from "./Tests/Test-22/Sec-2";
+import { Test23Sec2 } from "./Tests/Test-23/Sec-2";
+import { Test24Sec2 } from "./Tests/Test-24/Sec-2";
+import { Test25Sec2 } from "./Tests/Test-25/Sec-2";
+import { Test26Sec2 } from "./Tests/Test-26/Sec-2";
+import { Test27Sec2 } from "./Tests/Test-27/Sec-2";
+import { Test28Sec2 } from "./Tests/Test-28/Sec-2";
+import { Test29Sec2 } from "./Tests/Test-29/Sec-2";
+import { Test30Sec2 } from "./Tests/Test-30/Sec-2";
+import { Test31Sec2 } from "./Tests/Test-31/Sec-2";
+import { Test32Sec2 } from "./Tests/Test-32/Sec-2";
+import { Test33Sec2 } from "./Tests/Test-33/Sec-2";
+import { Test34Sec2 } from "./Tests/Test-34/Sec-2";
+import { Test35Sec2 } from "./Tests/Test-35/Sec-2";
+import { Test36Sec2 } from "./Tests/Test-36/Sec-2";
+import { Test37Sec2 } from "./Tests/Test-37/Sec-2";
+import { Test38Sec2 } from "./Tests/Test-38/Sec-2";
+import { Test39Sec2 } from "./Tests/Test-39/Sec-2";
+import { Test40Sec2 } from "./Tests/Test-40/Sec-2";
 
 
-
+//end of importings......
 
 
 
@@ -204,7 +224,7 @@ var userSpeechMainData = "";
 var checkStatusForSpeechMethod = false
 
 function ClickSpeaking({ testNo, setPassComment, setWaveTit }) {
-    const { bdPaidStatus, setBdPaidSatus, otherPaidStatus, setOtherPaidStatus, showSpeakingResult, setShoeSpeakingResult } = useStateContext();
+    const { showSpeakingResult, setShoeSpeakingResult, userPaymentStatusCheck } = useStateContext();
     const history = useRouter();
 
     //all localstorages data storing into states...........
@@ -289,7 +309,7 @@ function ClickSpeaking({ testNo, setPassComment, setWaveTit }) {
         setTimeout(() => {
             // console.log(testNo);
             //call the function below for check those status
-            localeCompare(testNo, bdPaidStatus, otherPaidStatus, history);
+            localeCompare(testNo, userPaymentStatusCheck, history);
         }, 1000);
     }, [])
 
@@ -749,7 +769,7 @@ function ClickSpeaking({ testNo, setPassComment, setWaveTit }) {
             Test12Sec2(playScript, setCurrectTimer, converstionSteps, userSpeakingSec2Test, preparationFlag, converstionStepsText);
         }
         else if (testNo == "Test13Sec2") {
-            Test13Sec2playScript, setCurrectTimer, converstionSteps, userSpeakingSec2Test, preparationFlag, converstionStepsText();
+            Test13Sec2(playScript, setCurrectTimer, converstionSteps, userSpeakingSec2Test, preparationFlag, converstionStepsText);
         }
         else if (testNo == "Test14Sec2") {
             Test14Sec2(playScript, setCurrectTimer, converstionSteps, userSpeakingSec2Test, preparationFlag, converstionStepsText);
@@ -777,6 +797,69 @@ function ClickSpeaking({ testNo, setPassComment, setWaveTit }) {
         else if (testNo == "Test20Sec2") {
             Test20Sec2(playScript, setCurrectTimer, converstionSteps, userSpeakingSec2Test, preparationFlag, converstionStepsText);
         }
+
+        else if (testNo == "Test21Sec2") {
+            Test21Sec2(playScript, setCurrectTimer, converstionSteps, userSpeakingSec2Test, preparationFlag, converstionStepsText);
+        }
+        else if (testNo == "Test22Sec2") {
+            Test22Sec2(playScript, setCurrectTimer, converstionSteps, userSpeakingSec2Test, preparationFlag, converstionStepsText);
+        }
+        else if (testNo == "Test23Sec2") {
+            Test23Sec2(playScript, setCurrectTimer, converstionSteps, userSpeakingSec2Test, preparationFlag, converstionStepsText);
+        }
+        else if (testNo == "Test24Sec2") {
+            Test24Sec2(playScript, setCurrectTimer, converstionSteps, userSpeakingSec2Test, preparationFlag, converstionStepsText);
+        }
+        else if (testNo == "Test25Sec2") {
+            Test25Sec2(playScript, setCurrectTimer, converstionSteps, userSpeakingSec2Test, preparationFlag, converstionStepsText);
+        }
+        else if (testNo == "Test26Sec2") {
+            Test26Sec2(playScript, setCurrectTimer, converstionSteps, userSpeakingSec2Test, preparationFlag, converstionStepsText);
+        }
+        else if (testNo == "Test27Sec2") {
+            Test27Sec2(playScript, setCurrectTimer, converstionSteps, userSpeakingSec2Test, preparationFlag, converstionStepsText);
+        }
+        else if (testNo == "Test28Sec2") {
+            Test28Sec2(playScript, setCurrectTimer, converstionSteps, userSpeakingSec2Test, preparationFlag, converstionStepsText);
+        }
+        else if (testNo == "Test29Sec2") {
+            Test29Sec2(playScript, setCurrectTimer, converstionSteps, userSpeakingSec2Test, preparationFlag, converstionStepsText);
+        }
+        else if (testNo == "Test30Sec2") {
+            Test30Sec2(playScript, setCurrectTimer, converstionSteps, userSpeakingSec2Test, preparationFlag, converstionStepsText);
+        }
+        else if (testNo == "Test31Sec2") {
+            Test31Sec2(playScript, setCurrectTimer, converstionSteps, userSpeakingSec2Test, preparationFlag, converstionStepsText);
+        }
+        else if (testNo == "Test32Sec2") {
+            Test32Sec2(playScript, setCurrectTimer, converstionSteps, userSpeakingSec2Test, preparationFlag, converstionStepsText);
+        }
+        else if (testNo == "Test33Sec2") {
+            Test33Sec2(playScript, setCurrectTimer, converstionSteps, userSpeakingSec2Test, preparationFlag, converstionStepsText);
+        }
+        else if (testNo == "Test34Sec2") {
+            Test34Sec2(playScript, setCurrectTimer, converstionSteps, userSpeakingSec2Test, preparationFlag, converstionStepsText);
+        }
+        else if (testNo == "Test35Sec2") {
+            Test35Sec2(playScript, setCurrectTimer, converstionSteps, userSpeakingSec2Test, preparationFlag, converstionStepsText);
+        }
+        else if (testNo == "Test36Sec2") {
+            Test36Sec2(playScript, setCurrectTimer, converstionSteps, userSpeakingSec2Test, preparationFlag, converstionStepsText);
+        }
+        else if (testNo == "Test37Sec2") {
+            Test37Sec2(playScript, setCurrectTimer, converstionSteps, userSpeakingSec2Test, preparationFlag, converstionStepsText);
+        }
+        else if (testNo == "Test38Sec2") {
+            Test38Sec2(playScript, setCurrectTimer, converstionSteps, userSpeakingSec2Test, preparationFlag, converstionStepsText);
+        }
+        else if (testNo == "Test39Sec2") {
+            Test39Sec2(playScript, setCurrectTimer, converstionSteps, userSpeakingSec2Test, preparationFlag, converstionStepsText);
+        }
+        else if (testNo == "Test40Sec2") {
+            Test40Sec2(playScript, setCurrectTimer, converstionSteps, userSpeakingSec2Test, preparationFlag, converstionStepsText);
+        }
+
+
 
     }
 

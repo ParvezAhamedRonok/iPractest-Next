@@ -67,6 +67,65 @@ import { Test19Sec1 } from "./Tests/Test-19/Sec-1";
 import { Test19Sec3 } from "./Tests/Test-19/Sec-3";
 import { Test20Sec1 } from "./Tests/Test-20/Sec-1";
 import { Test20Sec3 } from "./Tests/Test-20/Sec-3";
+import { Test21Sec1 } from "./Tests/Test-21/Sec-1";
+import { Test21Sec3 } from "./Tests/Test-21/Sec-3";
+
+import { Test22Sec1 } from "./Tests/Test-22/Sec-1";
+import { Test22Sec3 } from "./Tests/Test-22/Sec-3";
+
+import { Test23Sec1 } from "./Tests/Test-23/Sec-1";
+import { Test23Sec3 } from "./Tests/Test-23/Sec-3";
+
+import { Test24Sec1 } from "./Tests/Test-24/Sec-1";
+import { Test24Sec3 } from "./Tests/Test-24/Sec-3";
+
+import { Test25Sec1 } from "./Tests/Test-25/Sec-1";
+import { Test25Sec3 } from "./Tests/Test-25/Sec-3";
+
+import { Test26Sec1 } from "./Tests/Test-26/Sec-1";
+import { Test26Sec3 } from "./Tests/Test-26/Sec-3";
+
+import { Test27Sec1 } from "./Tests/Test-27/Sec-1";
+import { Test27Sec3 } from "./Tests/Test-27/Sec-3";
+
+import { Test28Sec1 } from "./Tests/Test-28/Sec-1";
+import { Test28Sec3 } from "./Tests/Test-28/Sec-3";
+
+import { Test29Sec1 } from "./Tests/Test-29/Sec-1";
+import { Test29Sec3 } from "./Tests/Test-29/Sec-3";
+
+import { Test30Sec1 } from "./Tests/Test-30/Sec-1";
+import { Test30Sec3 } from "./Tests/Test-30/Sec-3";
+
+import { Test31Sec1 } from "./Tests/Test-31/Sec-1";
+import { Test31Sec3 } from "./Tests/Test-31/Sec-3";
+
+import { Test32Sec1 } from "./Tests/Test-32/Sec-1";
+import { Test32Sec3 } from "./Tests/Test-32/Sec-3";
+
+import { Test33Sec1 } from "./Tests/Test-33/Sec-1";
+import { Test33Sec3 } from "./Tests/Test-33/Sec-3";
+
+import { Test34Sec1 } from "./Tests/Test-34/Sec-1";
+import { Test34Sec3 } from "./Tests/Test-34/Sec-3";
+
+import { Test35Sec1 } from "./Tests/Test-35/Sec-1";
+import { Test35Sec3 } from "./Tests/Test-35/Sec-3";
+
+import { Test36Sec1 } from "./Tests/Test-36/Sec-1";
+import { Test36Sec3 } from "./Tests/Test-36/Sec-3";
+
+import { Test37Sec1 } from "./Tests/Test-37/Sec-1";
+import { Test37Sec3 } from "./Tests/Test-37/Sec-3";
+
+import { Test38Sec1 } from "./Tests/Test-38/Sec-1";
+import { Test38Sec3 } from "./Tests/Test-38/Sec-3";
+
+import { Test39Sec1 } from "./Tests/Test-39/Sec-1";
+import { Test39Sec3 } from "./Tests/Test-39/Sec-3";
+
+import { Test40Sec1 } from "./Tests/Test-40/Sec-1";
+import { Test40Sec3 } from "./Tests/Test-40/Sec-3";
 
 
 // End of the importing==========================================
@@ -217,7 +276,7 @@ var spokenText = '';
 
 
 function ClickSpeaking({ testNo, setPassComment, setWaveTit }) {
-    const { bdPaidStatus, otherPaidStatus, setShoeSpeakingResult, speakingStepsNo, setSpeakingStepNo } = useStateContext();
+    const { setShoeSpeakingResult, speakingStepsNo, setSpeakingStepNo, userPaymentStatusCheck } = useStateContext();
     const history = useRouter();
 
     //all localstorages data storing into states...........
@@ -358,7 +417,7 @@ function ClickSpeaking({ testNo, setPassComment, setWaveTit }) {
 
         setTimeout(() => {
             //call the function below for check those status
-            localeCompare(testNo, bdPaidStatus, otherPaidStatus, history);
+            localeCompare(testNo, userPaymentStatusCheck, history);
         }, 1000);
     }, [])
 
@@ -893,51 +952,196 @@ function ClickSpeaking({ testNo, setPassComment, setWaveTit }) {
         }
 
 
+
         //test-21-------------------------
+        else if (testNo == "Test21Sec1") {
+            Test21Sec1(converstionStepsText, userSpeakingTestNo, testNo, recordedText, playScript, smallTalkError, setSampleAns, conditionsDependsOnUserSpeech, sendSpeakingtextToBackend);
+        }
 
-        // else if (testNo == "Test21Sec1") {
-        //     await Test21Sec1();
-        // }
+        else if (testNo == "Test21Sec3") {
+            Test21Sec3(converstionStepsText, userSpeakingTestNo, testNo, recordedText, playScript, smallTalkError, setSampleAns, conditionsDependsOnUserSpeech, sendSpeakingtextToBackend);
+        }
 
-        // else if (testNo == "Test21Sec3") {
-        //     await Test21Sec3();
-        // }
         //test-22-------------------------
+        else if (testNo == "Test22Sec1") {
+            Test22Sec1(converstionStepsText, userSpeakingTestNo, testNo, recordedText, playScript, smallTalkError, setSampleAns, conditionsDependsOnUserSpeech, sendSpeakingtextToBackend);
+        }
 
-        // else if (testNo == "Test22Sec1") {
-        //     await Test22Sec1();
-        // }
+        else if (testNo == "Test22Sec3") {
+            Test22Sec3(converstionStepsText, userSpeakingTestNo, testNo, recordedText, playScript, smallTalkError, setSampleAns, conditionsDependsOnUserSpeech, sendSpeakingtextToBackend);
+        }
 
-        // else if (testNo == "Test22Sec3") {
-        //     await Test22Sec3();
-        // }
         //test-23-------------------------
+        else if (testNo == "Test23Sec1") {
+            Test23Sec1(converstionStepsText, userSpeakingTestNo, testNo, recordedText, playScript, smallTalkError, setSampleAns, conditionsDependsOnUserSpeech, sendSpeakingtextToBackend);
+        }
 
-        // else if (testNo == "Test23Sec1") {
-        //     await Test23Sec1();
-        // }
+        else if (testNo == "Test23Sec3") {
+            Test23Sec3(converstionStepsText, userSpeakingTestNo, testNo, recordedText, playScript, smallTalkError, setSampleAns, conditionsDependsOnUserSpeech, sendSpeakingtextToBackend);
+        }
 
-        // else if (testNo == "Test23Sec3") {
-        //     await Test23Sec3();
-        // }
         //test-24-------------------------
+        else if (testNo == "Test24Sec1") {
+            Test24Sec1(converstionStepsText, userSpeakingTestNo, testNo, recordedText, playScript, smallTalkError, setSampleAns, conditionsDependsOnUserSpeech, sendSpeakingtextToBackend);
+        }
 
-        // else if (testNo == "Test24Sec1") {
-        //     await Test24Sec1();
-        // }
+        else if (testNo == "Test24Sec3") {
+            Test24Sec3(converstionStepsText, userSpeakingTestNo, testNo, recordedText, playScript, smallTalkError, setSampleAns, conditionsDependsOnUserSpeech, sendSpeakingtextToBackend);
+        }
 
-        // else if (testNo == "Test24Sec3") {
-        //     await Test24Sec3();
-        // }
         //test-25-------------------------
+        else if (testNo == "Test25Sec1") {
+            Test25Sec1(converstionStepsText, userSpeakingTestNo, testNo, recordedText, playScript, smallTalkError, setSampleAns, conditionsDependsOnUserSpeech, sendSpeakingtextToBackend);
+        }
 
-        // else if (testNo == "Test25Sec1") {
-        //     await Test25Sec1();
-        // }
+        else if (testNo == "Test25Sec3") {
+            Test25Sec3(converstionStepsText, userSpeakingTestNo, testNo, recordedText, playScript, smallTalkError, setSampleAns, conditionsDependsOnUserSpeech, sendSpeakingtextToBackend);
+        }
 
-        // else if (testNo == "Test25Sec3") {
-        //     await Test25Sec3();
-        // }
+        //test-26-------------------------
+        else if (testNo == "Test26Sec1") {
+            Test26Sec1(converstionStepsText, userSpeakingTestNo, testNo, recordedText, playScript, smallTalkError, setSampleAns, conditionsDependsOnUserSpeech, sendSpeakingtextToBackend);
+        }
+
+        else if (testNo == "Test26Sec3") {
+            Test26Sec3(converstionStepsText, userSpeakingTestNo, testNo, recordedText, playScript, smallTalkError, setSampleAns, conditionsDependsOnUserSpeech, sendSpeakingtextToBackend);
+        }
+
+        //test-27-------------------------
+        else if (testNo == "Test27Sec1") {
+            Test27Sec1(converstionStepsText, userSpeakingTestNo, testNo, recordedText, playScript, smallTalkError, setSampleAns, conditionsDependsOnUserSpeech, sendSpeakingtextToBackend);
+        }
+
+        else if (testNo == "Test27Sec3") {
+            Test27Sec3(converstionStepsText, userSpeakingTestNo, testNo, recordedText, playScript, smallTalkError, setSampleAns, conditionsDependsOnUserSpeech, sendSpeakingtextToBackend);
+        }
+
+        //test-28-------------------------
+        else if (testNo == "Test28Sec1") {
+            Test28Sec1(converstionStepsText, userSpeakingTestNo, testNo, recordedText, playScript, smallTalkError, setSampleAns, conditionsDependsOnUserSpeech, sendSpeakingtextToBackend);
+        }
+
+        else if (testNo == "Test28Sec3") {
+            Test28Sec3(converstionStepsText, userSpeakingTestNo, testNo, recordedText, playScript, smallTalkError, setSampleAns, conditionsDependsOnUserSpeech, sendSpeakingtextToBackend);
+        }
+
+        //test-29-------------------------
+        else if (testNo == "Test29Sec1") {
+            Test29Sec1(converstionStepsText, userSpeakingTestNo, testNo, recordedText, playScript, smallTalkError, setSampleAns, conditionsDependsOnUserSpeech, sendSpeakingtextToBackend);
+        }
+
+        else if (testNo == "Test29Sec3") {
+            Test29Sec3(converstionStepsText, userSpeakingTestNo, testNo, recordedText, playScript, smallTalkError, setSampleAns, conditionsDependsOnUserSpeech, sendSpeakingtextToBackend);
+        }
+
+        //test-30-------------------------
+        else if (testNo == "Test30Sec1") {
+            Test30Sec1(converstionStepsText, userSpeakingTestNo, testNo, recordedText, playScript, smallTalkError, setSampleAns, conditionsDependsOnUserSpeech, sendSpeakingtextToBackend);
+        }
+
+        else if (testNo == "Test30Sec3") {
+            Test30Sec3(converstionStepsText, userSpeakingTestNo, testNo, recordedText, playScript, smallTalkError, setSampleAns, conditionsDependsOnUserSpeech, sendSpeakingtextToBackend);
+        }
+
+        //test-31-------------------------
+        else if (testNo == "Test31Sec1") {
+            Test31Sec1(converstionStepsText, userSpeakingTestNo, testNo, recordedText, playScript, smallTalkError, setSampleAns, conditionsDependsOnUserSpeech, sendSpeakingtextToBackend);
+        }
+
+        else if (testNo == "Test31Sec3") {
+            Test31Sec3(converstionStepsText, userSpeakingTestNo, testNo, recordedText, playScript, smallTalkError, setSampleAns, conditionsDependsOnUserSpeech, sendSpeakingtextToBackend);
+        }
+
+        //test-32-------------------------
+        else if (testNo == "Test32Sec1") {
+            Test32Sec1(converstionStepsText, userSpeakingTestNo, testNo, recordedText, playScript, smallTalkError, setSampleAns, conditionsDependsOnUserSpeech, sendSpeakingtextToBackend);
+        }
+
+        else if (testNo == "Test32Sec3") {
+            Test32Sec3(converstionStepsText, userSpeakingTestNo, testNo, recordedText, playScript, smallTalkError, setSampleAns, conditionsDependsOnUserSpeech, sendSpeakingtextToBackend);
+        }
+
+        //test-33-------------------------
+        else if (testNo == "Test33Sec1") {
+            Test33Sec1(converstionStepsText, userSpeakingTestNo, testNo, recordedText, playScript, smallTalkError, setSampleAns, conditionsDependsOnUserSpeech, sendSpeakingtextToBackend);
+        }
+
+        else if (testNo == "Test33Sec3") {
+            Test33Sec3(converstionStepsText, userSpeakingTestNo, testNo, recordedText, playScript, smallTalkError, setSampleAns, conditionsDependsOnUserSpeech, sendSpeakingtextToBackend);
+        }
+
+        //test-34-------------------------
+        else if (testNo == "Test34Sec1") {
+            Test34Sec1(converstionStepsText, userSpeakingTestNo, testNo, recordedText, playScript, smallTalkError, setSampleAns, conditionsDependsOnUserSpeech, sendSpeakingtextToBackend);
+        }
+
+        else if (testNo == "Test34Sec3") {
+            Test34Sec3(converstionStepsText, userSpeakingTestNo, testNo, recordedText, playScript, smallTalkError, setSampleAns, conditionsDependsOnUserSpeech, sendSpeakingtextToBackend);
+        }
+
+        //test-35-------------------------
+        else if (testNo == "Test35Sec1") {
+            Test35Sec1(converstionStepsText, userSpeakingTestNo, testNo, recordedText, playScript, smallTalkError, setSampleAns, conditionsDependsOnUserSpeech, sendSpeakingtextToBackend);
+        }
+
+        else if (testNo == "Test35Sec3") {
+            Test35Sec3(converstionStepsText, userSpeakingTestNo, testNo, recordedText, playScript, smallTalkError, setSampleAns, conditionsDependsOnUserSpeech, sendSpeakingtextToBackend);
+        }
+
+        //test-36-------------------------
+        else if (testNo == "Test36Sec1") {
+            Test36Sec1(converstionStepsText, userSpeakingTestNo, testNo, recordedText, playScript, smallTalkError, setSampleAns, conditionsDependsOnUserSpeech, sendSpeakingtextToBackend);
+        }
+
+        else if (testNo == "Test36Sec3") {
+            Test36Sec3(converstionStepsText, userSpeakingTestNo, testNo, recordedText, playScript, smallTalkError, setSampleAns, conditionsDependsOnUserSpeech, sendSpeakingtextToBackend);
+        }
+
+        //test-37-------------------------
+        else if (testNo == "Test37Sec1") {
+            Test37Sec1(converstionStepsText, userSpeakingTestNo, testNo, recordedText, playScript, smallTalkError, setSampleAns, conditionsDependsOnUserSpeech, sendSpeakingtextToBackend);
+        }
+
+        else if (testNo == "Test37Sec3") {
+            Test37Sec3(converstionStepsText, userSpeakingTestNo, testNo, recordedText, playScript, smallTalkError, setSampleAns, conditionsDependsOnUserSpeech, sendSpeakingtextToBackend);
+        }
+
+        //test-38-------------------------
+        else if (testNo == "Test38Sec1") {
+            Test38Sec1(converstionStepsText, userSpeakingTestNo, testNo, recordedText, playScript, smallTalkError, setSampleAns, conditionsDependsOnUserSpeech, sendSpeakingtextToBackend);
+        }
+
+        else if (testNo == "Test38Sec3") {
+            Test38Sec3(converstionStepsText, userSpeakingTestNo, testNo, recordedText, playScript, smallTalkError, setSampleAns, conditionsDependsOnUserSpeech, sendSpeakingtextToBackend);
+        }
+
+        //test-39-------------------------
+        else if (testNo == "Test39Sec1") {
+            Test39Sec1(converstionStepsText, userSpeakingTestNo, testNo, recordedText, playScript, smallTalkError, setSampleAns, conditionsDependsOnUserSpeech, sendSpeakingtextToBackend);
+        }
+
+        else if (testNo == "Test39Sec3") {
+            Test39Sec3(converstionStepsText, userSpeakingTestNo, testNo, recordedText, playScript, smallTalkError, setSampleAns, conditionsDependsOnUserSpeech, sendSpeakingtextToBackend);
+        }
+
+        //test-40-------------------------
+        else if (testNo == "Test40Sec1") {
+            Test40Sec1(converstionStepsText, userSpeakingTestNo, testNo, recordedText, playScript, smallTalkError, setSampleAns, conditionsDependsOnUserSpeech, sendSpeakingtextToBackend);
+        }
+
+        else if (testNo == "Test40Sec3") {
+            Test40Sec3(converstionStepsText, userSpeakingTestNo, testNo, recordedText, playScript, smallTalkError, setSampleAns, conditionsDependsOnUserSpeech, sendSpeakingtextToBackend);
+        }
+
+
+
+
+
+
+
+
+
+
 
     }
 

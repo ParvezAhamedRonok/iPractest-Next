@@ -8,13 +8,16 @@ import FooterHomeThree from '../../LandingHome/FooterHomeOne';
 import { useStateContext } from "../../../../contexts/ContextProvider";
 import { CheckPaymentStatus } from "../../Payments/CkeckPayment/CheckPayments.js";
 import axios from "axios"
+// import Card_To_30 from './Cards-To-30';
+// import Card_To_40 from './Cards-To-40';
 
 //client components....
 const HeaderLanding = dynamic(() => import('../../LandingHome/HeaderHomeOne.js'), { ssr: false });
 const NavigationBar = dynamic(() => import('../../LandingHome/NavigationBar.js'), { ssr: false });
-const SpeakingTests = dynamic(() => import('./Cards-To-10'), { ssr: false });
-const SpeakingAfter10Tests = dynamic(() => import('./Cards-To-20.jsx'), { ssr: false });
-
+const Card_To_10 = dynamic(() => import('./Cards-To-10'), { ssr: false });
+const Card_To_20 = dynamic(() => import('./Cards-To-20'), { ssr: false });
+const Card_To_30 = dynamic(() => import('./Cards-To-30'), { ssr: false });
+const Card_To_40 = dynamic(() => import('./Cards-To-40'), { ssr: false });
 
 //end of the importing..........
 
@@ -30,7 +33,8 @@ function SpeakingAllTest() {
     const [mainDataAll, setmainData] = useState([])
     const [openTestAfter10, setOpenTestsAfter10] = useState(false);
     const [openTestAfter20, setOpenTestsAfter20] = useState(false);
-
+    const [openTestAfter30, setOpenTestsAfter30] = useState(false);
+    const [openTestAfter40, setOpenTestsAfter40] = useState(false);
     //for check every time that user has been payment or not-------
     CheckPaymentStatus();
 
@@ -119,7 +123,7 @@ function SpeakingAllTest() {
             </Suspense>
 
             <Suspense fallback={<div className='w-full h-full m-auto justify-center '>Loading... </div>}>
-                <SpeakingTests
+                <Card_To_10
                     setOpenTestsAfter10={setOpenTestsAfter10}
                     openTestAfter10={openTestAfter10}
                     mainDataAll={mainDataAll}
@@ -128,13 +132,35 @@ function SpeakingAllTest() {
 
             <Suspense fallback={<div className='w-full h-full m-auto justify-center '>Loading... </div>}>
                 {
-                    openTestAfter10 && (<SpeakingAfter10Tests
+                    openTestAfter10 && (<Card_To_20
                         setOpenTestsAfter20={setOpenTestsAfter20}
                         openTestAfter20={openTestAfter20}
                         mainDataAll={mainDataAll}
                     />)
                 }
             </Suspense>
+            <Suspense fallback={<div className='w-full h-full m-auto justify-center '>Loading... </div>}>
+                {
+                    openTestAfter20 && (<Card_To_30
+                        setOpenTestsAfter30={setOpenTestsAfter30}
+                        openTestAfter30={openTestAfter30}
+                        mainDataAll={mainDataAll}
+                    />)
+                }
+            </Suspense>
+            {/* test 31- 40 */}
+            <Suspense fallback={<div className='w-full h-full m-auto justify-center '>Loading... </div>}>
+                {
+                    openTestAfter30 && (<Card_To_40
+                        setOpenTestsAfter40={setOpenTestsAfter40}
+                        openTestAfter40={openTestAfter40}
+                        mainDataAll={mainDataAll}
+                    />)
+                }
+            </Suspense>
+
+
+
             <Suspense fallback={<div className='w-full h-full m-auto justify-center '>Loading... </div>}>
                 <FooterHomeThree />
             </Suspense>

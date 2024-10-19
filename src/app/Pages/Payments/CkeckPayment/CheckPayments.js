@@ -77,8 +77,13 @@ export const CheckPaymentStatus = () => {
                 console.log(res.data.data)
                 console.log(res.data && res.data);
                 if (res.data.data[0]) {
-                    setBdPaidSatus(true);
-                    setuserPaymentStatusCheck(res.data.data[0].productName)
+                    let isExpired = res.data.data[0].isExpire
+                    if (isExpired != null || isExpired != "" || isExpired == undefined) {
+                        setBdPaidSatus(true);
+                        setuserPaymentStatusCheck(res.data.data[0].productName)
+                    } else {
+                        alert("already expired...")
+                    }
                 }
             })
             .catch((error) => {
@@ -112,8 +117,15 @@ export const CheckPaymentStatus = () => {
             console.log(res.data && res.data);
             res.data.data.map((e) => {
                 if (e.orderId) {
-                    setOtherPaidStatus(true);
-                    setuserPaymentStatusCheck(e.productName)
+                    let isExpired = e.isExpire;
+                    //check if 3 month validation has been passed in that case those state will not true.
+                    //if has 3 monthe will be true.....
+                    if (isExpired != null || isExpired != "" || isExpired == undefined) {
+                        setOtherPaidStatus(true);
+                        setuserPaymentStatusCheck(e.productName)
+                    } else {
+                        alert("already expired...")
+                    }
                 }
             })
 

@@ -69,7 +69,32 @@ function Motivation({
     Test19Sec2,
     Test19Sec3, Test20Sec1,
     Test20Sec2,
-    Test20Sec3 }) {
+    Test20Sec3,
+    //test 21-30
+    Test21Sec1, Test21Sec2, Test21Sec3,
+    Test22Sec1, Test22Sec2, Test22Sec3,
+    Test23Sec1, Test23Sec2, Test23Sec3,
+    Test24Sec1, Test24Sec2, Test24Sec3,
+    Test25Sec1, Test25Sec2, Test25Sec3,
+    Test26Sec1, Test26Sec2, Test26Sec3,
+    Test27Sec1, Test27Sec2, Test27Sec3,
+    Test28Sec1, Test28Sec2, Test28Sec3,
+    Test29Sec1, Test29Sec2, Test29Sec3,
+    Test30Sec1, Test30Sec2, Test30Sec3,
+    //test 31-40
+    Test31Sec1, Test31Sec2, Test31Sec3,
+    Test32Sec1, Test32Sec2, Test32Sec3,
+    Test33Sec1, Test33Sec2, Test33Sec3,
+    Test34Sec1, Test34Sec2, Test34Sec3,
+    Test35Sec1, Test35Sec2, Test35Sec3,
+    Test36Sec1, Test36Sec2, Test36Sec3,
+    Test37Sec1, Test37Sec2, Test37Sec3,
+    Test38Sec1, Test38Sec2, Test38Sec3,
+    Test39Sec1, Test39Sec2, Test39Sec3,
+    Test40Sec1, Test40Sec2, Test40Sec3,
+
+
+}) {
     const history = useRouter();
     const [SpeakingScores, setSpeakingScores] = useState("")
 
@@ -189,179 +214,332 @@ function Motivation({
 
     const handleCountinueWithPayment = () => {
         if (TestWithSection == "Test1Sec1") {
-            Test1Sec2()
+            Test1Sec2();
         } else if (TestWithSection == "Test1Sec2") {
-            Test1Sec3()
+            Test1Sec3();
         } else if (TestWithSection == "Test1Sec3") {
-            Test2Sec1()
+            Test2Sec1();
         }
-        // test-2
+
         else if (TestWithSection == "Test2Sec1") {
-            Test2Sec2()
+            Test2Sec2();
         } else if (TestWithSection == "Test2Sec2") {
-            Test2Sec3()
+            Test2Sec3();
         } else if (TestWithSection == "Test2Sec3") {
-            Test3Sec1()
+            Test3Sec1();
         }
-        //test-3
+
         else if (TestWithSection == "Test3Sec1") {
-            Test3Sec2()
+            Test3Sec2();
         } else if (TestWithSection == "Test3Sec2") {
-            Test3Sec3()
+            Test3Sec3();
         } else if (TestWithSection == "Test3Sec3") {
-            Test4Sec1()
+            Test4Sec1();
         }
-        //test-4
+
         else if (TestWithSection == "Test4Sec1") {
-            Test4Sec2()
+            Test4Sec2();
         } else if (TestWithSection == "Test4Sec2") {
-            Test4Sec3()
+            Test4Sec3();
         } else if (TestWithSection == "Test4Sec3") {
-            Test5Sec1()
+            Test5Sec1();
         }
-        //test-5
+
         else if (TestWithSection == "Test5Sec1") {
-            Test5Sec2()
+            Test5Sec2();
         } else if (TestWithSection == "Test5Sec2") {
-            Test5Sec3()
+            Test5Sec3();
         } else if (TestWithSection == "Test5Sec3") {
-            Test5Sec1()
+            Test6Sec1();
         }
 
-        //test-6
         else if (TestWithSection == "Test6Sec1") {
-            Test6Sec2()
+            Test6Sec2();
         } else if (TestWithSection == "Test6Sec2") {
-            Test6Sec3()
+            Test6Sec3();
         } else if (TestWithSection == "Test6Sec3") {
-            Test6Sec1()
+            Test7Sec1();
         }
 
-        //test-7
         else if (TestWithSection == "Test7Sec1") {
-            Test7Sec2()
+            Test7Sec2();
         } else if (TestWithSection == "Test7Sec2") {
-            Test7Sec3()
+            Test7Sec3();
         } else if (TestWithSection == "Test7Sec3") {
-            Test7Sec1()
+            Test8Sec1();
         }
-        //test-8
+
         else if (TestWithSection == "Test8Sec1") {
-            Test8Sec2()
+            Test8Sec2();
         } else if (TestWithSection == "Test8Sec2") {
-            Test8Sec3()
+            Test8Sec3();
         } else if (TestWithSection == "Test8Sec3") {
-            Test8Sec1()
+            Test9Sec1();
         }
-        //test-9
+
         else if (TestWithSection == "Test9Sec1") {
-            Test9Sec2()
+            Test9Sec2();
         } else if (TestWithSection == "Test9Sec2") {
-            Test9Sec3()
+            Test9Sec3();
         } else if (TestWithSection == "Test9Sec3") {
-            Test9Sec1()
+            Test10Sec1();
         }
 
-        //test-10
         else if (TestWithSection == "Test10Sec1") {
-            Test10Sec2()
+            Test10Sec2();
         } else if (TestWithSection == "Test10Sec2") {
-            Test10Sec3()
+            Test10Sec3();
         } else if (TestWithSection == "Test10Sec3") {
-            Test10Sec1()
+            Test11Sec1();
         }
-        //test-11
+
         else if (TestWithSection == "Test11Sec1") {
-            Test11Sec2()
+            Test11Sec2();
         } else if (TestWithSection == "Test11Sec2") {
-            Test11Sec3()
+            Test11Sec3();
         } else if (TestWithSection == "Test11Sec3") {
-            Test11Sec1()
+            Test12Sec1();
         }
 
-        //test-12
         else if (TestWithSection == "Test12Sec1") {
-            Test12Sec2()
+            Test12Sec2();
         } else if (TestWithSection == "Test12Sec2") {
-            Test12Sec3()
+            Test12Sec3();
         } else if (TestWithSection == "Test12Sec3") {
-            Test12Sec1()
+            Test13Sec1();
         }
 
-        //test-13
         else if (TestWithSection == "Test13Sec1") {
-            Test13Sec2()
+            Test13Sec2();
         } else if (TestWithSection == "Test13Sec2") {
-            Test13Sec3()
+            Test13Sec3();
         } else if (TestWithSection == "Test13Sec3") {
-            Test13Sec1()
+            Test14Sec1();
         }
 
-        //test-14
         else if (TestWithSection == "Test14Sec1") {
-            Test14Sec2()
+            Test14Sec2();
         } else if (TestWithSection == "Test14Sec2") {
-            Test14Sec3()
+            Test14Sec3();
         } else if (TestWithSection == "Test14Sec3") {
-            Test14Sec1()
+            Test15Sec1();
         }
 
-        //test-15
         else if (TestWithSection == "Test15Sec1") {
-            Test15Sec2()
+            Test15Sec2();
         } else if (TestWithSection == "Test15Sec2") {
-            Test15Sec3()
+            Test15Sec3();
         } else if (TestWithSection == "Test15Sec3") {
-            Test15Sec1()
+            Test16Sec1();
         }
 
-
-        //test-16
         else if (TestWithSection == "Test16Sec1") {
-            Test16Sec2()
+            Test16Sec2();
         } else if (TestWithSection == "Test16Sec2") {
-            Test16Sec3()
+            Test16Sec3();
         } else if (TestWithSection == "Test16Sec3") {
-            Test16Sec1()
+            Test17Sec1();
         }
 
-        //test-17
         else if (TestWithSection == "Test17Sec1") {
-            Test17Sec2()
+            Test17Sec2();
         } else if (TestWithSection == "Test17Sec2") {
-            Test17Sec3()
+            Test17Sec3();
         } else if (TestWithSection == "Test17Sec3") {
-            Test17Sec1()
+            Test18Sec1();
         }
-        //test-18
+
         else if (TestWithSection == "Test18Sec1") {
-            Test18Sec2()
+            Test18Sec2();
         } else if (TestWithSection == "Test18Sec2") {
-            Test18Sec3()
+            Test18Sec3();
         } else if (TestWithSection == "Test18Sec3") {
-            Test18Sec1()
+            Test19Sec1();
         }
 
-
-        //test-19
         else if (TestWithSection == "Test19Sec1") {
-            Test19Sec2()
+            Test19Sec2();
         } else if (TestWithSection == "Test19Sec2") {
-            Test19Sec3()
+            Test19Sec3();
         } else if (TestWithSection == "Test19Sec3") {
-            Test19Sec1()
+            Test20Sec1();
         }
 
-        //test-20
         else if (TestWithSection == "Test20Sec1") {
-            Test20Sec2()
+            Test20Sec2();
         } else if (TestWithSection == "Test20Sec2") {
-            Test20Sec3()
+            Test20Sec3();
         } else if (TestWithSection == "Test20Sec3") {
-            Test20Sec1()
+            Test21Sec1();
         }
+
+        else if (TestWithSection == "Test21Sec1") {
+            Test21Sec2();
+        } else if (TestWithSection == "Test21Sec2") {
+            Test21Sec3();
+        } else if (TestWithSection == "Test21Sec3") {
+            Test22Sec1();
+        }
+
+        else if (TestWithSection == "Test22Sec1") {
+            Test22Sec2();
+        } else if (TestWithSection == "Test22Sec2") {
+            Test22Sec3();
+        } else if (TestWithSection == "Test22Sec3") {
+            Test23Sec1();
+        }
+
+        else if (TestWithSection == "Test23Sec1") {
+            Test23Sec2();
+        } else if (TestWithSection == "Test23Sec2") {
+            Test23Sec3();
+        } else if (TestWithSection == "Test23Sec3") {
+            Test24Sec1();
+        }
+
+        else if (TestWithSection == "Test24Sec1") {
+            Test24Sec2();
+        } else if (TestWithSection == "Test24Sec2") {
+            Test24Sec3();
+        } else if (TestWithSection == "Test24Sec3") {
+            Test25Sec1();
+        }
+
+        else if (TestWithSection == "Test25Sec1") {
+            Test25Sec2();
+        } else if (TestWithSection == "Test25Sec2") {
+            Test25Sec3();
+        } else if (TestWithSection == "Test25Sec3") {
+            Test26Sec1();
+        }
+
+        else if (TestWithSection == "Test26Sec1") {
+            Test26Sec2();
+        } else if (TestWithSection == "Test26Sec2") {
+            Test26Sec3();
+        } else if (TestWithSection == "Test26Sec3") {
+            Test27Sec1();
+        }
+
+        else if (TestWithSection == "Test27Sec1") {
+            Test27Sec2();
+        } else if (TestWithSection == "Test27Sec2") {
+            Test27Sec3();
+        } else if (TestWithSection == "Test27Sec3") {
+            Test28Sec1();
+        }
+
+        else if (TestWithSection == "Test28Sec1") {
+            Test28Sec2();
+        } else if (TestWithSection == "Test28Sec2") {
+            Test28Sec3();
+        } else if (TestWithSection == "Test28Sec3") {
+            Test29Sec1();
+        }
+
+        else if (TestWithSection == "Test29Sec1") {
+            Test29Sec2();
+        } else if (TestWithSection == "Test29Sec2") {
+            Test29Sec3();
+        } else if (TestWithSection == "Test29Sec3") {
+            Test30Sec1();
+        }
+
+        else if (TestWithSection == "Test30Sec1") {
+            Test30Sec2();
+        } else if (TestWithSection == "Test30Sec2") {
+            Test30Sec3();
+        } else if (TestWithSection == "Test30Sec3") {
+            Test31Sec1();
+        }
+
+        else if (TestWithSection == "Test31Sec1") {
+            Test31Sec2();
+        } else if (TestWithSection == "Test31Sec2") {
+            Test31Sec3();
+        } else if (TestWithSection == "Test31Sec3") {
+            Test32Sec1();
+        }
+
+        else if (TestWithSection == "Test32Sec1") {
+            Test32Sec2();
+        } else if (TestWithSection == "Test32Sec2") {
+            Test32Sec3();
+        } else if (TestWithSection == "Test32Sec3") {
+            Test33Sec1();
+        }
+
+        else if (TestWithSection == "Test33Sec1") {
+            Test33Sec2();
+        } else if (TestWithSection == "Test33Sec2") {
+            Test33Sec3();
+        } else if (TestWithSection == "Test33Sec3") {
+            Test34Sec1();
+        }
+
+        else if (TestWithSection == "Test34Sec1") {
+            Test34Sec2();
+        } else if (TestWithSection == "Test34Sec2") {
+            Test34Sec3();
+        } else if (TestWithSection == "Test34Sec3") {
+            Test35Sec1();
+        }
+
+        else if (TestWithSection == "Test35Sec1") {
+            Test35Sec2();
+        } else if (TestWithSection == "Test35Sec2") {
+            Test35Sec3();
+        } else if (TestWithSection == "Test35Sec3") {
+            Test36Sec1();
+        }
+
+        else if (TestWithSection == "Test36Sec1") {
+            Test36Sec2();
+        } else if (TestWithSection == "Test36Sec2") {
+            Test36Sec3();
+        } else if (TestWithSection == "Test36Sec3") {
+            Test37Sec1();
+        }
+
+        else if (TestWithSection == "Test37Sec1") {
+            Test37Sec2();
+        } else if (TestWithSection == "Test37Sec2") {
+            Test37Sec3();
+        } else if (TestWithSection == "Test37Sec3") {
+            Test38Sec1();
+        }
+
+        else if (TestWithSection == "Test38Sec1") {
+            Test38Sec2();
+        } else if (TestWithSection == "Test38Sec2") {
+            Test38Sec3();
+        } else if (TestWithSection == "Test38Sec3") {
+            Test39Sec1();
+        }
+
+        else if (TestWithSection == "Test39Sec1") {
+            Test39Sec2();
+        } else if (TestWithSection == "Test39Sec2") {
+            Test39Sec3();
+        } else if (TestWithSection == "Test39Sec3") {
+            Test40Sec1();
+        }
+
+        else if (TestWithSection == "Test40Sec1") {
+            Test40Sec2();
+        } else if (TestWithSection == "Test40Sec2") {
+            Test40Sec3();
+        } else if (TestWithSection == "Test40Sec3") {
+            Test1Sec1();
+        }
+
+
 
     }
+
+
+
+    //retake function................
 
     const handleRetakeTestFunc = () => {
         if (TestWithSection == "Test1Sec1") {
@@ -537,7 +715,193 @@ function Motivation({
             Test20Sec3()
         }
 
+
+
+        //test 21 -- 30==========================================
+        //test-20
+        else if (TestWithSection == "Test21Sec1") {
+            Test21Sec1()
+        } else if (TestWithSection == "Test21Sec2") {
+            Test21Sec2()
+        } else if (TestWithSection == "Test21Sec3") {
+            Test21Sec3()
+        }
+
+        //test-22
+        else if (TestWithSection == "Test22Sec1") {
+            Test22Sec1()
+        } else if (TestWithSection == "Test22Sec2") {
+            Test22Sec2()
+        } else if (TestWithSection == "Test22Sec3") {
+            Test22Sec3()
+        }
+
+        //test-23
+        else if (TestWithSection == "Test23Sec1") {
+            Test23Sec1()
+        } else if (TestWithSection == "Test23Sec2") {
+            Test23Sec2()
+        } else if (TestWithSection == "Test23Sec3") {
+            Test23Sec3()
+        }
+
+        //test-24
+        else if (TestWithSection == "Test24Sec1") {
+            Test24Sec1()
+        } else if (TestWithSection == "Test24Sec2") {
+            Test24Sec2()
+        } else if (TestWithSection == "Test24Sec3") {
+            Test24Sec3()
+        }
+
+        //test-20
+        else if (TestWithSection == "Test25Sec1") {
+            Test25Sec1()
+        } else if (TestWithSection == "Test25Sec2") {
+            Test25Sec2()
+        } else if (TestWithSection == "Test25Sec3") {
+            Test25Sec3()
+        }
+
+        //test-20
+        else if (TestWithSection == "Test26Sec1") {
+            Test26Sec1()
+        } else if (TestWithSection == "Test26Sec2") {
+            Test26Sec2()
+        } else if (TestWithSection == "Test26Sec3") {
+            Test26Sec3()
+        }
+
+        //test-20
+        else if (TestWithSection == "Test27Sec1") {
+            Test27Sec1()
+        } else if (TestWithSection == "Test27Sec2") {
+            Test27Sec2()
+        } else if (TestWithSection == "Test27Sec3") {
+            Test27Sec3()
+        }
+
+        //test-20
+        else if (TestWithSection == "Test28Sec1") {
+            Test28Sec1()
+        } else if (TestWithSection == "Test28Sec2") {
+            Test28Sec2()
+        } else if (TestWithSection == "Test28Sec3") {
+            Test28Sec3()
+        }
+
+        //test-29
+        else if (TestWithSection == "Test29Sec1") {
+            Test29Sec1()
+        } else if (TestWithSection == "Test29Sec2") {
+            Test29Sec2()
+        } else if (TestWithSection == "Test29Sec3") {
+            Test29Sec3()
+        }
+
+        //test-30
+        else if (TestWithSection == "Test30Sec1") {
+            Test30Sec1()
+        } else if (TestWithSection == "Test30Sec2") {
+            Test30Sec2()
+        } else if (TestWithSection == "Test30Sec3") {
+            Test30Sec3()
+        }
+
+        // Test-31
+        else if (TestWithSection == "Test31Sec1") {
+            Test31Sec1();
+        } else if (TestWithSection == "Test31Sec2") {
+            Test31Sec2();
+        } else if (TestWithSection == "Test31Sec3") {
+            Test31Sec3();
+        }
+
+        // Test-32
+        else if (TestWithSection == "Test32Sec1") {
+            Test32Sec1();
+        } else if (TestWithSection == "Test32Sec2") {
+            Test32Sec2();
+        } else if (TestWithSection == "Test32Sec3") {
+            Test32Sec3();
+        }
+
+        // Test-33
+        else if (TestWithSection == "Test33Sec1") {
+            Test33Sec1();
+        } else if (TestWithSection == "Test33Sec2") {
+            Test33Sec2();
+        } else if (TestWithSection == "Test33Sec3") {
+            Test33Sec3();
+        }
+
+        // Test-34
+        else if (TestWithSection == "Test34Sec1") {
+            Test34Sec1();
+        } else if (TestWithSection == "Test34Sec2") {
+            Test34Sec2();
+        } else if (TestWithSection == "Test34Sec3") {
+            Test34Sec3();
+        }
+
+        // Test-35
+        else if (TestWithSection == "Test35Sec1") {
+            Test35Sec1();
+        } else if (TestWithSection == "Test35Sec2") {
+            Test35Sec2();
+        } else if (TestWithSection == "Test35Sec3") {
+            Test35Sec3();
+        }
+
+        // Test-36
+        else if (TestWithSection == "Test36Sec1") {
+            Test36Sec1();
+        } else if (TestWithSection == "Test36Sec2") {
+            Test36Sec2();
+        } else if (TestWithSection == "Test36Sec3") {
+            Test36Sec3();
+        }
+
+        // Test-37
+        else if (TestWithSection == "Test37Sec1") {
+            Test37Sec1();
+        } else if (TestWithSection == "Test37Sec2") {
+            Test37Sec2();
+        } else if (TestWithSection == "Test37Sec3") {
+            Test37Sec3();
+        }
+
+        // Test-38
+        else if (TestWithSection == "Test38Sec1") {
+            Test38Sec1();
+        } else if (TestWithSection == "Test38Sec2") {
+            Test38Sec2();
+        } else if (TestWithSection == "Test38Sec3") {
+            Test38Sec3();
+        }
+
+        // Test-39
+        else if (TestWithSection == "Test39Sec1") {
+            Test39Sec1();
+        } else if (TestWithSection == "Test39Sec2") {
+            Test39Sec2();
+        } else if (TestWithSection == "Test39Sec3") {
+            Test39Sec3();
+        }
+
+        // Test-40
+        else if (TestWithSection == "Test40Sec1") {
+            Test40Sec1();
+        } else if (TestWithSection == "Test40Sec2") {
+            Test40Sec2();
+        } else if (TestWithSection == "Test40Sec3") {
+            Test40Sec3();
+        }
+
+
     }
+
+
 
     return (
         <>

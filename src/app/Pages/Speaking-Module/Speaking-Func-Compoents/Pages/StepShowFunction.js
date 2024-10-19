@@ -1,5 +1,5 @@
 export async function StepShowFunction(setSpeakingStepNo, testNo) {
-    // console.log('checkingReplyofUser')
+    console.log('checkingReplyofUser')
     if (testNo == "Test1Sec1") {
         await setSpeakingStepNo(6)
     }
@@ -200,6 +200,232 @@ export async function StepShowFunction(setSpeakingStepNo, testNo) {
     else if (testNo == "Test20Sec3") {
         await setSpeakingStepNo(6)
     }
+
+    //test-21-----------------------------------------------
+    else if (testNo == "Test21Sec1") {
+        await setSpeakingStepNo(8)
+    }
+    else if (testNo == "Test21Sec2") {
+        // await Test12Sec2();
+    }
+    else if (testNo == "Test21Sec3") {
+        await setSpeakingStepNo(6)
+    }
+
+
+    //test-22-----------------------------------------------
+    else if (testNo == "Test22Sec1") {
+        await setSpeakingStepNo(7)
+    }
+    else if (testNo == "Test22Sec2") {
+        // await Test12Sec2();
+    }
+    else if (testNo == "Test21Sec3") {
+        await setSpeakingStepNo(6)
+    }
+
+    //test-23-----------------------------------------------
+    else if (testNo == "Test23Sec1") {
+        await setSpeakingStepNo(7)
+    }
+    else if (testNo == "Test23Sec2") {
+        // await Test12Sec2();
+    }
+    else if (testNo == "Test23Sec3") {
+        await setSpeakingStepNo(6)
+    }
+
+    //test-24-----------------------------------------------
+    else if (testNo == "Test24Sec1") {
+        await setSpeakingStepNo(7)
+    }
+    else if (testNo == "Test24Sec2") {
+        // await Test12Sec2();
+    }
+    else if (testNo == "Test24Sec3") {
+        await setSpeakingStepNo(6)
+    }
+
+    //test-25-----------------------------------------------
+    else if (testNo == "Test25Sec1") {
+        await setSpeakingStepNo(7)
+    }
+    else if (testNo == "Test25Sec2") {
+        // await Test12Sec2();
+    }
+    else if (testNo == "Test25Sec3") {
+        await setSpeakingStepNo(6)
+    }
+
+    //test-26-----------------------------------------------
+    else if (testNo == "Test26Sec1") {
+        await setSpeakingStepNo(7)
+    }
+    else if (testNo == "Test26Sec2") {
+        // await Test12Sec2();
+    }
+    else if (testNo == "Test26Sec3") {
+        await setSpeakingStepNo(6)
+    }
+
+    //test-27-----------------------------------------------
+    else if (testNo == "Test27Sec1") {
+        await setSpeakingStepNo(7)
+    }
+    else if (testNo == "Test27Sec2") {
+        // await Test12Sec2();
+    }
+    else if (testNo == "Test27Sec3") {
+        await setSpeakingStepNo(6)
+    }
+
+    //test-28-----------------------------------------------
+    else if (testNo == "Test28Sec1") {
+        await setSpeakingStepNo(7)
+    }
+    else if (testNo == "Test28Sec2") {
+        // await Test12Sec2();
+    }
+    else if (testNo == "Test28Sec3") {
+        await setSpeakingStepNo(6)
+    }
+
+
+    //test-29-----------------------------------------------
+    else if (testNo == "Test29Sec1") {
+        await setSpeakingStepNo(7)
+    }
+    else if (testNo == "Test29Sec2") {
+        // await Test12Sec2();
+    }
+    else if (testNo == "Test29Sec3") {
+        await setSpeakingStepNo(6)
+    }
+
+
+    //test-30-----------------------------------------------
+    else if (testNo == "Test30Sec1") {
+        await setSpeakingStepNo(7)
+    }
+    else if (testNo == "Test30Sec2") {
+        // await Test12Sec2();
+    }
+    else if (testNo == "Test30Sec3") {
+        await setSpeakingStepNo(6)
+    }
+
+    //test-31-----------------------------------------------
+    else if (testNo == "Test31Sec1") {
+        await setSpeakingStepNo(7)
+    }
+    else if (testNo == "Test31Sec2") {
+        // await Test31Sec2();
+    }
+    else if (testNo == "Test31Sec3") {
+        await setSpeakingStepNo(6)
+    }
+
+    //test-32-----------------------------------------------
+    else if (testNo == "Test32Sec1") {
+        await setSpeakingStepNo(7)
+    }
+    else if (testNo == "Test32Sec2") {
+        // await Test32Sec2();
+    }
+    else if (testNo == "Test32Sec3") {
+        await setSpeakingStepNo(6)
+    }
+
+    //test-33-----------------------------------------------
+    else if (testNo == "Test33Sec1") {
+        await setSpeakingStepNo(7)
+    }
+    else if (testNo == "Test33Sec2") {
+        // await Test33Sec2();
+    }
+    else if (testNo == "Test33Sec3") {
+        await setSpeakingStepNo(6)
+    }
+
+    //test-34-----------------------------------------------
+    else if (testNo == "Test34Sec1") {
+        await setSpeakingStepNo(7)
+    }
+    else if (testNo == "Test34Sec2") {
+        // await Test34Sec2();
+    }
+    else if (testNo == "Test34Sec3") {
+        await setSpeakingStepNo(6)
+    }
+
+    //test-35-----------------------------------------------
+    else if (testNo == "Test35Sec1") {
+        await setSpeakingStepNo(7)
+    }
+    else if (testNo == "Test35Sec2") {
+        // await Test35Sec2();
+    }
+    else if (testNo == "Test35Sec3") {
+        await setSpeakingStepNo(6)
+    }
+
+    //test-36-----------------------------------------------
+    else if (testNo == "Test36Sec1") {
+        await setSpeakingStepNo(7)
+    }
+    else if (testNo == "Test36Sec2") {
+        // await Test36Sec2();
+    }
+    else if (testNo == "Test36Sec3") {
+        await setSpeakingStepNo(6)
+    }
+
+    //test-37-----------------------------------------------
+    else if (testNo == "Test37Sec1") {
+        await setSpeakingStepNo(7)
+    }
+    else if (testNo == "Test37Sec2") {
+        // await Test37Sec2();
+    }
+    else if (testNo == "Test37Sec3") {
+        await setSpeakingStepNo(6)
+    }
+
+    //test-38-----------------------------------------------
+    else if (testNo == "Test38Sec1") {
+        await setSpeakingStepNo(7)
+    }
+    else if (testNo == "Test38Sec2") {
+        // await Test38Sec2();
+    }
+    else if (testNo == "Test38Sec3") {
+        await setSpeakingStepNo(6)
+    }
+
+    //test-39-----------------------------------------------
+    else if (testNo == "Test39Sec1") {
+        await setSpeakingStepNo(7)
+    }
+    else if (testNo == "Test39Sec2") {
+        // await Test39Sec2();
+    }
+    else if (testNo == "Test39Sec3") {
+        await setSpeakingStepNo(6)
+    }
+
+    //test-40-----------------------------------------------
+    else if (testNo == "Test40Sec1") {
+        await setSpeakingStepNo(7)
+    }
+    else if (testNo == "Test40Sec2") {
+        // await Test40Sec2();
+    }
+    else if (testNo == "Test40Sec3") {
+        await setSpeakingStepNo(6)
+    }
+
+
+
 
 
 

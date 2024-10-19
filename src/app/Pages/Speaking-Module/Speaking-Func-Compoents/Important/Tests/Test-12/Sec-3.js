@@ -8,20 +8,7 @@ export async function Test12Sec3(converstionStepsText, userSpeakingTestNo, testN
     }
     converstionSteps++;
     if (converstionStepsText != '') {
-        // if (converstionStepsText.length < 10) {
-        //     await smallTalkError();
-        // }
-        // if (converstionStepsText.match('repeat') || converstionStepsText.match("don't understand")) {
-        //     await playScript(
-        //         "Ok , I am repeating.");
-        //     converstionSteps--;
-        // }
-        // if (converstionSteps == 0) {
-        //     await playScript(
 
-        //         " My name is Adrian.& I will be your examiner for this part of the test  part three.  Are you confortable?"
-        //     );
-        // }
         if (converstionSteps == 1) {
             await playScript(
                 "Sorry.... Can you repeat that please"

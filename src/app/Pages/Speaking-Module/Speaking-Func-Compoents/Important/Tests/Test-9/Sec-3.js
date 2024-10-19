@@ -8,19 +8,7 @@ export async function Test9Sec3(converstionStepsText, userSpeakingTestNo, testNo
     }
     converstionSteps++;
     if (converstionStepsText != '') {
-        // if (converstionStepsText.length < 10) {
-        //     await smallTalkError();
-        // }
-        // if (converstionStepsText.match('repeat') || converstionStepsText.match("don't understand")) {
-        //     await playScript(
-        //         "Ok , I am repeating.");
-        //     converstionSteps--;
-        // }
-        // if (converstionSteps == 0) {
-        //     await playScript(
-        //         "For this part three. I will ask you some questions related to the topic of part two. And some questions connected to your response. Let's talk about social activities & football. So, are you ready ?"
-        //     );
-        // }
+
         if (converstionSteps == 1) {
             if (converstionStepsText.length < 10) {
                 await smallTalkError(" are you ready ?");

@@ -73,7 +73,7 @@ const TellusReason = dynamic(() => import("./TellusResoan"))
 
 
 
-function SpeakingTests({ openTestAfter10, setOpenTestsAfter10, mainDataAll }) {
+function Card_To_10({ openTestAfter10, setOpenTestsAfter10, mainDataAll }) {
     const { setWritingText, bdPaidStatus, setBdPaidSatus, otherPaidStatus, setOtherPaidStatus, billPopUp, setBillPopUp, userPaymentStatusCheck, setuserPaymentStatusCheck } = useStateContext();
     const history = useRouter();
 
@@ -573,6 +573,7 @@ function SpeakingTests({ openTestAfter10, setOpenTestsAfter10, mainDataAll }) {
     };
 
     // Speaking-Test21-Section Functions
+    // Speaking-Test21-Section Functions
     const Test21Sec1 = (e) => {
         handleTestNavigation("Test21Sec1");
     };
@@ -583,6 +584,246 @@ function SpeakingTests({ openTestAfter10, setOpenTestsAfter10, mainDataAll }) {
 
     const Test21Sec3 = (e) => {
         handleTestNavigation("Test21Sec3");
+    };
+    //test--22
+    const Test22Sec1 = (e) => {
+        handleTestNavigation("Test22Sec1");
+    };
+
+    const Test22Sec2 = (e) => {
+        handleTestNavigation("Test22Sec2");
+    };
+
+    const Test22Sec3 = (e) => {
+        handleTestNavigation("Test22Sec3");
+    };
+
+    //test--23
+    const Test23Sec1 = (e) => {
+        handleTestNavigation("Test23Sec1");
+    };
+
+    const Test23Sec2 = (e) => {
+        handleTestNavigation("Test23Sec2");
+    };
+
+    const Test23Sec3 = (e) => {
+        handleTestNavigation("Test23Sec3");
+    };
+
+    //test--24
+    const Test24Sec1 = (e) => {
+        handleTestNavigation("Test24Sec1");
+    };
+
+    const Test24Sec2 = (e) => {
+        handleTestNavigation("Test24Sec2");
+    };
+
+    const Test24Sec3 = (e) => {
+        handleTestNavigation("Test24Sec3");
+    };
+
+    //test--25
+    const Test25Sec1 = (e) => {
+        handleTestNavigation("Test25Sec1");
+    };
+
+    const Test25Sec2 = (e) => {
+        handleTestNavigation("Test25Sec2");
+    };
+
+    const Test25Sec3 = (e) => {
+        handleTestNavigation("Test25Sec3");
+    };
+
+    //test--26
+    const Test26Sec1 = (e) => {
+        handleTestNavigation("Test26Sec1");
+    };
+
+    const Test26Sec2 = (e) => {
+        handleTestNavigation("Test26Sec2");
+    };
+
+    const Test26Sec3 = (e) => {
+        handleTestNavigation("Test26Sec3");
+    };
+
+
+    //test--27
+    const Test27Sec1 = (e) => {
+        handleTestNavigation("Test27Sec1");
+    };
+
+    const Test27Sec2 = (e) => {
+        handleTestNavigation("Test27Sec2");
+    };
+
+    const Test27Sec3 = (e) => {
+        handleTestNavigation("Test27Sec3");
+    };
+
+    //test--28
+    const Test28Sec1 = (e) => {
+        handleTestNavigation("Test28Sec1");
+    };
+
+    const Test28Sec2 = (e) => {
+        handleTestNavigation("Test28Sec2");
+    };
+
+    const Test28Sec3 = (e) => {
+        handleTestNavigation("Test28Sec3");
+    };
+
+
+    //test--29
+    const Test29Sec1 = (e) => {
+        handleTestNavigation("Test29Sec1");
+    };
+
+    const Test29Sec2 = (e) => {
+        handleTestNavigation("Test29Sec2");
+    };
+
+    const Test29Sec3 = (e) => {
+        handleTestNavigation("Test29Sec3");
+    };
+
+
+    //test--30
+    const Test30Sec1 = (e) => {
+        handleTestNavigation("Test30Sec1");
+    };
+
+    const Test30Sec2 = (e) => {
+        handleTestNavigation("Test30Sec2");
+    };
+
+    const Test30Sec3 = (e) => {
+        handleTestNavigation("Test30Sec3");
+    };
+
+    //tests from 31 - 40 ...
+    const Test31Sec1 = (e) => {
+        handleTestNavigation("Test31Sec1");
+    };
+
+    const Test31Sec2 = (e) => {
+        handleTestNavigation("Test31Sec2");
+    };
+
+    const Test31Sec3 = (e) => {
+        handleTestNavigation("Test31Sec3");
+    };
+
+    const Test32Sec1 = (e) => {
+        handleTestNavigation("Test32Sec1");
+    };
+
+    const Test32Sec2 = (e) => {
+        handleTestNavigation("Test32Sec2");
+    };
+
+    const Test32Sec3 = (e) => {
+        handleTestNavigation("Test32Sec3");
+    };
+
+    const Test33Sec1 = (e) => {
+        handleTestNavigation("Test33Sec1");
+    };
+
+    const Test33Sec2 = (e) => {
+        handleTestNavigation("Test33Sec2");
+    };
+
+    const Test33Sec3 = (e) => {
+        handleTestNavigation("Test33Sec3");
+    };
+
+    const Test34Sec1 = (e) => {
+        handleTestNavigation("Test34Sec1");
+    };
+
+    const Test34Sec2 = (e) => {
+        handleTestNavigation("Test34Sec2");
+    };
+
+    const Test34Sec3 = (e) => {
+        handleTestNavigation("Test34Sec3");
+    };
+
+    const Test35Sec1 = (e) => {
+        handleTestNavigation("Test35Sec1");
+    };
+
+    const Test35Sec2 = (e) => {
+        handleTestNavigation("Test35Sec2");
+    };
+
+    const Test35Sec3 = (e) => {
+        handleTestNavigation("Test35Sec3");
+    };
+
+    const Test36Sec1 = (e) => {
+        handleTestNavigation("Test36Sec1");
+    };
+
+    const Test36Sec2 = (e) => {
+        handleTestNavigation("Test36Sec2");
+    };
+
+    const Test36Sec3 = (e) => {
+        handleTestNavigation("Test36Sec3");
+    };
+
+    const Test37Sec1 = (e) => {
+        handleTestNavigation("Test37Sec1");
+    };
+
+    const Test37Sec2 = (e) => {
+        handleTestNavigation("Test37Sec2");
+    };
+
+    const Test37Sec3 = (e) => {
+        handleTestNavigation("Test37Sec3");
+    };
+
+    const Test38Sec1 = (e) => {
+        handleTestNavigation("Test38Sec1");
+    };
+
+    const Test38Sec2 = (e) => {
+        handleTestNavigation("Test38Sec2");
+    };
+
+    const Test38Sec3 = (e) => {
+        handleTestNavigation("Test38Sec3");
+    };
+
+    const Test39Sec1 = (e) => {
+        handleTestNavigation("Test39Sec1");
+    };
+
+    const Test39Sec2 = (e) => {
+        handleTestNavigation("Test39Sec2");
+    };
+
+    const Test39Sec3 = (e) => {
+        handleTestNavigation("Test39Sec3");
+    };
+
+    const Test40Sec1 = (e) => {
+        handleTestNavigation("Test40Sec1");
+    };
+
+    const Test40Sec2 = (e) => {
+        handleTestNavigation("Test40Sec2");
+    };
+
+    const Test40Sec3 = (e) => {
+        handleTestNavigation("Test40Sec3");
     };
 
 
@@ -3930,6 +4171,87 @@ function SpeakingTests({ openTestAfter10, setOpenTestsAfter10, mainDataAll }) {
                         Test20Sec2={Test20Sec2}
                         Test20Sec3={Test20Sec3}
 
+                        //test1 21-30 
+                        Test21Sec1={Test21Sec1}
+                        Test21Sec2={Test21Sec2}
+                        Test21Sec3={Test21Sec3}
+
+                        Test22Sec1={Test22Sec1}
+                        Test22Sec2={Test22Sec2}
+                        Test22Sec3={Test22Sec3}
+
+                        Test23Sec1={Test23Sec1}
+                        Test23Sec2={Test23Sec2}
+                        Test23Sec3={Test23Sec3}
+
+                        Test24Sec1={Test24Sec1}
+                        Test24Sec2={Test24Sec2}
+                        Test24Sec3={Test24Sec3}
+
+
+                        Test25Sec1={Test25Sec1}
+                        Test25Sec2={Test25Sec2}
+                        Test25Sec3={Test25Sec3}
+
+                        Test26Sec1={Test26Sec1}
+                        Test26Sec2={Test26Sec2}
+                        Test26Sec3={Test26Sec3}
+
+                        Test27Sec1={Test27Sec1}
+                        Test27Sec2={Test27Sec2}
+                        Test27Sec3={Test27Sec3}
+
+                        Test28Sec1={Test28Sec1}
+                        Test28Sec2={Test28Sec2}
+                        Test28Sec3={Test28Sec3}
+
+                        Test29Sec1={Test29Sec1}
+                        Test29Sec2={Test29Sec2}
+                        Test29Sec3={Test29Sec3}
+
+                        Test30Sec1={Test30Sec1}
+                        Test30Sec2={Test30Sec2}
+                        Test30Sec3={Test30Sec3}
+
+                        Test31Sec1={Test31Sec1}
+                        Test31Sec2={Test31Sec2}
+                        Test31Sec3={Test31Sec3}
+
+                        Test32Sec1={Test32Sec1}
+                        Test32Sec2={Test32Sec2}
+                        Test32Sec3={Test32Sec3}
+
+                        Test33Sec1={Test33Sec1}
+                        Test33Sec2={Test33Sec2}
+                        Test33Sec3={Test33Sec3}
+
+                        Test34Sec1={Test34Sec1}
+                        Test34Sec2={Test34Sec2}
+                        Test34Sec3={Test34Sec3}
+
+                        Test35Sec1={Test35Sec1}
+                        Test35Sec2={Test35Sec2}
+                        Test35Sec3={Test35Sec3}
+
+                        Test36Sec1={Test36Sec1}
+                        Test36Sec2={Test36Sec2}
+                        Test36Sec3={Test36Sec3}
+
+                        Test37Sec1={Test37Sec1}
+                        Test37Sec2={Test37Sec2}
+                        Test37Sec3={Test37Sec3}
+
+                        Test38Sec1={Test38Sec1}
+                        Test38Sec2={Test38Sec2}
+                        Test38Sec3={Test38Sec3}
+
+                        Test39Sec1={Test39Sec1}
+                        Test39Sec2={Test39Sec2}
+                        Test39Sec3={Test39Sec3}
+
+                        Test40Sec1={Test40Sec1}
+                        Test40Sec2={Test40Sec2}
+                        Test40Sec3={Test40Sec3}
 
                     />
                 )
@@ -3941,4 +4263,4 @@ function SpeakingTests({ openTestAfter10, setOpenTestsAfter10, mainDataAll }) {
     );
 }
 
-export default SpeakingTests;
+export default Card_To_10;

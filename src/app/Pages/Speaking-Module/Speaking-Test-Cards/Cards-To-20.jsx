@@ -22,33 +22,6 @@ import test3Sec1Images from "../../../../assets/images/Speaking-Images/test3Sec-
 import test3Sec2Images from "../../../../assets/images/Speaking-Images/test3Sec-2.png"
 import test3Sec3Images from "../../../../assets/images/Speaking-Images/test3Sec-3.png"
 
-import test4Sec1Images from "../../../../assets/images/Speaking-Images/test4Sec-1.png"
-import test4Sec2Images from "../../../../assets/images/Speaking-Images/test4Sec-2.png"
-import test4Sec3Images from "../../../../assets/images/Speaking-Images/test4Sec-3.png"
-
-import test5Sec1Images from "../../../../assets/images/Speaking-Images/test12Sec-1.png"
-import test5Se2Images from "../../../../assets/images/Speaking-Images/Test5Sec2.jpg"
-import test5Sec3Images from "../../../../assets/images/Speaking-Images/test5Sec-3.png"
-
-import test6Sec1Images from "../../../../assets/images/Speaking-Images/Test6Sec1.jpg"
-import test6Sec2Images from "../../../../assets/images/Speaking-Images/Test6Sec2.jpg"
-import test6Sec3Images from "../../../../assets/images/Speaking-Images/Test6Sec3.jpg"
-
-import test7Sec1Images from "../../../../assets/images/Speaking-Images/test7Sec-1.png"
-import test7Sec2Images from "../../../../assets/images/Speaking-Images/test7Sec-2.png"
-import test7Sec3Images from "../../../../assets/images/Speaking-Images/test7Sec-3.png"
-
-import test8Sec1Images from "../../../../assets/images/Speaking-Images/test8Sec-1.png"
-import test8Sec2Images from "../../../../assets/images/Speaking-Images/test8Sec-2.png"
-import test8Sec3Images from "../../../../assets/images/Speaking-Images/test8Sec-3.png"
-
-import test9Sec1Images from "../../../../assets/images/Speaking-Images/test9Sec-1.png"
-import test9Sec2Images from "../../../../assets/images/Speaking-Images/test9Sec-2.png"
-import test9Sec3Images from "../../../../assets/images/Speaking-Images/test9Sec-3.png"
-
-import test10Sec1Images from "../../../../assets/images/Speaking-Images/test10Sec-1.png"
-import test10Sec2Images from "../../../../assets/images/Speaking-Images/test10Sec-2.png"
-import test10Sec3Images from "../../../../assets/images/Speaking-Images/test10Sec-3.png"
 
 import test11Sec1Images from "../../../../assets/images/Speaking-Images/test11Sec-1.png"
 import test11Sec2Images from "../../../../assets/images/Speaking-Images/test11Sec-2.png"
@@ -85,8 +58,8 @@ const TellusReason = dynamic(() => import("./TellusResoan"))
 
 
 
-function SpeakingAfter10Tests({ openTestAfter20, setOpenTestsAfter20, mainDataAll }) {
-    const { setWritingText, bdPaidStatus, setBdPaidSatus, otherPaidStatus, setOtherPaidStatus, billPopUp, setBillPopUp, userPaymentStatusCheck, setuserPaymentStatusCheck } = useStateContext();
+function Card_To_20({ openTestAfter20, setOpenTestsAfter20, mainDataAll }) {
+    const { setWritingText, userPaymentStatusCheck, setuserPaymentStatusCheck } = useStateContext();
     const history = useRouter();
     //localstorage data storing variables here....
     const [useremail, setuseremail] = useState("");
@@ -145,53 +118,6 @@ function SpeakingAfter10Tests({ openTestAfter20, setOpenTestsAfter20, mainDataAl
 
 
 
-
-
-
-    // useEffect(() => {
-    //     Axios({
-    //         method: "get",
-    //         url: 'http://localhost:8080/api/user/checkforDBPayAccess/' + useremail,
-    //         headers: {
-    //             "Authorization": `Bearer ${localStorage.getItem("loginTOken")}`,
-    //             'Content-Type': 'application/json'
-    //         }
-    //     })
-    //         .then((res) => {
-    //             //console.log(res.data);
-    //             res.data.data.map((e) => {
-    //                 if (e.paidStatus == "1") {
-    //                     setBdPaidSatus(true)
-    //                 }
-    //             })
-    //         })
-    //         .catch((e) => { //console.log(e); })
-    // }, []);
-
-    // useEffect(() => {
-    //     Axios({
-    //         method: "get",
-    //         url: 'http://localhost:8080/api/user/AccesPaypalPaid/' + useremail,
-    //         headers: {
-    //             "Authorization": `Bearer ${localStorage.getItem("loginTOken")}`,
-    //             'Content-Type': 'application/json'
-    //         }
-    //     }).then((res) => {
-    //         //console.log(res.data);
-    //         res.data.data.map((e) => {
-    //             if (e.orderId) {
-    //                 setOtherPaidStatus(true)
-    //             }
-    //         })
-
-    //     })
-    //         .catch((e) => { //console.log(e); })
-    // }, []);
-
-
-
-
-
     //Function for open login & SignUp pages Base on state    
     const openLogInPage = (x) => {
         setTimeout(() => {
@@ -208,73 +134,6 @@ function SpeakingAfter10Tests({ openTestAfter20, setOpenTestsAfter20, mainDataAl
     }
 
 
-
-    // Speaking-Test1-Section Functions
-    const Test1Sec1 = (e) => {
-        // if (bdPaidStatus || otherPaidStatus) {
-        if (MainiOS()) {
-            alert("Sorry...Speaking Exam is not available for iPhone and iPad.")
-        }
-        else if (isMobile && isOpera) {
-            alert("Please use Chrome/Firefox/Microsoft-Edge/Aloha")
-        }
-        else if (isSafari) {
-            alert("Please use Chrome/Firefox/Microsoft-Edge/Aloha")
-        }
-        else {
-            history.push("/Pages/Speaking-Module/Test1Sec1")
-        };
-        // } else {
-        //     if (useremail && userCountry) {
-        //         setBillPopUp(true);
-        //history.push("/Pages/Payments/BillingComponent")
-        //         // if(userCountry === "Bangladesh"){ 
-        //         // }
-        //     } else {
-        // localStorage.setItem("productID", "Ok");
-
-        //         //console.log("You have to login first..")
-        //         openLogInPage();
-        //         //setloginPage & Sign up page here...
-        //     }
-        // }
-    }
-
-
-    const Test1Sec2 = (e) => {
-        if (MainiOS()) {
-            alert("Sorry...Speaking Exam is not available for iPhone and iPad.")
-        }
-        else if (isMobile && isOpera) {
-            alert("Please use Chrome/Firefox/Microsoft-Edge/Aloha")
-        }
-        else if (isSafari) {
-            alert("Please use Chrome/Firefox/Microsoft-Edge/Aloha")
-        }
-        else {
-            // //e.preventDefault();
-            history.push("/Pages/Speaking-Module/Test1Sec2")
-        };
-        // //e.preventDefault(); history.push("/Pages/Speaking-Module/Test1Sec2")
-
-    };
-    const Test1Sec3 = (e) => {
-        // //e.preventDefault();
-        if (MainiOS()) {
-            alert("Sorry...Speaking Exam is not available for iPhone and iPad.")
-        }
-        else if (isMobile && isOpera) {
-            alert("Please use Chrome/Firefox/Microsoft-Edge/Aloha")
-        }
-        else if (isSafari) {
-            alert("Please use Chrome/Firefox/Microsoft-Edge/Aloha")
-        }
-        else {
-            history.push("/Pages/Speaking-Module/Test1Sec3")
-        }
-
-
-    };
 
 
 
@@ -317,122 +176,6 @@ function SpeakingAfter10Tests({ openTestAfter20, setOpenTestsAfter20, mainDataAl
     };
 
 
-    // Speaking-Test2-Section Functions
-    const Test2Sec1 = (e) => {
-        handleTestNavigation("Test2Sec1");
-    };
-
-    const Test2Sec2 = (e) => {
-        handleTestNavigation("Test2Sec2");
-    };
-
-    const Test2Sec3 = (e) => {
-        handleTestNavigation("Test2Sec3");
-    };
-
-    // Speaking-Test3-Section Functions
-    const Test3Sec1 = (e) => {
-        handleTestNavigation("Test3Sec1");
-    };
-
-    const Test3Sec2 = (e) => {
-        handleTestNavigation("Test3Sec2");
-    };
-
-    const Test3Sec3 = (e) => {
-        handleTestNavigation("Test3Sec3");
-    };
-
-    // Speaking-Test4-Section Functions
-    const Test4Sec1 = (e) => {
-        handleTestNavigation("Test4Sec1");
-    };
-
-    const Test4Sec2 = (e) => {
-        handleTestNavigation("Test4Sec2");
-    };
-
-    const Test4Sec3 = (e) => {
-        handleTestNavigation("Test4Sec3");
-    };
-
-    // Speaking-Test5-Section Functions
-    const Test5Sec1 = (e) => {
-        handleTestNavigation("Test5Sec1");
-    };
-
-    const Test5Sec2 = (e) => {
-        handleTestNavigation("Test5Sec2");
-    };
-
-    const Test5Sec3 = (e) => {
-        handleTestNavigation("Test5Sec3");
-    };
-
-    // Speaking-Test6-Section Functions
-    const Test6Sec1 = (e) => {
-        handleTestNavigation("Test6Sec1");
-    };
-
-    const Test6Sec2 = (e) => {
-        handleTestNavigation("Test6Sec2");
-    };
-
-    const Test6Sec3 = (e) => {
-        handleTestNavigation("Test6Sec3");
-    };
-
-    // Speaking-Test7-Section Functions
-    const Test7Sec1 = (e) => {
-        handleTestNavigation("Test7Sec1");
-    };
-
-    const Test7Sec2 = (e) => {
-        handleTestNavigation("Test7Sec2");
-    };
-
-    const Test7Sec3 = (e) => {
-        handleTestNavigation("Test7Sec3");
-    };
-
-    // Speaking-Test8-Section Functions
-    const Test8Sec1 = (e) => {
-        handleTestNavigation("Test8Sec1");
-    };
-
-    const Test8Sec2 = (e) => {
-        handleTestNavigation("Test8Sec2");
-    };
-
-    const Test8Sec3 = (e) => {
-        handleTestNavigation("Test8Sec3");
-    };
-
-    // Speaking-Test9-Section Functions
-    const Test9Sec1 = (e) => {
-        handleTestNavigation("Test9Sec1");
-    };
-
-    const Test9Sec2 = (e) => {
-        handleTestNavigation("Test9Sec2");
-    };
-
-    const Test9Sec3 = (e) => {
-        handleTestNavigation("Test9Sec3");
-    };
-
-    // Speaking-Test10-Section Functions
-    const Test10Sec1 = (e) => {
-        handleTestNavigation("Test10Sec1");
-    };
-
-    const Test10Sec2 = (e) => {
-        handleTestNavigation("Test10Sec2");
-    };
-
-    const Test10Sec3 = (e) => {
-        handleTestNavigation("Test10Sec3");
-    };
 
     // Speaking-Test11-Section Functions
     const Test11Sec1 = (e) => {
@@ -563,25 +306,6 @@ function SpeakingAfter10Tests({ openTestAfter20, setOpenTestsAfter20, mainDataAl
     const Test20Sec3 = (e) => {
         handleTestNavigation("Test20Sec3");
     };
-
-    // Speaking-Test21-Section Functions
-    const Test21Sec1 = (e) => {
-        handleTestNavigation("Test21Sec1");
-    };
-
-    const Test21Sec2 = (e) => {
-        handleTestNavigation("Test21Sec2");
-    };
-
-    const Test21Sec3 = (e) => {
-        handleTestNavigation("Test21Sec3");
-    };
-
-
-
-
-
-
 
 
 
@@ -759,32 +483,10 @@ function SpeakingAfter10Tests({ openTestAfter20, setOpenTestsAfter20, mainDataAl
     //for-load-more-10-test-functions---
     const checkAllTestsForOpenNextTests = () => {
         setLoadMoreStatus(true);
-        // let itemsNumber = [];
-        // //console.log(userAllSpeakingData)
-        // //console.log(typeof user.email);
-        //Map all the user Speaking data && store data into the above empty arry in every time 
-        // for make sure that how many tests has been done by the user ---
-        // if (userAllSpeakingData[0]) {
-        //     userAllSpeakingData.map((items, index) => {
-        //         //console.log(index)
-        //         if (items.SectionName != null && items.SectionName != "") {
-        //             itemsNumber.push(items.SectionName);
-        //         }
-
-        //     })
-        // }
-        // //console.log(itemsNumber)
-        // //console.log(itemsNumber.sort());
-        // //console.log(typeof itemsNumber.sort().length)
-
-
         //Give access to the user if user have already finished above 10 test 
         // other wise tell to the user need to be finished above 10 tests first---
         setTimeout(() => {
             if (checkLoadMoreArray[0]) {
-                // //console.log(checkLoadMoreArray.sort().length)
-                // alert(checkLoadMoreArray.sort().length)
-                // alert(typeof checkLoadMoreArray.sort().length)
                 if (checkLoadMoreArray.sort().length == 30) {
                     setOpenTestsAfter20(true);
                     setLoadMoreStatus(false);
@@ -800,9 +502,6 @@ function SpeakingAfter10Tests({ openTestAfter20, setOpenTestsAfter20, mainDataAl
             }
 
         }, 2000);
-
-
-        // //console.log(itemsNumber)
 
     }
 
@@ -2907,7 +2606,7 @@ function SpeakingAfter10Tests({ openTestAfter20, setOpenTestsAfter20, mainDataAl
                                                                             useremail && <div className={`text-center rounded-[50%]  font-bold text-[14px] pt-[2px] outline outline-3 h-[25px] w-[25px] outline-offset-2 outline-gray-500
                                                                                        ${Number(test18sec1[test18sec1.length - 1].ieltsScore) < 4 && "bg-red-600 text-white"}
 
-                                                                                     ${Number(test18sec1[test18sec1.length - 1].ieltsScore) >= 4 && Number(test18sec1[test17sec3.length - 1].ieltsScore) <= 6 && "bg-yellow-500 text-black"}
+                                                                                     ${Number(test18sec1[test18sec1.length - 1].ieltsScore) >= 4 && Number(test18sec1[test18sec1.length - 1].ieltsScore) <= 6 && "bg-yellow-500 text-black"}
 
                                                                                      ${Number(test18sec1[test18sec1.length - 1].ieltsScore) > 6 && "bg-green-600 text-white"} `} >
                                                                                 {Number(test18sec1[test18sec1.length - 1].ieltsScore)}
@@ -3078,7 +2777,7 @@ function SpeakingAfter10Tests({ openTestAfter20, setOpenTestsAfter20, mainDataAl
                                                                             useremail && <div className={`text-center rounded-[50%]  font-bold text-[14px] pt-[2px] outline outline-3 h-[25px] w-[25px] outline-offset-2 outline-gray-500
                                                                                        ${Number(test18sec3[test18sec3.length - 1].ieltsScore) < 4 && "bg-red-600 text-white"}
 
-                                                                                     ${Number(test18sec3[test18sec3.length - 1].ieltsScore) >= 4 && Number(test18sec1[test17sec3.length - 1].ieltsScore) <= 6 && "bg-yellow-500 text-black"}
+                                                                                     ${Number(test18sec3[test18sec3.length - 1].ieltsScore) >= 4 && Number(test18sec3[test18sec3.length - 1].ieltsScore) <= 6 && "bg-yellow-500 text-black"}
 
                                                                                      ${Number(test18sec3[test18sec3.length - 1].ieltsScore) > 6 && "bg-green-600 text-white"} `} >
                                                                                 {Number(test18sec3[test18sec3.length - 1].ieltsScore)}
@@ -3687,15 +3386,9 @@ function SpeakingAfter10Tests({ openTestAfter20, setOpenTestsAfter20, mainDataAl
 
 
                         {/*Next Tests opens by the help of this button check those above 10 tests if user have completed those tests then open next tests other wise say the user have to finished above 10 tests*/}
-                        {/* 
-                            !openTestAfter10 && <div className='flex flex-wrap justify-center gap-4  p-[12px] sm:p-[15px] pb-5 pt-3'>
-                                {/* <button className='p-2 hover:bg-blue-400 bg-green-400 flex justify-center align-middle rounded w-[80%] sm:w-[20%] text-white text-[15px]'
-                                    onClick={checkAllTestsForOpenNextTests}
-                                >
-                                    {
-                                        loadMoreStatus ? (<LoadingCom />) : <div className='flex gap-2'>Load More 10 Tests <AiOutlineLogin className='text-xl translate-y-[2px] text-purple-600 font-bold' /> </div>
-                                    }
-                                </button> 
+                        {
+                            !openTestAfter20 && <div className='flex flex-wrap justify-center gap-4  p-[12px] sm:p-[15px] pb-5 pt-3'>
+
                                 <button className="bookmarkBtn" onClick={checkAllTestsForOpenNextTests} >
                                     <span className="IconContainer">
                                         {loadMoreStatus ? (<LoadingCom className="text-xl" />) : < AiOutlineLogin className="text-xl" />}
@@ -3703,8 +3396,7 @@ function SpeakingAfter10Tests({ openTestAfter20, setOpenTestsAfter20, mainDataAl
                                     <p className="text">Load More 10 Tests </p>
                                 </button>
                             </div>
-                        
-                         */}
+                        }
 
 
 
@@ -3765,7 +3457,7 @@ function SpeakingAfter10Tests({ openTestAfter20, setOpenTestsAfter20, mainDataAl
                                 </div>
                                 <div className='pt-4'>
                                     <div className='flex gap-2 text-xl text-center font-bold'>
-                                        Please complete all tests from 1 to 10 first to activate the next set of 10 tests.
+                                        Please complete all tests from 11 to 20 first to activate the next set of 10 tests.
                                     </div>
 
                                 </div>
@@ -3777,101 +3469,10 @@ function SpeakingAfter10Tests({ openTestAfter20, setOpenTestsAfter20, mainDataAl
                 </div>
             }
 
-            {/* Give Motivate user component */}
-            {
-
-                openCongressPopup && (
-                    <Motivation
-                        setopenCongressPopup={setopenCongressPopup}
-                        Test1Sec1={Test1Sec1}
-                        Test1Sec2={Test1Sec2}
-                        Test1Sec3={Test1Sec3}
-
-                        Test2Sec1={Test2Sec1}
-                        Test2Sec2={Test2Sec2}
-                        Test2Sec3={Test2Sec3}
-
-                        Test3Sec1={Test3Sec1}
-                        Test3Sec2={Test3Sec2}
-                        Test3Sec3={Test3Sec3}
-
-                        Test4Sec1={Test4Sec1}
-                        Test4Sec2={Test4Sec2}
-                        Test4Sec3={Test4Sec3}
-
-                        Test5Sec1={Test5Sec1}
-                        Test5Sec2={Test5Sec2}
-                        Test5Sec3={Test5Sec3}
-
-                        Test6Sec1={Test6Sec1}
-                        Test6Sec2={Test6Sec2}
-                        Test6Sec3={Test6Sec3}
-
-                        Test7Sec1={Test7Sec1}
-                        Test7Sec2={Test7Sec2}
-                        Test7Sec3={Test7Sec3}
-
-                        Test8Sec1={Test8Sec1}
-                        Test8Sec2={Test8Sec2}
-                        Test8Sec3={Test8Sec3}
-
-                        Test9Sec1={Test9Sec1}
-                        Test9Sec2={Test9Sec2}
-                        Test9Sec3={Test9Sec3}
-
-                        Test10Sec1={Test10Sec1}
-                        Test10Sec2={Test10Sec2}
-                        Test10Sec3={Test10Sec3}
-
-                        Test11Sec1={Test11Sec1}
-                        Test11Sec2={Test11Sec2}
-                        Test11Sec3={Test11Sec3}
-
-                        Test12Sec1={Test12Sec1}
-                        Test12Sec2={Test12Sec2}
-                        Test12Sec3={Test12Sec3}
-
-                        Test13Sec1={Test13Sec1}
-                        Test13Sec2={Test13Sec2}
-                        Test13Sec3={Test13Sec3}
-
-                        Test14Sec1={Test14Sec1}
-                        Test14Sec2={Test14Sec2}
-                        Test14Sec3={Test14Sec3}
-
-                        Test15Sec1={Test15Sec1}
-                        Test15Sec2={Test15Sec2}
-                        Test15Sec3={Test15Sec3}
-
-                        Test16Sec1={Test16Sec1}
-                        Test16Sec2={Test16Sec2}
-                        Test16Sec3={Test16Sec3}
-
-                        Test17Sec1={Test17Sec1}
-                        Test17Sec2={Test17Sec2}
-                        Test17Sec3={Test17Sec3}
-
-                        Test18Sec1={Test18Sec1}
-                        Test18Sec2={Test18Sec2}
-                        Test18Sec3={Test18Sec3}
-
-                        Test19Sec1={Test19Sec1}
-                        Test19Sec2={Test19Sec2}
-                        Test19Sec3={Test19Sec3}
-
-                        Test20Sec1={Test20Sec1}
-                        Test20Sec2={Test20Sec2}
-                        Test20Sec3={Test20Sec3}
-
-
-                    />
-                )
-            }
-
 
 
         </>
     );
 }
 
-export default SpeakingAfter10Tests;
+export default Card_To_10;
